@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A977ECF2B4E88350094286B /* LoginViewController.swift */; };
+		5A977ED22B4E9F300094286B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A977ED12B4E9F300094286B /* Launch Screen.storyboard */; };
+		5A977ED32B4EA6610094286B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E602B4E60DA00E2924A /* Assets.xcassets */; };
 		5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */; };
-		5A9E3E322B4E5F2800E2924A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E312B4E5F2800E2924A /* LoginViewController.swift */; };
 		5A9E3E352B4E5F2800E2924A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E332B4E5F2800E2924A /* Main.storyboard */; };
 		5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E362B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld */; };
-		5A9E3E3D2B4E5F2800E2924A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E3B2B4E5F2800E2924A /* LaunchScreen.storyboard */; };
 		5A9E3E482B4E5F2800E2924A /* ElixrTalentConnectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E472B4E5F2800E2924A /* ElixrTalentConnectTests.swift */; };
 		5A9E3E522B4E5F2800E2924A /* ElixrTalentConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E512B4E5F2800E2924A /* ElixrTalentConnectUITests.swift */; };
 		5A9E3E542B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E532B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift */; };
@@ -36,12 +37,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A977ECF2B4E88350094286B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5A977ED12B4E9F300094286B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5A9E3E2A2B4E5F2800E2924A /* ElixrTalentConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElixrTalentConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A9E3E312B4E5F2800E2924A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A9E3E342B4E5F2800E2924A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A9E3E372B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ElixrTalentConnect.xcdatamodel; sourceTree = "<group>"; };
-		5A9E3E3C2B4E5F2800E2924A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A9E3E3E2B4E5F2800E2924A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A9E3E432B4E5F2800E2924A /* ElixrTalentConnectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ElixrTalentConnectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9E3E472B4E5F2800E2924A /* ElixrTalentConnectTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixrTalentConnectTests.swift; sourceTree = "<group>"; };
@@ -76,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A977ECE2B4E88350094286B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				5A977ECF2B4E88350094286B /* LoginViewController.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
 		5A9E3E212B4E5F2800E2924A = {
 			isa = PBXGroup;
 			children = (
@@ -99,11 +108,11 @@
 		5A9E3E2C2B4E5F2800E2924A /* ElixrTalentConnect */ = {
 			isa = PBXGroup;
 			children = (
+				5A977ECE2B4E88350094286B /* Login */,
 				5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */,
-				5A9E3E312B4E5F2800E2924A /* LoginViewController.swift */,
 				5A9E3E332B4E5F2800E2924A /* Main.storyboard */,
+				5A977ED12B4E9F300094286B /* Launch Screen.storyboard */,
 				5A9E3E602B4E60DA00E2924A /* Assets.xcassets */,
-				5A9E3E3B2B4E5F2800E2924A /* LaunchScreen.storyboard */,
 				5A9E3E3E2B4E5F2800E2924A /* Info.plist */,
 				5A9E3E362B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld */,
 			);
@@ -231,7 +240,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A9E3E3D2B4E5F2800E2924A /* LaunchScreen.storyboard in Resources */,
+				5A977ED22B4E9F300094286B /* Launch Screen.storyboard in Resources */,
+				5A977ED32B4EA6610094286B /* Assets.xcassets in Resources */,
 				5A9E3E352B4E5F2800E2924A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -258,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A9E3E322B4E5F2800E2924A /* LoginViewController.swift in Sources */,
+				5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */,
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
 			);
@@ -303,14 +313,6 @@
 				5A9E3E342B4E5F2800E2924A /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		5A9E3E3B2B4E5F2800E2924A /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A9E3E3C2B4E5F2800E2924A /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -440,7 +442,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ElixrTalentConnect/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -467,7 +469,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = ElixrTalentConnect/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
