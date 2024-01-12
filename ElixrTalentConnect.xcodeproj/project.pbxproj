@@ -17,6 +17,7 @@
 		5A9E3E522B4E5F2800E2924A /* ElixrTalentConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E512B4E5F2800E2924A /* ElixrTalentConnectUITests.swift */; };
 		5A9E3E542B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E532B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift */; };
 		5A9E3E612B4E60DA00E2924A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E602B4E60DA00E2924A /* Assets.xcassets */; };
+		5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		5A9E3E512B4E5F2800E2924A /* ElixrTalentConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixrTalentConnectUITests.swift; sourceTree = "<group>"; };
 		5A9E3E532B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixrTalentConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5A9E3E602B4E60DA00E2924A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ElixrTalentConnect/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SfSymbolSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 		5A977ECE2B4E88350094286B /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */,
 				5A977ECF2B4E88350094286B /* LoginViewController.swift */,
 			);
 			path = Login;
@@ -270,6 +273,7 @@
 			files = (
 				5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */,
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,
+				5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

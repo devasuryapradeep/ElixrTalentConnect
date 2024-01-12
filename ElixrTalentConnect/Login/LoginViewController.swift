@@ -7,53 +7,65 @@
 
 import UIKit
 
+/// LoginViewcontroller contains  user authentication,sign-in ,sign-up.
 class LoginViewController: UIViewController {
     
-    /// Variable declaration
-    var  userPrompt = "Don't have an account?Sign up"
-    var TextToChangeColor = "Sign up."
-    /// Refercing  Outlets
-    @IBOutlet weak var outerView: UIView!
-    @IBOutlet weak var signInPromptLabel: UILabel!
-    @IBOutlet weak var credentialView: UIImageView!
+    /// Variables and constants  declaration
+    let userInfoPrompt = "Don't have an account?Sign up"
+    let TextToChangeColor = "Sign up"
     
-    /// View Life cycle.
+    /// Referencing  Outlets.
+    @IBOutlet weak var outerView: UIView!
+    @IBOutlet weak var signInButton: UIButton!
+    @IBOutlet weak var signInPromptLabel: UILabel!
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var backGroundImage: UIImageView!
+    
+    /// View Life cycle.- Contain method calls to setup basic UI.
+    /// Setupcode to perform same action as that of IQkeyboard manager.
     override func viewDidLoad() {
         super.viewDidLoad()
         UISetup()
-        labelSetup()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    
     /// Function to get the basic UI layout.
-    func UISetup(){
-        credentialView.layer.cornerRadius = 20
-        credentialView.clipsToBounds = true
+    func UISetup() {
+        backGroundImage.layer.cornerRadius = 20
+        backGroundImage.clipsToBounds = true
         outerView.layer.cornerRadius = 20
         outerView.layer.shadowColor = UIColor.gray.cgColor
         outerView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
         outerView.layer.shadowRadius = 20
         outerView.layer.shadowOpacity = 0.7
         
-    }
-    func labelSetup(){
-        var stringOne = "Don't have an account?Sign up"
-        let stringTwo = "Sign up"
-        
-        let range = (stringOne as NSString).range(of: stringTwo)
-        
-        let attributedText = NSMutableAttributedString.init(string: stringOne)
-        attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor.blue , range: range)
+        let range = (userInfoPrompt as NSString).range(of: TextToChangeColor)
+        let attributedText = NSMutableAttributedString.init(string: userInfoPrompt)
+        attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(red: 228/255, green: 118/255, blue: 75/255, alpha: 1.0) , range: range)
         signInPromptLabel.attributedText = attributedText
     }
-}
-    extension UILabel {
-        func halfTextColorChange (fullText : String , changeText : String ) {
-            let strNumber: NSString = fullText as NSString
-            let range = (strNumber).range(of: changeText)
-            let attribute = NSMutableAttributedString.init(string: fullText)
-            attribute.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(red: 228/255, green: 118/255, blue: 75/255, alpha: 1.0) , range: range)
-            self.attributedText = attribute
+    
+    /// This function is called when the keyboard is about to be displayed.
+    ///It checks the size of the keyboard using information from the notification.
+    /// - Parameter notification: notification on clicking the textfields.
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
         }
     }
+    
+    /// This implementation is commonly used to handle the keyboard covering the text input fields in a view, ensuring a smooth user experience.
+    /// - Parameter notification: notification on clicking the textfields.
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
+    }
+}
+
+
 
