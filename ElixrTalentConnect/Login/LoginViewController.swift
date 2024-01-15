@@ -11,8 +11,8 @@ import UIKit
 class LoginViewController: UIViewController {
     
     /// Variables and constants  declaration
-    let userInfoPrompt = "Don't have an account?Sign up"
-    let TextToChangeColor = "Sign up"
+    public  let userInfoPrompt = "Don't have an account?Sign up"
+    public  let TextToChangeColor = "Sign up"
     
     /// Referencing  Outlets.
     @IBOutlet weak var outerView: UIView!
@@ -35,18 +35,32 @@ class LoginViewController: UIViewController {
     func UISetup() {
         backGroundImage.layer.cornerRadius = 20
         backGroundImage.clipsToBounds = true
-        outerView.layer.cornerRadius = 20
-        outerView.layer.shadowColor = UIColor.gray.cgColor
-        outerView.layer.shadowOffset = CGSize(width: 5.0, height: 5.0)
-        outerView.layer.shadowRadius = 20
-        outerView.layer.shadowOpacity = 0.7
-        
+        signInPromptLabel.text = userInfoPrompt
         let range = (userInfoPrompt as NSString).range(of: TextToChangeColor)
         let attributedText = NSMutableAttributedString.init(string: userInfoPrompt)
         attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(red: 228/255, green: 118/255, blue: 75/255, alpha: 1.0) , range: range)
         signInPromptLabel.attributedText = attributedText
+        let signInGesture = UITapGestureRecognizer(target: self, action:#selector(signUpAction(gesture: ) ))
+        signInPromptLabel.isUserInteractionEnabled = true
+        signInPromptLabel.addGestureRecognizer(signInGesture)
+        
     }
-    
+    @objc func signUpAction(gesture:UITapGestureRecognizer) {
+        let termsRange = (userInfoPrompt as NSString).range(of: self.TextToChangeColor)
+        // comment for now
+        //let privacyRange = (text as NSString).range(of: "Privacy Policy")
+        signInPromptLabel.isUserInteractionEnabled = true
+        
+        if gesture.didTapAttributedTextInLabel(label: signInPromptLabel, inRange: termsRange) {
+            guard let rootView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
+            else {
+                return
+            }
+            navigationController?.pushViewController(rootView, animated: true)
+        }
+        
+        
+    }
     /// This function is called when the keyboard is about to be displayed.
     ///It checks the size of the keyboard using information from the notification.
     /// - Parameter notification: notification on clicking the textfields.
@@ -65,7 +79,15 @@ class LoginViewController: UIViewController {
             self.view.frame.origin.y = 0
         }
     }
+    
+    func tapSignup(){
+        guard   let homeVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else{
+            return
+        }
+        navigationController?.pushViewController(homeVc, animated: true)
+    }
+    
+    
+    
 }
-
-
 

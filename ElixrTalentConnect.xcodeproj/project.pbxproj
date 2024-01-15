@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */; };
+		5A12A7FA2B54F6D800A0BD02 /* signupDataMdel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12A7F92B54F6D800A0BD02 /* signupDataMdel.swift */; };
+		5A12A7FC2B55295B00A0BD02 /* EmailDisplayTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12A7FB2B55295B00A0BD02 /* EmailDisplayTableView.swift */; };
+		5A12A8002B5531B100A0BD02 /* CredentialDisplayTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12A7FF2B5531B100A0BD02 /* CredentialDisplayTable.swift */; };
+		5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */; };
 		5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A977ECF2B4E88350094286B /* LoginViewController.swift */; };
 		5A977ED22B4E9F300094286B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A977ED12B4E9F300094286B /* Launch Screen.storyboard */; };
 		5A977ED32B4EA6610094286B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E602B4E60DA00E2924A /* Assets.xcassets */; };
@@ -17,6 +22,10 @@
 		5A9E3E522B4E5F2800E2924A /* ElixrTalentConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E512B4E5F2800E2924A /* ElixrTalentConnectUITests.swift */; };
 		5A9E3E542B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E532B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift */; };
 		5A9E3E612B4E60DA00E2924A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E602B4E60DA00E2924A /* Assets.xcassets */; };
+		5AA4B1352B53AAEB009E469D /* TapGestureSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */; };
+		5AA4B1372B53BB4C009E469D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1362B53BB4C009E469D /* HomeViewController.swift */; };
+		5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */; };
+		5AA4B1412B54555A009E469D /* ProfileDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1402B54555A009E469D /* ProfileDisplay.swift */; };
 		5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */; };
 /* End PBXBuildFile section */
 
@@ -38,6 +47,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewcontroller+Extn.swift"; sourceTree = "<group>"; };
+		5A12A7F92B54F6D800A0BD02 /* signupDataMdel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupDataMdel.swift; sourceTree = "<group>"; };
+		5A12A7FB2B55295B00A0BD02 /* EmailDisplayTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailDisplayTableView.swift; sourceTree = "<group>"; };
+		5A12A7FF2B5531B100A0BD02 /* CredentialDisplayTable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialDisplayTable.swift; sourceTree = "<group>"; };
+		5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A977ECF2B4E88350094286B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A977ED12B4E9F300094286B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5A9E3E2A2B4E5F2800E2924A /* ElixrTalentConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElixrTalentConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +65,10 @@
 		5A9E3E512B4E5F2800E2924A /* ElixrTalentConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixrTalentConnectUITests.swift; sourceTree = "<group>"; };
 		5A9E3E532B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixrTalentConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5A9E3E602B4E60DA00E2924A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ElixrTalentConnect/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureSetUp.swift; sourceTree = "<group>"; };
+		5AA4B1362B53BB4C009E469D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSetup.swift; sourceTree = "<group>"; };
+		5AA4B1402B54555A009E469D /* ProfileDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplay.swift; sourceTree = "<group>"; };
 		5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SfSymbolSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -79,11 +97,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5A12A7F82B54EEF800A0BD02 /* SignUP */ = {
+			isa = PBXGroup;
+			children = (
+				5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */,
+				5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */,
+				5AA4B1402B54555A009E469D /* ProfileDisplay.swift */,
+				5A12A7F92B54F6D800A0BD02 /* signupDataMdel.swift */,
+				5A12A7FB2B55295B00A0BD02 /* EmailDisplayTableView.swift */,
+				5A12A7FF2B5531B100A0BD02 /* CredentialDisplayTable.swift */,
+			);
+			path = SignUP;
+			sourceTree = "<group>";
+		};
 		5A977ECE2B4E88350094286B /* Login */ = {
 			isa = PBXGroup;
 			children = (
 				5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */,
 				5A977ECF2B4E88350094286B /* LoginViewController.swift */,
+				5AA4B1362B53BB4C009E469D /* HomeViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -111,6 +143,8 @@
 		5A9E3E2C2B4E5F2800E2924A /* ElixrTalentConnect */ = {
 			isa = PBXGroup;
 			children = (
+				5A12A7F82B54EEF800A0BD02 /* SignUP */,
+				5AA4B1332B53AABB009E469D /* Extensions */,
 				5A977ECE2B4E88350094286B /* Login */,
 				5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */,
 				5A9E3E332B4E5F2800E2924A /* Main.storyboard */,
@@ -137,6 +171,15 @@
 				5A9E3E532B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift */,
 			);
 			path = ElixrTalentConnectUITests;
+			sourceTree = "<group>";
+		};
+		5AA4B1332B53AABB009E469D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */,
+				5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -273,8 +316,17 @@
 			files = (
 				5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */,
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,
+				5A12A7FC2B55295B00A0BD02 /* EmailDisplayTableView.swift in Sources */,
 				5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
+				5A12A8002B5531B100A0BD02 /* CredentialDisplayTable.swift in Sources */,
+				5A12A7FA2B54F6D800A0BD02 /* signupDataMdel.swift in Sources */,
+				5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */,
+				5AA4B1372B53BB4C009E469D /* HomeViewController.swift in Sources */,
+				5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */,
+				5AA4B1412B54555A009E469D /* ProfileDisplay.swift in Sources */,
+				5AA4B1352B53AAEB009E469D /* TapGestureSetUp.swift in Sources */,
+				5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
