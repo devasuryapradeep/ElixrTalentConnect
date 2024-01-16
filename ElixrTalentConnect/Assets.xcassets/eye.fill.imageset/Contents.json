@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "envelope.png",
+      "filename" : "eye.fill.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "envelope 1.png",
+      "filename" : "eye.fill 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "envelope 2.png",
+      "filename" : "eye.fill 2.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

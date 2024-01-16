@@ -12,7 +12,7 @@ class LoginViewController: UIViewController {
     
     /// Variables and constants  declaration
     public  let userInfoPrompt = "Don't have an account?Sign up"
-    public  let TextToChangeColor = "Sign up"
+    public  let textToChangeColor = "Sign up"
     private var viewModel : LoginViewModel!
     
     /// Referencing  Outlets.
@@ -68,7 +68,7 @@ class LoginViewController: UIViewController {
         backGroundImage.layer.cornerRadius = 20
         backGroundImage.clipsToBounds = true
         signInPromptLabel.text = userInfoPrompt
-        let range = (userInfoPrompt as NSString).range(of: TextToChangeColor)
+        let range = (userInfoPrompt as NSString).range(of: textToChangeColor)
         let attributedText = NSMutableAttributedString.init(string: userInfoPrompt)
         attributedText.addAttribute(NSAttributedString.Key.foregroundColor, value: UIColor(red: 228/255, green: 118/255, blue: 75/255, alpha: 1.0) , range: range)
         signInPromptLabel.attributedText = attributedText
@@ -81,7 +81,7 @@ class LoginViewController: UIViewController {
     /// Function to setup SignUp action using gesture
     /// - Parameter gesture: Specific part in the UIlabel where tap gesture is added.
     @objc func signUpAction(gesture:UITapGestureRecognizer) {
-        let termsRange = (userInfoPrompt as NSString).range(of: self.TextToChangeColor)
+        let termsRange = (userInfoPrompt as NSString).range(of: self.textToChangeColor)
         signInPromptLabel.isUserInteractionEnabled = true
         if gesture.didTapAttributedTextInLabel(label: signInPromptLabel, inRange: termsRange) {
             print("tapped")
