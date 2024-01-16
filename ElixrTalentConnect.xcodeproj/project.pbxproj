@@ -26,6 +26,8 @@
 		5AA4B1372B53BB4C009E469D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1362B53BB4C009E469D /* HomeViewController.swift */; };
 		5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */; };
 		5AA4B1412B54555A009E469D /* ProfileDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1402B54555A009E469D /* ProfileDisplay.swift */; };
+		5AB565422B55787E00B97941 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565412B55787E00B97941 /* LoginModel.swift */; };
+		5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565442B562E9A00B97941 /* LoginViewModel.swift */; };
 		5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +71,8 @@
 		5AA4B1362B53BB4C009E469D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSetup.swift; sourceTree = "<group>"; };
 		5AA4B1402B54555A009E469D /* ProfileDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplay.swift; sourceTree = "<group>"; };
+		5AB565412B55787E00B97941 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
+		5AB565442B562E9A00B97941 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SfSymbolSetup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,9 +117,9 @@
 		5A977ECE2B4E88350094286B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */,
 				5A977ECF2B4E88350094286B /* LoginViewController.swift */,
-				5AA4B1362B53BB4C009E469D /* HomeViewController.swift */,
+				5AB565412B55787E00B97941 /* LoginModel.swift */,
+				5AB565442B562E9A00B97941 /* LoginViewModel.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -143,6 +147,7 @@
 		5A9E3E2C2B4E5F2800E2924A /* ElixrTalentConnect */ = {
 			isa = PBXGroup;
 			children = (
+				5AB565432B562E7100B97941 /* HomeviewController */,
 				5A12A7F82B54EEF800A0BD02 /* SignUP */,
 				5AA4B1332B53AABB009E469D /* Extensions */,
 				5A977ECE2B4E88350094286B /* Login */,
@@ -176,10 +181,19 @@
 		5AA4B1332B53AABB009E469D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */,
 				5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */,
 				5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		5AB565432B562E7100B97941 /* HomeviewController */ = {
+			isa = PBXGroup;
+			children = (
+				5AA4B1362B53BB4C009E469D /* HomeViewController.swift */,
+			);
+			path = HomeviewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -315,12 +329,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */,
+				5AB565422B55787E00B97941 /* LoginModel.swift in Sources */,
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,
 				5A12A7FC2B55295B00A0BD02 /* EmailDisplayTableView.swift in Sources */,
 				5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
 				5A12A8002B5531B100A0BD02 /* CredentialDisplayTable.swift in Sources */,
 				5A12A7FA2B54F6D800A0BD02 /* signupDataMdel.swift in Sources */,
+				5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */,
 				5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */,
 				5AA4B1372B53BB4C009E469D /* HomeViewController.swift in Sources */,
 				5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */,
