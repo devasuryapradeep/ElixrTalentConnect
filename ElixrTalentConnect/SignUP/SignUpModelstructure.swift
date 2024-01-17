@@ -6,53 +6,75 @@
 //
 
 import Foundation
-enum dataModel{
-    case FullName
-    case EmailAdress
-    case Password
+
+/// Data model for Signup view controller.
+enum DataModel {
+    case fullName
+    case emailAdress
+    case password
     case confirmPassword
 }
-extension dataModel {
+
+extension DataModel {
     var title: String {
         switch self {
-        case .FullName:
+        case .fullName:
             return "FULL NAME"
-        case .EmailAdress:
+        case .emailAdress:
             return "EMAIL ADDRESS"
-        case .Password:
+        case .password:
             return "PASSWORD"
         case .confirmPassword:
             return "CONFIRM PASSWORD"
         }
     }
-}
-extension dataModel {
     var textTitle : String{
         switch self {
-        case .FullName:
+        case .fullName:
             return "Enter your user name."
-        case .EmailAdress:
+        case .emailAdress:
             return "Enter your Email ID."
-        case .Password:
+        case .password:
             return "Enter your password."
         case .confirmPassword:
             return "Confirm Your password "
         }
     }
-}
-extension dataModel {
-    var icon :String{
+    
+    
+    var icon :String {
         switch self {
-        case .FullName:
+        case .fullName:
             return "person"
-        case .EmailAdress:
+        case .emailAdress:
             return "envelope"
-        case .Password:
+        case .password:
             return "lock"
         case .confirmPassword:
             return "lock "
         }
     }
-}
-
-
+    
+        var isVisible:Bool {
+            switch self {
+            case .fullName:
+                return false
+            case .emailAdress:
+                return false
+            case .password:
+                return true
+            case .confirmPassword:
+                return  true
+                
+            }
+        }
+      
+    }
+    
+//func dataRendering(){
+//    let individualData:[DataModel] = [.fullName,.emailAdress,.password,.confirmPassword]
+//    let itemData = individualData[IndexPath.row]
+//   let tcell = ProfileDisplay()
+//    tcell.userName.text = individualData.fullName
+//    return tcell
+//}

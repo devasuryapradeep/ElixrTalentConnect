@@ -12,29 +12,31 @@ class SignUpViewController: UIViewController {
     /// Referencing Outlets.
     @IBOutlet weak var backButton: UIButton!
     @IBOutlet weak var promptSignup: UILabel!
-
+    
     /// Variable Declaration.
     var Dataheading :[String]?
     var firstCellPlaceholder:String?
     var modelInfoKey = CandidateInfo()
-    let cellTypes: [dataModel] = [dataModel.FullName,dataModel.EmailAdress,dataModel.Password,dataModel.confirmPassword]
-    let textToChangeColor = "Sign in."
-let userInfoPrompt = "Already have an account?Sign in."
+    let cellTypes: [DataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
+    let textToChangeColor = " Sign in."
+    let userInfoPrompt = "Already have an account? Sign in."
     /// View life Cycle.
     override func viewDidLoad() {
         super.viewDidLoad()
         backButton.setImage(UIImage(systemName: "arrow.backward"), for: .highlighted)
         backButton.tintColor = UIColor.gray
         SigupPromptSetup()
+        self.view.endEditing(true)
+        
     }
     
+    ///@IBAction to set up return button to the rootview controller.
+    /// - Parameter sender: <#sender description#>
     @IBAction func returnAction(_ sender: UIButton) {
-        
-        guard let signInVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {
-            return
-        }
-        navigationController?.pushViewController(signInVC, animated: true)
+        navigationController?.popViewController(animated: true)
     }
+    
+    /// To  present a label that have attributed text field and tap gesture.
     func SigupPromptSetup(){
         let range = (userInfoPrompt as NSString).range(of: textToChangeColor)
         let attributedText = NSMutableAttributedString.init(string: userInfoPrompt)
@@ -44,12 +46,15 @@ let userInfoPrompt = "Already have an account?Sign in."
         promptSignup.isUserInteractionEnabled = true
         promptSignup.addGestureRecognizer(signInGesture)
     }
+    
+    /// Action of tap gesture.
+    /// - Parameter gesture: UItapgesture
     @objc func  signUpAction(gesture: UITapGestureRecognizer ){
         let termsRange = (userInfoPrompt as NSString).range(of: self.textToChangeColor)
         promptSignup.isUserInteractionEnabled = true
         if gesture.didTapAttributedTextInLabel(label: promptSignup, inRange: termsRange) {
             print("tapped")
-            guard let rootView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
+            guard let rootView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController
             else {
                 return
             }

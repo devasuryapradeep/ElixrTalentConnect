@@ -13,6 +13,11 @@ extension SignUpViewController:UITableViewDelegate,UITableViewDataSource{
         return cellTypes.count
     }
     
+    /// cellForRowAt function
+    /// - Parameters:
+    ///   - tableView: UItableview
+    ///   - indexPath: indexPath
+    /// - Returns: UITableViewCell.
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let profileCell = tableView.dequeueReusableCell(withIdentifier: "ProfileDisplay") as? ProfileDisplay else{
             return UITableViewCell()
@@ -20,18 +25,24 @@ extension SignUpViewController:UITableViewDelegate,UITableViewDataSource{
         let dataView = cellTypes[indexPath.row]
         profileCell.userNametitle.text = dataView.title
         profileCell.userName.placeholder = dataView.textTitle
-        profileCell.profileImage.image = UIImage(named: dataView.icon)
+        profileCell.profileImage.image = UIImage(systemName: dataView.icon)
         profileCell.profileImage.tintColor = UIColor(red: 228/255, green: 118/255, blue: 75/255, alpha: 1.0)
         if indexPath.row == 2 && indexPath.row == 3{
             if let image = UIImage(systemName:"eye.fill") {
-                profileCell.hideButton.setImage(image, for: .highlighted)
+                profileCell.privacyButton.setImage(image, for: .highlighted)
+                profileCell.privacyButton.isHidden = false
             }
         }
         return profileCell
     }
+    
+    /// HeightForRowAt
+    /// - Parameters:
+    ///   - tableView: UItableview
+    ///   - indexPath: indexPath
+    /// - Returns: Float type  value describes about the cell height.
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 100
-        
+        return 80
     }
     
     

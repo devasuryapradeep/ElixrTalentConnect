@@ -10,7 +10,7 @@ import UIKit
 class ProfileDisplay: UITableViewCell {
     
     /// Referencing Outlets.
-    @IBOutlet weak var hideButton: UIButton!
+    @IBOutlet weak var privacyButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var userName: UITextField!
