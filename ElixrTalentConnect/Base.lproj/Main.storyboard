@@ -377,6 +377,9 @@
                                                 <real key="value" value="0.0"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="SignUpTapped:" destination="1cL-Jb-Nzf" eventType="touchUpInside" id="itl-Is-LGc"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-4j-G7N">
                                         <rect key="frame" x="25" y="713.66666666666663" width="343" height="20.333333333333371"/>
@@ -427,6 +430,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SignUpTableview" destination="5OP-q0-huC" id="xnK-QO-DBp"/>
                         <outlet property="backButton" destination="4ev-JN-ILU" id="N91-Cb-LLo"/>
                         <outlet property="promptSignup" destination="Acb-4j-G7N" id="ZrP-hz-c83"/>
                     </connections>
@@ -513,8 +517,8 @@
         <image name="LoginBg" width="426" height="406"/>
         <image name="Logo" width="84.666664123535156" height="55.666667938232422"/>
         <image name="arrow.left" catalog="system" width="128" height="95"/>
-        <image name="envelope" catalog="system" width="32" height="32"/>
-        <image name="lock" catalog="system" width="32" height="32"/>
+        <image name="envelope" catalog="system" width="128" height="93"/>
+        <image name="lock" catalog="system" width="125" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

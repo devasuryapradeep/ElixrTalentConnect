@@ -4,7 +4,7 @@
 //
 //  Created by Devasurya on 16/01/24.
 //
-
+import UIKit
 import Foundation
 
 /// Data model for Signup view controller.
@@ -41,9 +41,8 @@ extension DataModel {
         }
     }
     
-    
-    var icon :String {
-        switch self {
+    var icon : String {
+        switch self{
         case .fullName:
             return "person"
         case .emailAdress:
@@ -51,7 +50,7 @@ extension DataModel {
         case .password:
             return "lock"
         case .confirmPassword:
-            return "lock "
+            return "lock"
         }
     }
     
@@ -71,10 +70,4 @@ extension DataModel {
       
     }
     
-//func dataRendering(){
-//    let individualData:[DataModel] = [.fullName,.emailAdress,.password,.confirmPassword]
-//    let itemData = individualData[IndexPath.row]
-//   let tcell = ProfileDisplay()
-//    tcell.userName.text = individualData.fullName
-//    return tcell
-//}
+

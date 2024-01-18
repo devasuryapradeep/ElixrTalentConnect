@@ -11,6 +11,7 @@ class SignUpViewController: UIViewController {
     
     /// Referencing Outlets.
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var SignUpTableview: UITableView!
     @IBOutlet weak var promptSignup: UILabel!
     
     /// Variable Declaration.
@@ -29,6 +30,13 @@ class SignUpViewController: UIViewController {
         self.view.endEditing(true)
         
     }
+    
+    
+    @IBAction func SignUpTapped(_ sender: Any) {
+      authentication()
+    }
+    
+    
     
     ///@IBAction to set up return button to the rootview controller.
     /// - Parameter sender: <#sender description#>
@@ -61,6 +69,69 @@ class SignUpViewController: UIViewController {
             navigationController?.pushViewController(rootView, animated: true)
         }
     }
+    
+    func authentication(){
+        print("alert happens")
+        guard let fullNameCell = SignUpTableview.cellForRow(at: IndexPath(row: cellTypes.firstIndex(of: .fullName) ?? 0, section: 0)) as? ProfileDisplay else {
+            return
+        }
+        
+        if let fullName = fullNameCell.userName.text, fullName.isEmpty {
+            showAlert(message: "Please enter your full name.")
+            return
+        }
+        
+        guard let emailCell = SignUpTableview.cellForRow(at: IndexPath(row: cellTypes.firstIndex(of: .emailAdress) ?? 0, section: 0)) as? ProfileDisplay else {
+            return
+        }
+        
+        if let email = emailCell.userName.text,
+           !email.contains("@") || !email.contains(".") {
+            showAlert(message: "Please enter a valid email address.")
+            return
+        }
+        
+        guard let passwordCell = SignUpTableview.cellForRow(at: IndexPath(row: cellTypes.firstIndex(of: .password) ?? 0, section: 0)) as? ProfileDisplay,
+              let confirmPasswordCell = SignUpTableview.cellForRow(at: IndexPath(row: cellTypes.firstIndex(of: .confirmPassword) ?? 0, section: 0)) as? ProfileDisplay else {
+            return
+        }
+        
+        let password = passwordCell.userName.text ?? ""
+        let confirmPassword = confirmPasswordCell.userName.text ?? ""
+        
+        if password.isEmpty || confirmPassword.isEmpty {
+            showAlert(message: "Password fields cannot be empty.")
+            return
+        }
+        
+        let containsAlphabetic = password.contains { $0.isLetter }
+        let containsNumeric = password.contains { $0.isNumber }
+        
+        if !containsAlphabetic || !containsNumeric {
+            showAlert(message: "Password should contain both alphabetic and numeric characters.")
+            return
+        }
+        
+        if password.count < 8 {
+            showAlert(message: "Password should be at least 8 characters long.")
+            return
+        }
+        
+        if password != confirmPassword {
+            showAlert(message: "Passwords do not match.")
+            return
+        }
+        navigationController?.popViewController(animated: true)
+    }
+    
+    func showAlert(message:String){
+        let ok = UIAlertAction(title: "OK", style: .default)
+        let alertOnValidation = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        alertOnValidation.addAction(ok)
+        present(alertOnValidation, animated: true)
+        
+    }
+    
 }
 
 
