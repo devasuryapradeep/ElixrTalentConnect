@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// SignUpViewController - is the view through which user can add their user Credentials.
 class SignUpViewController: UIViewController {
     
     /// Referencing Outlets.
@@ -31,15 +32,16 @@ class SignUpViewController: UIViewController {
         
     }
     
-    
-    @IBAction func SignUpTapped(_ sender: Any) {
-      authentication()
+    /// SignIn actiion
+    /// - Parameter sender: UIButton
+    @IBAction func SignUpTapped(_ sender: UIButton) {
+      authenticationOnSignup()
     }
     
     
     
     ///@IBAction to set up return button to the rootview controller.
-    /// - Parameter sender: <#sender description#>
+    /// - Parameter sender: UIButton
     @IBAction func returnAction(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
     }
@@ -70,8 +72,9 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    func authentication(){
-        print("alert happens")
+    /// Function to navigate on validating some crirteria on the text fields.
+    func authenticationOnSignup(){
+      //  print("alert happens")
         guard let fullNameCell = SignUpTableview.cellForRow(at: IndexPath(row: cellTypes.firstIndex(of: .fullName) ?? 0, section: 0)) as? ProfileDisplay else {
             return
         }
@@ -95,7 +98,8 @@ class SignUpViewController: UIViewController {
               let confirmPasswordCell = SignUpTableview.cellForRow(at: IndexPath(row: cellTypes.firstIndex(of: .confirmPassword) ?? 0, section: 0)) as? ProfileDisplay else {
             return
         }
-        
+        confirmPasswordCell.privacyButton.setImage(UIImage(systemName: "eye"), for: .highlighted)
+        confirmPasswordCell.privacyButton.isHidden = false
         let password = passwordCell.userName.text ?? ""
         let confirmPassword = confirmPasswordCell.userName.text ?? ""
         
@@ -124,6 +128,8 @@ class SignUpViewController: UIViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    /// showAlert
+    /// - Parameter message: This is the fuction responsible to the alert on validating the criterias.
     func showAlert(message:String){
         let ok = UIAlertAction(title: "OK", style: .default)
         let alertOnValidation = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
