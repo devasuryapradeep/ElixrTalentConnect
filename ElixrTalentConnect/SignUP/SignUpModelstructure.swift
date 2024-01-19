@@ -28,7 +28,7 @@ extension DataModel {
             return "CONFIRM PASSWORD"
         }
     }
-    var textTitle : String{
+    var placeHolder : String{
         switch self {
         case .fullName:
             return "Enter your user name."
@@ -54,20 +54,18 @@ extension DataModel {
         }
     }
     
-        var isVisible:Bool {
-            switch self {
-            case .fullName:
-                return false
-            case .emailAdress:
-                return false
-            case .password:
-                return true
-            case .confirmPassword:
-                return  true
-                
-            }
+    var isVisible:Bool {
+        switch self {
+        case .fullName:
+            return false
+        case .emailAdress:
+            return false
+        case .password:
+            return true
+        case .confirmPassword:
+            return  true
+            
         }
-      
     }
     
-
+}

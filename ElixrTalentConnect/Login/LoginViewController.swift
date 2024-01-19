@@ -159,6 +159,4 @@ class LoginViewController: UIViewController {
             present(alertMessage, animated: true)
 
         }
-
-    
 }

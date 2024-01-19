@@ -7,7 +7,8 @@
 
 import UIKit
 
-class ProfileDisplay: UITableViewCell {
+/// TableView cell for signuPtable
+class ProfileDisplayCell: UITableViewCell {
     
     /// Referencing Outlets.
     @IBOutlet weak var privacyButton: UIButton!
@@ -20,11 +21,16 @@ class ProfileDisplay: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
-
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        
         // Configure the view for the selected state
     }
-
+    func configure(with dataItem :DataModel){
+        userNametitle.text = dataItem.title
+        userName.placeholder = dataItem.placeHolder
+        profileImage.image = UIImage(systemName: dataItem.icon)
+        
+    }
 }
