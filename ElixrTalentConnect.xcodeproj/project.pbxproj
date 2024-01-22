@@ -30,7 +30,7 @@
 		5AA4B1412B54555A009E469D /* ProfileDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */; };
 		5AB565422B55787E00B97941 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565412B55787E00B97941 /* LoginModel.swift */; };
 		5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565442B562E9A00B97941 /* LoginViewModel.swift */; };
-		5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */; };
+		5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */; };
 		5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */; };
 		5AF49FC22B5D03D700893719 /* JobDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */; };
 		5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */; };
@@ -80,7 +80,7 @@
 		5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplayCell.swift; sourceTree = "<group>"; };
 		5AB565412B55787E00B97941 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		5AB565442B562E9A00B97941 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SfSymbolSetup.swift; sourceTree = "<group>"; };
+		5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDisplayTable+Extn.swift"; sourceTree = "<group>"; };
 		5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDisplayTableViewCell.swift; sourceTree = "<group>"; };
 		5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModal.swift; sourceTree = "<group>"; };
@@ -216,7 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */,
-				5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */,
+				5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */,
 				5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */,
 				5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */,
 			);
@@ -430,7 +430,7 @@
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,
 				5A4B7BBD2B56DDB100BF8777 /* SignUpModelstructure.swift in Sources */,
 				5AA0FDB22B5D6D2F008B8D31 /* HomeViewModal.swift in Sources */,
-				5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */,
+				5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
 				5A2801CD2B56F02B00AD9800 /* UIButtonSetup.swift in Sources */,
 				5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */,

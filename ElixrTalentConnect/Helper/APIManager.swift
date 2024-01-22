@@ -11,7 +11,7 @@ import UIKit
 final class APIManager{
     static let shared  = APIManager()
     private init(){}
-    typealias Handler = (Result<[Jobs],DataError>)->Void
+    typealias Handler = (Result<[Jobs],DataError>) -> Void
     func fetchJobs (completion:@escaping Handler) {
         guard let url = URL(string: "http://localhost:9001/elixr/jobs")  else{
             return
@@ -31,7 +31,7 @@ final class APIManager{
             }
             do{
                 let product = try JSONDecoder().decode(JobsResponse.self, from: data)
-                completion(.success(product.jobs!))
+                completion(.success(product.jobs))
                 
             }
             catch{

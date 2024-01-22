@@ -8,14 +8,14 @@ import UIKit
 import Foundation
 
 /// Data model for Signup view controller.
-enum DataModel {
+enum SignupDataModel {
     case fullName
     case emailAdress
     case password
     case confirmPassword
 }
 
-extension DataModel {
+extension SignupDataModel {
     var title: String {
         switch self {
         case .fullName:

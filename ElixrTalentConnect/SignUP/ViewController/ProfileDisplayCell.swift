@@ -26,7 +26,7 @@ class ProfileDisplayCell: UITableViewCell {
         
         // Configure the view for the selected state
     }
-    func configure(with dataItem :DataModel){
+    func configure(with dataItem :SignupDataModel){
         userNametitle.text = dataItem.title
         userName.placeholder = dataItem.placeHolder
         profileImage.image = UIImage(systemName: dataItem.icon)

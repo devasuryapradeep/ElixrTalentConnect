@@ -33,28 +33,27 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         viewModel = LoginViewModel()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        
+        emailField.resignFirstResponder()
+        passwordField.resignFirstResponder()
     }
     
     /// SignIntapped is the IBaction of the button "signInButton", which trigers alert actions,validation
     /// - Parameter sender: UIbutton named "signInButton".
-    @IBAction func SignInTapped(_ sender: UIButton){
+    @IBAction func signInTapped(_ sender: UIButton){
         let loginModel = UserModel(userName: emailField.text , passwordValue:passwordField.text)
         let validationResult = viewModel.validateCredentials(model: loginModel)
-        
         if validationResult.isValid {
             viewModel.authenticateWithBiometrics { [weak self] (success, error) in
                 if success {
                     self!.navigateToHome()
-                    
                 } else {
                     if let error = error {
-                        self!.showAlert(message: "Biometric authentication failed: \(error.localizedDescription)")
+                        self!.alertOnEmptyFields(message: "Biometric authentication failed: \(error.localizedDescription)")
                     }
                 }
             }
         } else {
-            showAlert(message: validationResult.message ?? "Invalid credentials.")
+            alertOnEmptyFields(message: validationResult.message ?? "Invalid credentials.")
         }
     }
         
@@ -70,9 +69,8 @@ class LoginViewController: UIViewController {
             let signInGesture = UITapGestureRecognizer(target: self, action:#selector(signUpAction(gesture: ) ))
             signInPromptLabel.isUserInteractionEnabled = true
             signInPromptLabel.addGestureRecognizer(signInGesture)
-            
         }
-        
+    
         /// Function to setup SignUp action using gesture
         /// - Parameter gesture: Specific part in the UIlabel where tap gesture is added.
         @objc func signUpAction(gesture:UITapGestureRecognizer) {
@@ -108,7 +106,7 @@ class LoginViewController: UIViewController {
         
         /// Function  to perform  navigation to Signup viewcontroller.
         func tapSignup() {
-            guard   let homeVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "LoginViewController") as? LoginViewController else{
+            guard let homeVc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController else{
                 return
             }
             navigationController?.pushViewController(homeVc, animated: true)
@@ -116,17 +114,18 @@ class LoginViewController: UIViewController {
         
         /// Function to  perform navigaion to HomeviewController.
         func navigateToHome() {
-            guard   let HomeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController") as? HomeViewController else {
+            guard   let HomeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? UITabBarController else {
                 return
             }
             self.navigationController?.pushViewController(HomeView, animated: true)
         }
-        
-        /// Function to display alert on empty .
-        func showAlert(message:String){
-            let ok = UIAlertAction(title: "OK", style: .default)
+    
+    /// Functions to display alert on empty fields.
+    /// - Parameter message: Message based on the vacancy of the specfic  fields.
+        func alertOnEmptyFields(message:String){
+            let okButton = UIAlertAction(title: "OK", style: .default)
             let emptyFields = UIAlertController(title: "Empty Fields", message:message , preferredStyle: .alert)
-            emptyFields.addAction(ok)
+            emptyFields.addAction(okButton)
             present(emptyFields, animated: true)
         }
         
@@ -148,7 +147,6 @@ class LoginViewController: UIViewController {
             else {
                 self.alertOnBiometric(with: "Authentication not available")
             }
-
         }
         /// Alert on Biometric Authentication.
         /// - Parameter message: Based on the authentication related message is prompted to the user.
@@ -159,4 +157,10 @@ class LoginViewController: UIViewController {
             present(alertMessage, animated: true)
 
         }
+}
+extension LoginViewController: UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+         textField.resignFirstResponder()
+        return true
+    }
 }

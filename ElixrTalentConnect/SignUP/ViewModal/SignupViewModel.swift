@@ -8,7 +8,7 @@
 
 import Foundation
 class SignUpViewModel {
-    var cellTypes: [DataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
+    var cellTypes: [SignupDataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
     
     func validateCredentials(fullName: String?, emailAddress: String?, password: String?, confirmPassword: String?) -> String? {
         guard let fullName = fullName, !fullName.isEmpty else {

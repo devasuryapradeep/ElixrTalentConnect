@@ -18,7 +18,7 @@ class SignUpViewController: UIViewController {
     /// Variable Declaration.
     var Dataheading :[String]?
     var firstCellPlaceholder:String?
-    let cellTypes: [DataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
+    let cellTypes: [SignupDataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
     let textToChangeColor = " Sign in."
     let userInfoPrompt = "Already have an account? Sign in."
     let viewModalInstance = SignUpViewModel()
@@ -105,7 +105,4 @@ class SignUpViewController: UIViewController {
         }
         navigationController?.pushViewController(homeview, animated: true)
     }
-    
-    
-    
 }

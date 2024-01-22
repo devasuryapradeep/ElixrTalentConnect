@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-extension HomeViewController:UITableViewDelegate,UITableViewDataSource {
+extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("arrayCount--->",viewModal.jobDetails.count)
