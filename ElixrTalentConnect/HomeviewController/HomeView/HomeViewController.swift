@@ -13,13 +13,16 @@ class HomeViewController: UIViewController {
     var viewModal = JobViewModal()
     
     /// Referencing Outlets.
+    @IBOutlet weak var customSearchbar: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var jobDisplayTableView: UITableView!
     
     /// View llife cycle
     override func viewDidLoad() {
+        customSearchbar.leftView = UIImageView(image: UIImage(systemName: "magnifyingglass"))
         super.viewDidLoad()
         getJobs()
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     /// get Jobs- This is to make  make View Controller connect with view Model and also responsible for updating the UI of the screen.

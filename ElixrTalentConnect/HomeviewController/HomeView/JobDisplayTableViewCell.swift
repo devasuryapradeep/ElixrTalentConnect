@@ -17,7 +17,7 @@ class JobDisplayTableViewCell: UITableViewCell {
     @IBOutlet weak var jobHeading: UILabel!
     
     /// Variable Declarattion
-    
+    var viewModalData = JobViewModal()
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -25,6 +25,13 @@ class JobDisplayTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+    }
+    
+    func cellData(with dataItem:Jobs){
+        jobHeading.text = dataItem.title
+        jobLocation.text = dataItem.location
+        jobdetails.text = dataItem.description
+        jobStatus.text = dataItem.status
     }
    
 }

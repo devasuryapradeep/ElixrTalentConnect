@@ -22,11 +22,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let jobItemCell = jobDisplayTableView.dequeueReusableCell(withIdentifier: "JobDisplayTableViewCell")as? JobDisplayTableViewCell else{
             return UITableViewCell()
         }
-        let jobs = viewModal.jobDetails[indexPath.row]
-        jobItemCell.jobHeading.text = jobs.department
-        jobItemCell.jobLocation .text = jobs.location
-        jobItemCell.jobdetails.text = jobs.description
-        jobItemCell.jobStatus.text = jobs.status
+        let jobsInfo = viewModal.jobDetails[indexPath.row]
+        jobItemCell.cellData(with: jobsInfo)
         return jobItemCell
     }
 }

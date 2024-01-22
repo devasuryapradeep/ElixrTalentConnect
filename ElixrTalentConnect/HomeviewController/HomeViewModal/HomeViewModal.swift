@@ -9,7 +9,7 @@ import Foundation
 
 final class JobViewModal{
     var  jobDetails :[Jobs] = []
-    
+//    var mainDataSource :[Jobs] = []
     /// get job list from api
     /// - Parameter completion: completion return true or false
     func getJobsList(completion: @escaping (Bool) -> ()) {
