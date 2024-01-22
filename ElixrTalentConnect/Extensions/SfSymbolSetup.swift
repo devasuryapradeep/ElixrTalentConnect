@@ -27,7 +27,13 @@ import UIKit
                  return self.placeHolderColor
              }
              set {
-                 self.attributedPlaceholder = NSAttributedString(string:self.placeholder != nil ? self.placeholder! : "", attributes:[NSAttributedString.Key.foregroundColor: newValue!])
+                 if let newValue = newValue{
+                     self.attributedPlaceholder = NSAttributedString(string: (self.placeHolderColor ?? "" as NSObject) as! String,attributes: [NSAttributedString.Key.foregroundColor:newValue])
+                 }
+                 else
+                 {
+                     self.attributedPlaceholder = NSAttributedString(string: (self.placeHolderColor ?? "" as NSObject) as! String,attributes: [NSAttributedString.Key.foregroundColor: UIColor.gray])
+                 }
              }
          }
     @IBInspectable var leftPadding: CGFloat = 0

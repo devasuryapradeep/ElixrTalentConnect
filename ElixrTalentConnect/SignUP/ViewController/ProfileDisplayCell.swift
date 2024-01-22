@@ -7,7 +7,6 @@
 
 import UIKit
 
-/// TableView cell for signuPtable
 class ProfileDisplayCell: UITableViewCell {
     
     /// Referencing Outlets.

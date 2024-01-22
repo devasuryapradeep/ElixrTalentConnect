@@ -22,6 +22,8 @@
 		5A9E3E522B4E5F2800E2924A /* ElixrTalentConnectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E512B4E5F2800E2924A /* ElixrTalentConnectUITests.swift */; };
 		5A9E3E542B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E532B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift */; };
 		5A9E3E612B4E60DA00E2924A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E602B4E60DA00E2924A /* Assets.xcassets */; };
+		5AA0FDB22B5D6D2F008B8D31 /* HomeViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA0FDB12B5D6D2F008B8D31 /* HomeViewModal.swift */; };
+		5AA0FDB52B5D70F7008B8D31 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA0FDB42B5D70F7008B8D31 /* APIManager.swift */; };
 		5AA4B1352B53AAEB009E469D /* TapGestureSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */; };
 		5AA4B1372B53BB4C009E469D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1362B53BB4C009E469D /* HomeViewController.swift */; };
 		5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */; };
@@ -29,6 +31,9 @@
 		5AB565422B55787E00B97941 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565412B55787E00B97941 /* LoginModel.swift */; };
 		5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565442B562E9A00B97941 /* LoginViewModel.swift */; };
 		5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */; };
+		5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */; };
+		5AF49FC22B5D03D700893719 /* JobDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */; };
+		5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +72,8 @@
 		5A9E3E512B4E5F2800E2924A /* ElixrTalentConnectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixrTalentConnectUITests.swift; sourceTree = "<group>"; };
 		5A9E3E532B4E5F2800E2924A /* ElixrTalentConnectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElixrTalentConnectUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5A9E3E602B4E60DA00E2924A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ElixrTalentConnect/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		5AA0FDB12B5D6D2F008B8D31 /* HomeViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModal.swift; sourceTree = "<group>"; };
+		5AA0FDB42B5D70F7008B8D31 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureSetUp.swift; sourceTree = "<group>"; };
 		5AA4B1362B53BB4C009E469D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSetup.swift; sourceTree = "<group>"; };
@@ -74,6 +81,9 @@
 		5AB565412B55787E00B97941 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		5AB565442B562E9A00B97941 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5AC636982B50FA7E00EA45E0 /* SfSymbolSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SfSymbolSetup.swift; sourceTree = "<group>"; };
+		5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDisplayTable+Extn.swift"; sourceTree = "<group>"; };
+		5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDisplayTableViewCell.swift; sourceTree = "<group>"; };
+		5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModal.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,11 +114,9 @@
 		5A12A7F82B54EEF800A0BD02 /* SignUP */ = {
 			isa = PBXGroup;
 			children = (
-				5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */,
-				5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */,
-				5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */,
-				5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */,
-				5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */,
+				5AF49FC52B5D0CDA00893719 /* ViewController */,
+				5AF49FC42B5D0CC300893719 /* ViewModal */,
+				5AF49FC32B5D0CAF00893719 /* Modal */,
 			);
 			path = SignUP;
 			sourceTree = "<group>";
@@ -116,9 +124,9 @@
 		5A977ECE2B4E88350094286B /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				5A977ECF2B4E88350094286B /* LoginViewController.swift */,
-				5AB565412B55787E00B97941 /* LoginModel.swift */,
-				5AB565442B562E9A00B97941 /* LoginViewModel.swift */,
+				5AF49FC82B5D0D1700893719 /* ViewController */,
+				5AF49FC72B5D0D0000893719 /* ViewModal */,
+				5AF49FC62B5D0CF700893719 /* Modal */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -146,6 +154,7 @@
 		5A9E3E2C2B4E5F2800E2924A /* ElixrTalentConnect */ = {
 			isa = PBXGroup;
 			children = (
+				5AA0FDB32B5D70CD008B8D31 /* Helper */,
 				5AB565432B562E7100B97941 /* HomeviewController */,
 				5A12A7F82B54EEF800A0BD02 /* SignUP */,
 				5AA4B1332B53AABB009E469D /* Extensions */,
@@ -177,6 +186,32 @@
 			path = ElixrTalentConnectUITests;
 			sourceTree = "<group>";
 		};
+		5AA0FDAF2B5D6CF6008B8D31 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				5AA4B1362B53BB4C009E469D /* HomeViewController.swift */,
+				5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */,
+				5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		5AA0FDB02B5D6D13008B8D31 /* HomeViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				5AA0FDB12B5D6D2F008B8D31 /* HomeViewModal.swift */,
+			);
+			path = HomeViewModal;
+			sourceTree = "<group>";
+		};
+		5AA0FDB32B5D70CD008B8D31 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				5AA0FDB42B5D70F7008B8D31 /* APIManager.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
 		5AA4B1332B53AABB009E469D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
@@ -191,9 +226,69 @@
 		5AB565432B562E7100B97941 /* HomeviewController */ = {
 			isa = PBXGroup;
 			children = (
-				5AA4B1362B53BB4C009E469D /* HomeViewController.swift */,
+				5AA0FDB02B5D6D13008B8D31 /* HomeViewModal */,
+				5AA0FDAF2B5D6CF6008B8D31 /* HomeView */,
+				5AF49FC92B5D17DF00893719 /* Model */,
 			);
 			path = HomeviewController;
+			sourceTree = "<group>";
+		};
+		5AF49FC32B5D0CAF00893719 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		5AF49FC42B5D0CC300893719 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		5AF49FC52B5D0CDA00893719 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */,
+				5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */,
+				5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5AF49FC62B5D0CF700893719 /* Modal */ = {
+			isa = PBXGroup;
+			children = (
+				5AB565412B55787E00B97941 /* LoginModel.swift */,
+			);
+			path = Modal;
+			sourceTree = "<group>";
+		};
+		5AF49FC72B5D0D0000893719 /* ViewModal */ = {
+			isa = PBXGroup;
+			children = (
+				5AB565442B562E9A00B97941 /* LoginViewModel.swift */,
+			);
+			path = ViewModal;
+			sourceTree = "<group>";
+		};
+		5AF49FC82B5D0D1700893719 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5A977ECF2B4E88350094286B /* LoginViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		5AF49FC92B5D17DF00893719 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -328,18 +423,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */,
 				5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */,
 				5AB565422B55787E00B97941 /* LoginModel.swift in Sources */,
 				5A3ACBAD2B5A896500B3F9F8 /* SignupViewModel.swift in Sources */,
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,
 				5A4B7BBD2B56DDB100BF8777 /* SignUpModelstructure.swift in Sources */,
+				5AA0FDB22B5D6D2F008B8D31 /* HomeViewModal.swift in Sources */,
 				5AC636992B51013C00EA45E0 /* SfSymbolSetup.swift in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
 				5A2801CD2B56F02B00AD9800 /* UIButtonSetup.swift in Sources */,
 				5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */,
 				5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */,
+				5AA0FDB52B5D70F7008B8D31 /* APIManager.swift in Sources */,
 				5AA4B1372B53BB4C009E469D /* HomeViewController.swift in Sources */,
+				5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */,
 				5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */,
+				5AF49FC22B5D03D700893719 /* JobDisplayTableViewCell.swift in Sources */,
 				5AA4B1412B54555A009E469D /* ProfileDisplayCell.swift in Sources */,
 				5AA4B1352B53AAEB009E469D /* TapGestureSetUp.swift in Sources */,
 				5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */,

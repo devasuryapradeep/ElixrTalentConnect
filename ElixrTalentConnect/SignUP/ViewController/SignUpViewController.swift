@@ -22,7 +22,6 @@ class SignUpViewController: UIViewController {
     let textToChangeColor = " Sign in."
     let userInfoPrompt = "Already have an account? Sign in."
     let viewModalInstance = SignUpViewModel()
-    
     /// View life Cycle.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,9 @@ class SignUpViewController: UIViewController {
     @IBAction func SignUpTapped(_ sender: UIButton) {
         authenticationOnSignup()
     }
-
+    
+    
+    
     ///@IBAction to set up return button to the rootview controller.
     /// - Parameter sender: UIButton
     @IBAction func returnAction(_ sender: UIButton) {
@@ -57,7 +58,7 @@ class SignUpViewController: UIViewController {
     }
     
     /// Action of tap gesture.
-    /// - Parameter gesture: UItapgesture.
+    /// - Parameter gesture: UItapgesture
     @objc func  signUpAction(gesture: UITapGestureRecognizer ){
         let termsRange = (userInfoPrompt as NSString).range(of: self.textToChangeColor)
         promptSignup.isUserInteractionEnabled = true
@@ -71,7 +72,7 @@ class SignUpViewController: UIViewController {
         }
     }
     
-    /// Function to navigate on validating some crirteria on the text fields, setting a reference from viewModal.
+    /// Function to navigate on validating some crirteria on the text fields.
     func authenticationOnSignup(){
         let fullNameCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .fullName) ?? 0, section: 0)) as? ProfileDisplayCell
         let emailCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .emailAdress) ?? 0, section: 0)) as? ProfileDisplayCell
@@ -96,13 +97,15 @@ class SignUpViewController: UIViewController {
         let alertOnValidation = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         alertOnValidation.addAction(ok)
         present(alertOnValidation, animated: true)
+        
     }
-    
-    /// Function to navigate  to Home view Controller.
     func navigateToHome(){
         guard  let homeview = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "HomeViewController")as? HomeViewController else {
             return
         }
         navigationController?.pushViewController(homeview, animated: true)
     }
+    
+    
+    
 }
