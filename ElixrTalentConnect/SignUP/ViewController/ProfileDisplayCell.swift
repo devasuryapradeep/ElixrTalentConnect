@@ -29,12 +29,8 @@ class ProfileDisplayCell: UITableViewCell {
     func configure(with dataItem :SignupDataModel){
         userNametitle.text = dataItem.title
         userName.placeholder = dataItem.placeHolder
-        if dataItem == .password {
-            privacyButton.isHidden = !userName.isEditing
-            privacyButton.setImage(UIImage(systemName: "eye"), for: .highlighted)
-        } else {
-            privacyButton.isHidden = true
-            privacyButton.setImage(UIImage(systemName: "eye.slash"), for: .highlighted)
+        if dataItem.isVisible{
+            privacyButton.setImage(UIImage(systemName: "eye"), for: .normal)
         }
         profileImage.image = UIImage(systemName: dataItem.icon)
     }

@@ -45,20 +45,18 @@ class SignUpViewController: UIViewController {
     /// Function SignIn- to perform sign in functionality.
     /// - Parameter sender: UIButton.
     @IBAction func signInTapped(_ sender: UIButton) {
-        performSegue(withIdentifier: "SignUpViewController", sender: UIButton.self)
+        self.navigationController?.popViewController(animated: true)
     }
     
     /// Function to navigate on validating some crirteria on the text fields.
     func authenticationOnSignup(){
         let fullNameCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .fullName) ?? 0, section: 0)) as? ProfileDisplayCell
         let emailCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .emailAdress) ?? 0, section: 0)) as? ProfileDisplayCell
-        guard let passwordCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .password) ?? 0, section: 0)) as? ProfileDisplayCell else{
-            return
-        }
+         let passwordCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .password) ?? 0, section: 0)) as? ProfileDisplayCell
         let confirmPasswordCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of:.confirmPassword) ?? 0, section: 0)) as? ProfileDisplayCell
             let fullName = fullNameCell?.userName.text
             let email = emailCell?.userName.text
-            let password = passwordCell.userName.text
+        let password = passwordCell!.userName.text
             let confirmPassword = confirmPasswordCell?.userName.text
             if let errorMessage = viewModalInstance.validateCredentials(fullName: fullName, emailAddress: email, password: password, confirmPassword: confirmPassword) {
                 showAlert(message: errorMessage)
@@ -75,6 +73,8 @@ class SignUpViewController: UIViewController {
             alertOnValidation.addAction(ok)
             present(alertOnValidation, animated: true)
         }
-        }
+    
+    
+}
     
 

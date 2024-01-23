@@ -12,7 +12,6 @@ import LocalAuthentication
 class LoginViewController: UIViewController {
     
     /// Variables and constants  declaration
-
     private var viewModel : LoginViewModel!
     
     /// Referencing  Outlets.

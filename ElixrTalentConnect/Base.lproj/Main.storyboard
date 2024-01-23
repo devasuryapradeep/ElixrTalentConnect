@@ -476,31 +476,83 @@
             </objects>
             <point key="canvasLocation" x="2498.4732824427479" y="0.0"/>
         </scene>
-        <!--View Controller-->
+        <!--Popup View Controller-->
         <scene sceneID="SHm-jo-QJ1">
             <objects>
-                <viewController id="dDD-T9-xw0" sceneMemberID="viewController">
+                <viewController id="dDD-T9-xw0" customClass="PopupViewController" customModule="ElixrTalentConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lvT-1Q-fSo">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="4.Home Screen" translatesAutoresizingMaskIntoConstraints="NO" id="RbR-pi-owb">
-                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
-                            </imageView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="h0s-QD-WZB">
+                                <rect key="frame" x="0.0" y="59" width="393" height="421"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="IiZ-lM-4QT" customClass="UIViewSetUp" customModule="ElixrTalentConnect" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="166" width="353" height="89.333333333333343"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ajJ-ok-E8M">
+                                                <rect key="frame" x="15.000000000000004" y="9.9999999999999982" width="41.333333333333343" height="20.333333333333329"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PRp-yy-cWn">
+                                                <rect key="frame" x="15.000000000000004" y="40.333333333333336" width="37.333333333333343" height="18"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eUU-fs-2zn">
+                                                <rect key="frame" x="15" y="68.333333333333329" width="31" height="14.333333333333329"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sc4-Ep-UTe">
+                                                <rect key="frame" x="10" y="41.666666666666664" width="31" height="15.333333333333336"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.98039215800000001" green="0.88235294819999999" blue="0.83137255909999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                                <color key="textColor" red="0.57414853570000002" green="0.57416242360000003" blue="0.57415497299999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" red="0.090196087960000004" green="0.1019607931" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pfQ-Fl-yLp">
+                                                <rect key="frame" x="304" y="10" width="25" height="25"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
+                                                    <color key="baseForegroundColor" red="0.090196087960000004" green="0.1019607931" blue="0.2588235438" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </buttonConfiguration>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="kbY-YL-EF1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="kbY-YL-EF1" firstAttribute="trailing" secondItem="RbR-pi-owb" secondAttribute="trailing" id="Blp-XG-3bZ"/>
-                            <constraint firstItem="RbR-pi-owb" firstAttribute="top" secondItem="kbY-YL-EF1" secondAttribute="top" id="DFd-tk-73c"/>
-                            <constraint firstItem="RbR-pi-owb" firstAttribute="leading" secondItem="kbY-YL-EF1" secondAttribute="leading" id="aH3-DI-ERr"/>
-                            <constraint firstItem="kbY-YL-EF1" firstAttribute="bottom" secondItem="RbR-pi-owb" secondAttribute="bottom" id="ejB-V2-cgS"/>
-                        </constraints>
                     </view>
+                    <size key="freeformSize" width="393" height="480"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yud-om-LSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5526" y="-325"/>
+            <point key="canvasLocation" x="5523" y="-237"/>
         </scene>
         <!--Profile-->
         <scene sceneID="1YL-gB-ORq">
@@ -797,10 +849,10 @@
             </objects>
             <point key="canvasLocation" x="4849.6183206106871" y="-351.40845070422534"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Controller-->
         <scene sceneID="LQe-qH-f0F">
             <objects>
-                <tabBarController storyboardIdentifier="TabBarViewController" id="Qeq-hP-DGF" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarViewController" id="Qeq-hP-DGF" customClass="MainTabController" customModule="ElixrTalentConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="MVS-bg-Zxf">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -847,22 +899,21 @@
         </designable>
     </designables>
     <resources>
-        <image name="4.Home Screen" width="430" height="932"/>
         <image name="LoginBg" width="426" height="406"/>
         <image name="Logo" width="84.666664123535156" height="55.666667938232422"/>
-        <image name="arrow.left" catalog="system" width="128" height="95"/>
-        <image name="bell" catalog="system" width="125" height="128"/>
-        <image name="clipboard" catalog="system" width="103" height="128"/>
-        <image name="clipboard.fill" catalog="system" width="103" height="128"/>
-        <image name="envelope" catalog="system" width="128" height="93"/>
-        <image name="heart" catalog="system" width="128" height="107"/>
-        <image name="house" catalog="system" width="128" height="104"/>
-        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="arrow.left" catalog="system" width="32" height="32"/>
+        <image name="bell" catalog="system" width="32" height="32"/>
+        <image name="clipboard" catalog="system" width="32" height="32"/>
+        <image name="clipboard.fill" catalog="system" width="32" height="32"/>
+        <image name="envelope" catalog="system" width="32" height="32"/>
+        <image name="heart" catalog="system" width="32" height="32"/>
+        <image name="house" catalog="system" width="32" height="32"/>
+        <image name="house.fill" catalog="system" width="32" height="32"/>
         <image name="icons8-filter-40" width="40" height="40"/>
-        <image name="list.dash" catalog="system" width="128" height="85"/>
-        <image name="lock" catalog="system" width="125" height="128"/>
-        <image name="person" catalog="system" width="128" height="121"/>
-        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="list.dash" catalog="system" width="32" height="32"/>
+        <image name="lock" catalog="system" width="32" height="32"/>
+        <image name="person" catalog="system" width="32" height="32"/>
+        <image name="person.fill" catalog="system" width="32" height="32"/>
         <systemColor name="secondaryLabelColor">
             <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -34,6 +34,7 @@
 		5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */; };
 		5AF49FC22B5D03D700893719 /* JobDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */; };
 		5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */; };
+		5AF9C89F2B5F7A1E007A0D54 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +85,7 @@
 		5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDisplayTable+Extn.swift"; sourceTree = "<group>"; };
 		5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDisplayTableViewCell.swift; sourceTree = "<group>"; };
 		5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModal.swift; sourceTree = "<group>"; };
+		5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = ElixrTalentConnect/MainTabController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -226,6 +228,7 @@
 		5AB565432B562E7100B97941 /* HomeviewController */ = {
 			isa = PBXGroup;
 			children = (
+				5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */,
 				5AA0FDB02B5D6D13008B8D31 /* HomeViewModal */,
 				5AA0FDAF2B5D6CF6008B8D31 /* HomeView */,
 				5AF49FC92B5D17DF00893719 /* Model */,
@@ -252,9 +255,9 @@
 		5AF49FC52B5D0CDA00893719 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */,
 				5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */,
 				5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */,
-				5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -425,6 +428,7 @@
 			files = (
 				5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */,
 				5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */,
+				5AF9C89F2B5F7A1E007A0D54 /* MainTabController.swift in Sources */,
 				5AB565422B55787E00B97941 /* LoginModel.swift in Sources */,
 				5A3ACBAD2B5A896500B3F9F8 /* SignupViewModel.swift in Sources */,
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,

@@ -47,6 +47,7 @@ class HomeViewController: UIViewController {
             let OkButton = UIAlertAction(title: "OK", style: .default)
             let alertDisplay = UIAlertController(title: "Alert", message: "Failure while calling API", preferredStyle: .alert)
             alertDisplay.addAction(OkButton)
+            present(alertDisplay, animated: true)
         }
     }
 }

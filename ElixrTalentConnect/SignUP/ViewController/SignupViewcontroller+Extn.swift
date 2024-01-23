@@ -24,7 +24,6 @@ extension SignUpViewController:UITableViewDelegate,UITableViewDataSource{
         }
         let dataCell = viewModalInstance.cellTypes[indexPath.row]
         profileCell.configure(with: dataCell)
-        
         return profileCell
     }
     
@@ -37,6 +36,6 @@ extension SignUpViewController:UITableViewDelegate,UITableViewDataSource{
         return 80
     }
     
-    
+   
 }
 
