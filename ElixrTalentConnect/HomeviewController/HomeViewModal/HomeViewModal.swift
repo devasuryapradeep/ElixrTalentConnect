@@ -9,7 +9,7 @@ import Foundation
 
 final class JobViewModal{
     var  jobDetails :[Jobs] = []
-//    var mainDataSource :[Jobs] = []
+    var mainDataSource :[Jobs] = []
     /// get job list from api
     /// - Parameter completion: completion return true or false
     func getJobsList(completion: @escaping (Bool) -> ()) {
@@ -25,4 +25,14 @@ final class JobViewModal{
             }
         }
     }
-}
+//    func applySearch(_ text: String) {
+//        jobs =  mainDataSource.filter { job in
+//            if job.title.contains(text) {
+//                return true
+//            } else if job.location.contains(text) {
+//                return true
+//            }
+//            
+//            return false
+//        }
+    }

@@ -26,4 +26,10 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         jobItemCell.cellData(with: jobsInfo)
         return jobItemCell
     }
+    
 }
+
+
+
+
+

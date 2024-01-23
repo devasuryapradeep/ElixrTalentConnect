@@ -11,7 +11,7 @@ class HomeViewController: UIViewController {
     
     /// Variable and constant Declarations.
     var viewModal = JobViewModal()
-    
+    var isOn:Bool = false
     /// Referencing Outlets.
     @IBOutlet weak var customSearchbar: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -49,5 +49,23 @@ class HomeViewController: UIViewController {
             alertDisplay.addAction(OkButton)
             present(alertDisplay, animated: true)
         }
+        
     }
 }
+extension HomeViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // Hide the keyboard
+        performSearch(with: customSearchbar.text)
+        return true
+    }
+    
+    // Replace this method with your actual search logic
+    func performSearch(with searchTerm: String?) {
+        guard let searchTerm = searchTerm, !searchTerm.isEmpty else {
+            return
+        }
+        
+        
+    }
+}
+

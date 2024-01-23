@@ -16,10 +16,11 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var promptSignup: UILabel!
     
     /// Variable Declaration.
-    var Dataheading :[String]?
+    var dataheading :[String]?
     var firstCellPlaceholder:String?
     let cellTypes: [SignupDataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
     let viewModalInstance = SignUpViewModel()
+    var isOn : Bool = true
     
     /// View life Cycle.
     override func viewDidLoad() {
@@ -54,10 +55,10 @@ class SignUpViewController: UIViewController {
         let emailCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .emailAdress) ?? 0, section: 0)) as? ProfileDisplayCell
          let passwordCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .password) ?? 0, section: 0)) as? ProfileDisplayCell
         let confirmPasswordCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of:.confirmPassword) ?? 0, section: 0)) as? ProfileDisplayCell
-            let fullName = fullNameCell?.userName.text
-            let email = emailCell?.userName.text
-        let password = passwordCell!.userName.text
-            let confirmPassword = confirmPasswordCell?.userName.text
+            let fullName = fullNameCell?.userInput.text
+            let email = emailCell?.userInput.text
+        let password = passwordCell!.userInput.text
+            let confirmPassword = confirmPasswordCell?.userInput.text
             if let errorMessage = viewModalInstance.validateCredentials(fullName: fullName, emailAddress: email, password: password, confirmPassword: confirmPassword) {
                 showAlert(message: errorMessage)
                 
@@ -74,8 +75,6 @@ class SignUpViewController: UIViewController {
             alertOnValidation.addAction(ok)
             present(alertOnValidation, animated: true)
         }
-    
-    
 }
     
 

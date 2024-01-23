@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aYg-4O-Tqc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i4b-aB-ygC">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -369,8 +369,8 @@
                                                     <outlet property="privacyButton" destination="odX-KR-ZZh" id="tG1-5y-dSV"/>
                                                     <outlet property="profileImage" destination="SOQ-3C-Ipb" id="opc-3z-a7g"/>
                                                     <outlet property="profileView" destination="3j5-Zj-gZx" id="Apl-5W-Kfv"/>
-                                                    <outlet property="userName" destination="npV-Ir-Rrh" id="Yra-TC-3Jc"/>
-                                                    <outlet property="userNametitle" destination="ycu-MD-sJ2" id="Jdq-M2-aK3"/>
+                                                    <outlet property="userInput" destination="npV-Ir-Rrh" id="Yra-TC-3Jc"/>
+                                                    <outlet property="userText" destination="ycu-MD-sJ2" id="j7Y-bN-oLR"/>
                                                 </connections>
                                             </tableViewCell>
                                         </prototypes>
@@ -403,6 +403,9 @@
                                             </userDefinedRuntimeAttribute>
                                             <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
                                                 <real key="value" value="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.89411764709999997" green="0.46274509800000002" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
@@ -868,6 +871,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.043137259779999999" green="0.050980389119999997" blue="0.1294117719" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="barTintColor" red="0.074509806930000005" green="0.13333332540000001" blue="0.2941176593" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </tabBar>
                     <connections>
                         <segue destination="aYg-4O-Tqc" kind="relationship" relationship="viewControllers" id="p8J-eW-xUo"/>

@@ -85,7 +85,7 @@
 		5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDisplayTable+Extn.swift"; sourceTree = "<group>"; };
 		5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDisplayTableViewCell.swift; sourceTree = "<group>"; };
 		5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModal.swift; sourceTree = "<group>"; };
-		5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = ElixrTalentConnect/MainTabController.swift; sourceTree = SOURCE_ROOT; };
+		5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = ElixrTalentConnect/Helper/MainTabController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -209,6 +209,7 @@
 		5AA0FDB32B5D70CD008B8D31 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */,
 				5AA0FDB42B5D70F7008B8D31 /* APIManager.swift */,
 			);
 			path = Helper;
@@ -228,7 +229,6 @@
 		5AB565432B562E7100B97941 /* HomeviewController */ = {
 			isa = PBXGroup;
 			children = (
-				5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */,
 				5AA0FDB02B5D6D13008B8D31 /* HomeViewModal */,
 				5AA0FDAF2B5D6CF6008B8D31 /* HomeView */,
 				5AF49FC92B5D17DF00893719 /* Model */,
