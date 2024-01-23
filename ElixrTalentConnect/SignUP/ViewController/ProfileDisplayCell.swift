@@ -18,20 +18,31 @@ class ProfileDisplayCell: UITableViewCell {
     /// View life cycle.
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
-        // Configure the view for the selected state
-    }
+            }
     func configure(with dataItem :SignupDataModel){
         userNametitle.text = dataItem.title
         userName.placeholder = dataItem.placeHolder
         if dataItem.isVisible{
+            profileImage.image = UIImage(systemName: dataItem.icon)
+            userName.isSecureTextEntry = true
+            privacyButton.tintColor = UIColor.gray
             privacyButton.setImage(UIImage(systemName: "eye"), for: .normal)
+            privacyButton.addTarget(self, action: #selector(privacyButtonTapped), for: .touchUpInside)
+            privacyButton.isHidden = false
         }
-        profileImage.image = UIImage(systemName: dataItem.icon)
     }
-}
+        @objc func privacyButtonTapped () {
+            userName.isSecureTextEntry.toggle()
+            if   let imageName = userName.isSecureTextEntry ? "eye.slash" : "eye"{
+                privacyButton.setImage(UIImage(systemName: imageName),for:.normal)
+                privacyButton.tintColor = UIColor.gray
+                privacyButton.isHidden = false
+
+            }
+        }
+    }
+
