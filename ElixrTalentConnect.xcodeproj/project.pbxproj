@@ -31,6 +31,7 @@
 		5AB565422B55787E00B97941 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565412B55787E00B97941 /* LoginModel.swift */; };
 		5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565442B562E9A00B97941 /* LoginViewModel.swift */; };
 		5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */; };
+		5AD4C58C2B5FD5DF0017E5DC /* PopupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD4C58B2B5FD5DF0017E5DC /* PopupViewController.swift */; };
 		5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */; };
 		5AF49FC22B5D03D700893719 /* JobDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */; };
 		5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */; };
@@ -82,6 +83,7 @@
 		5AB565412B55787E00B97941 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		5AB565442B562E9A00B97941 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		5AD4C58B2B5FD5DF0017E5DC /* PopupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupViewController.swift; sourceTree = "<group>"; };
 		5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDisplayTable+Extn.swift"; sourceTree = "<group>"; };
 		5AF49FC12B5D03D700893719 /* JobDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDisplayTableViewCell.swift; sourceTree = "<group>"; };
 		5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModal.swift; sourceTree = "<group>"; };
@@ -156,6 +158,7 @@
 		5A9E3E2C2B4E5F2800E2924A /* ElixrTalentConnect */ = {
 			isa = PBXGroup;
 			children = (
+				5AD4C58B2B5FD5DF0017E5DC /* PopupViewController.swift */,
 				5AA0FDB32B5D70CD008B8D31 /* Helper */,
 				5AB565432B562E7100B97941 /* HomeviewController */,
 				5A12A7F82B54EEF800A0BD02 /* SignUP */,
@@ -437,6 +440,7 @@
 				5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
 				5A2801CD2B56F02B00AD9800 /* UIButtonSetup.swift in Sources */,
+				5AD4C58C2B5FD5DF0017E5DC /* PopupViewController.swift in Sources */,
 				5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */,
 				5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */,
 				5AA0FDB52B5D70F7008B8D31 /* APIManager.swift in Sources */,

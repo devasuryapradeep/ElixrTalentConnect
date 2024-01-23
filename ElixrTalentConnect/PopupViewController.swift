@@ -7,8 +7,15 @@
 
 import UIKit
 
+///PopupViewController - Pops up the result of  search function.
 class PopupViewController: UIViewController {
-
+    
+    /// Referencing Outlets
+    @IBOutlet weak var descriptionFetched: UILabel!
+    @IBOutlet weak var locationFetched: UILabel!
+    @IBOutlet weak var jobPosition: UILabel!
+    /// Variable declarations
+    var displayData:[Jobs] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 

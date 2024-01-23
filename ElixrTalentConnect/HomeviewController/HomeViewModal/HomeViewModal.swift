@@ -10,7 +10,9 @@ import Foundation
 final class JobViewModal{
     var  jobDetails :[Jobs] = []
     var mainDataSource :[Jobs] = []
-    /// get job list from api
+    var filterDataItem :[Jobs] = []
+    var searchedData : [Jobs]  = []
+     /// get job list from api
     /// - Parameter completion: completion return true or false
     func getJobsList(completion: @escaping (Bool) -> ()) {
         APIManager.shared.fetchJobs { response in
@@ -25,14 +27,11 @@ final class JobViewModal{
             }
         }
     }
-//    func applySearch(_ text: String) {
-//        jobs =  mainDataSource.filter { job in
-//            if job.title.contains(text) {
-//                return true
-//            } else if job.location.contains(text) {
-//                return true
-//            }
-//            
-//            return false
-//        }
+    func fiterData(with searchTerm :String){
+        filterDataItem = mainDataSource.filter({
+            Jobs in
+            return Jobs.title.lowercased().contains(searchTerm.lowercased())
+        })
     }
+    
+}

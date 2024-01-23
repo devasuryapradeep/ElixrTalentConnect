@@ -30,6 +30,7 @@ class ProfileDisplayCell: UITableViewCell {
         userText.text = dataItem.title
         userInput.placeholder = dataItem.placeHolder
         profileImage.image = UIImage(systemName: dataItem.icon)
+        profileImage.tintColor = UIColor(red: 228/255, green: 118/255, blue: 75/255, alpha: 1.0)
         if dataItem.isVisible{
             profileImage.image = UIImage(systemName: dataItem.icon)
             userInput.isSecureTextEntry = true
