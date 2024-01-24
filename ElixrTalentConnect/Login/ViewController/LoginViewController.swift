@@ -54,82 +54,85 @@ class LoginViewController: UIViewController {
             alertOnEmptyFields(message: validationResult.message ?? "Invalid credentials.")
         }
     }
-        
-        /// Function to get the basic UI layout.
+    
+    /// Function to get the basic UI layout.
     func UISetup() {
         backGroundImage.layer.cornerRadius = 20
         backGroundImage.clipsToBounds = true
     }
-
-        /// This function is called when the keyboard is about to be displayed.
-        ///It checks the size of the keyboard using information from the notification.
-        /// - Parameter notification: notification on clicking the textfields.
-        @objc func keyboardWillShow(notification: NSNotification) {
-            if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
-                if self.view.frame.origin.y == 0 {
-                    self.view.frame.origin.y -= keyboardSize.height
-                }
+    
+    /// This function is called when the keyboard is about to be displayed.
+    ///It checks the size of the keyboard using information from the notification.
+    /// - Parameter notification: notification on clicking the textfields.
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
             }
         }
-        
-        /// This implementation is commonly used to handle the keyboard covering the text input fields in a view, ensuring a smooth user experience.
-        /// - Parameter notification: notification on clicking the textfields.
-        @objc func keyboardWillHide(notification: NSNotification) {
-            if self.view.frame.origin.y != 0 {
-                self.view.frame.origin.y = 0
-            }
+    }
+    
+    /// This implementation is commonly used to handle the keyboard covering the text input fields in a view, ensuring a smooth user experience.
+    /// - Parameter notification: notification on clicking the textfields.
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
         }
-        
-        /// Function  to perform  navigation to Signup viewcontroller.
+    }
+    
+    /// Function  to perform  navigation to Signup viewcontroller.
     func tapSignup() {
         performSegue(withIdentifier: "Signupviewcontroller", sender: UIButton.self)
     }
-        
-        /// Function to  perform navigaion to HomeviewController.
-        func navigateToHome() {
-            guard   let HomeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? UITabBarController else {
-                return
-            }
-            self.navigationController?.pushViewController(HomeView, animated: true)
+    
+    /// Function to  perform navigaion to HomeviewController.
+    func navigateToHome() {
+        guard   let HomeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? UITabBarController else {
+            return
         }
+        self.navigationController?.pushViewController(HomeView, animated: true)
+    }
     
     /// Functions to display alert on empty fields.
     /// - Parameter message: Message based on the vacancy of the specfic  fields.
-        func alertOnEmptyFields(message:String){
-            let okButton = UIAlertAction(title: "OK", style: .default)
-            let emptyFields = UIAlertController(title: "Empty Fields", message:message , preferredStyle: .alert)
-            emptyFields.addAction(okButton)
-            present(emptyFields, animated: true)
-        }
-        
-        /// Function to check userAuthentication via face ID.
-        func authenticationOnBiometrics(){
-            let context = LAContext()
-            var error:NSError? = nil
-            if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
-            {
-                let reason = "explaination of Authentication"
-                context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){ [self] success , authenticationError in
-                    if  success{
-                        self.alertOnBiometric(with: "Authentication Successfull.")
-                    } else {
-                    }
-                    print("Authentication failed.")
+    func alertOnEmptyFields(message:String){
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        let emptyFields = UIAlertController(title: "Empty Fields", message:message , preferredStyle: .alert)
+        emptyFields.addAction(okButton)
+        present(emptyFields, animated: true)
+    }
+    
+    /// Function to check userAuthentication via face ID.
+    func authenticationOnBiometrics(){
+        let context = LAContext()
+        var error:NSError? = nil
+        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+        {
+            let reason = "explaination of Authentication"
+            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){ [self] success , authenticationError in
+                if  success{
+                    self.alertOnBiometric(with: "Authentication Successfull.")
+                } else {
                 }
-            }
-            else {
-                self.alertOnBiometric(with: "Authentication not available")
+                print("Authentication failed.")
             }
         }
-        /// Alert on Biometric Authentication.
-        /// - Parameter message: Based on the authentication related message is prompted to the user.
-        private func alertOnBiometric(with message: String){
-            let alertMessage = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-            let okButton = UIAlertAction(title: "OK", style: .default)
-            alertMessage.addAction(okButton)
-            present(alertMessage, animated: true)
-
+        else {
+            self.alertOnBiometric(with: "Authentication not available")
         }
+    }
+    
+    /// Alert on Biometric Authentication.
+    /// - Parameter message: Based on the authentication related message is prompted to the user.
+    private func alertOnBiometric(with message: String){
+        let alertMessage = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        let okButton = UIAlertAction(title: "OK", style: .default)
+        alertMessage.addAction(okButton)
+        present(alertMessage, animated: true)
+        
+    }
+    
+    /// Function to navigate to the Signupviewcontroller.
     func navigateToSignup(){
         guard let rootView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
         else {
@@ -138,9 +141,13 @@ class LoginViewController: UIViewController {
         navigationController?.pushViewController(rootView, animated: true)
     }
 }
+
 extension LoginViewController: UITextFieldDelegate{
+    /// UItextfield  delegate method .
+    /// - Parameter textField:UITextField
+    /// - Returns: Bool
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-         textField.resignFirstResponder()
+        textField.resignFirstResponder()
         return true
     }
 }

@@ -6,17 +6,14 @@
 //
 
 import UIKit
-protocol SearchCompleted {
-    func  fetchedData(filteredData:[Jobs])
-}
+
 /// HomeviewController is the view controller where the users is able to see the job oppprtunities in uikit
 class HomeViewController: UIViewController {
-
     
     /// Variable and constant Declarations.
-    var viewModal = JobViewModal()
+    var viewModal = JobViewModel()
     var isOn:Bool = false
-      var searchbarInstance:SearchCompleted?
+    
     /// Referencing Outlets.
     @IBOutlet weak var customSearchbar: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
@@ -30,11 +27,15 @@ class HomeViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
+    /// searchFunctionality- this is to asign search functionality to the textfield called  custom textfield.
+    /// - Parameter sender: UITextField
     @IBAction func searchFunctionality(_ sender: UITextField) {
         if let searchText = sender.text{
-            
+            viewModal.filteredData(with: searchText)
+            jobDisplayTableView.reloadData()
         }
     }
+    
     /// get Jobs- This is to make  make View Controller connect with view Model and also responsible for updating the UI of the screen.
     func getJobs() {
         activityIndicator.startAnimating()
@@ -52,6 +53,7 @@ class HomeViewController: UIViewController {
             }
         }
     }
+    
     /// ShowAlert - Display the alert on failure while calling API.
     func showAlert(){
         let OkButton = UIAlertAction(title: "OK", style: .default)
@@ -60,6 +62,8 @@ class HomeViewController: UIViewController {
         present(alertDisplay, animated: true)
     }
 }
+
+// Extension on HomeViewController delgate methods.
 extension HomeViewController:UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // Hide the keyboard
@@ -69,22 +73,12 @@ extension HomeViewController:UITextFieldDelegate{
     
     // Replace this method with your actual search logic
     func performSearch(with searchTerm: String?) {
-        guard let searchTerm = searchTerm, !searchTerm.isEmpty else {
+        guard let searchTerm = searchTerm ,!searchTerm.isEmpty else {
+            viewModal.resetSearch()
+            jobDisplayTableView.reloadData()
             return
         }
-        viewModal.fiterData(with: searchTerm)
-        viewModal.searchedData = viewModal.filterDataItem
-        searchbarInstance?.fetchedData(filteredData: viewModal.searchedData)
-    }
-}
-extension HomeViewController :SearchCompleted {
-    func fetchedData(filteredData: [Jobs]) {
-        <#code#>
-    }
-    
-    func onCompletingSearch(filteredData :[Jobs]){
-        if let popupViewController = storyboard?.instantiateViewController(withIdentifier: "popupViewController") as? PopupViewController{
-            popupViewController.displayData = filteredData
-        }
+        viewModal.filteredData(with: searchTerm)
+        jobDisplayTableView.reloadData()
     }
 }

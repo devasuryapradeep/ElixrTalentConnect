@@ -1,5 +1,5 @@
 //
-//  JobDisplayTable.swift
+//  JobDisplayTableViewCell.swift
 //  ElixrTalentConnect
 //
 //  Created by Devasurya on 21/01/24.
@@ -7,6 +7,7 @@
 
 import UIKit
 
+/// JobDisplayTableViewCell is the place where all datas related to tableview cell is shown, and referenced.
 class JobDisplayTableViewCell: UITableViewCell {
     
     /// Referencing Outlets
@@ -18,7 +19,7 @@ class JobDisplayTableViewCell: UITableViewCell {
     @IBOutlet weak var jobHeading: UILabel!
     
     /// Variable Declarattion
-    var viewModalData = JobViewModal()
+    var viewModalData = JobViewModel()
     var isOn : Bool = true
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,7 +30,7 @@ class JobDisplayTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    /// cellData
+    /// cellData- To assign th tablevalues with data from data model.
     /// - Parameter dataItem: dataItem is of type Jobs.
     func cellData(with dataItem:Jobs){
         jobHeading.text = dataItem.title
@@ -37,7 +38,6 @@ class JobDisplayTableViewCell: UITableViewCell {
         jobdetails.text = dataItem.description
         jobStatus.text = dataItem.status
     }
-    
 }
 
 
