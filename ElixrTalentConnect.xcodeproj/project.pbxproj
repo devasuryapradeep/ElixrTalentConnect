@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		547412CBFCC37137771FC5AD /* Pods_ElixrTalentConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D133AC8BF649373C38C657 /* Pods_ElixrTalentConnect.framework */; };
 		5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */; };
 		5A2801CD2B56F02B00AD9800 /* UIButtonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */; };
 		5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */; };
@@ -36,6 +37,8 @@
 		5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */; };
 		5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */; };
 		5AF9C89F2B5F7A1E007A0D54 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */; };
+		C84260AEE3A0973DF36BF31B /* Pods_ElixrTalentConnectTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 936919F703CE7855E0B4B1C5 /* Pods_ElixrTalentConnectTests.framework */; };
+		E9F4060DAD2D511E21D7E4B1 /* Pods_ElixrTalentConnect_ElixrTalentConnectUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C6934C681FA856E5F718912 /* Pods_ElixrTalentConnect_ElixrTalentConnectUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1CE0B1D30FC5050CF44815B0 /* Pods-ElixrTalentConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnect.release.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnect/Pods-ElixrTalentConnect.release.xcconfig"; sourceTree = "<group>"; };
+		1DB07ABD4D543C021EB20E3E /* Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnect-ElixrTalentConnectUITests/Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
 		5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewcontroller+Extn.swift"; sourceTree = "<group>"; };
 		5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButtonSetup.swift; path = ElixrTalentConnect/SignUP/UIButtonSetup.swift; sourceTree = SOURCE_ROOT; };
 		5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +93,13 @@
 		5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDisplayTable+Extn.swift"; sourceTree = "<group>"; };
 		5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModal.swift; sourceTree = "<group>"; };
 		5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = ElixrTalentConnect/Helper/MainTabController.swift; sourceTree = SOURCE_ROOT; };
+		655E51A43BFBECBAA9F4E085 /* Pods-ElixrTalentConnectTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnectTests.debug.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnectTests/Pods-ElixrTalentConnectTests.debug.xcconfig"; sourceTree = "<group>"; };
+		6C6934C681FA856E5F718912 /* Pods_ElixrTalentConnect_ElixrTalentConnectUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElixrTalentConnect_ElixrTalentConnectUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F7EB8631A607B53829B1BE5 /* Pods-ElixrTalentConnectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnectTests.release.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnectTests/Pods-ElixrTalentConnectTests.release.xcconfig"; sourceTree = "<group>"; };
+		8D931B9392189C57B20A5958 /* Pods-ElixrTalentConnect-ElixrTalentConnectUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnect-ElixrTalentConnectUITests.debug.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnect-ElixrTalentConnectUITests/Pods-ElixrTalentConnect-ElixrTalentConnectUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		936919F703CE7855E0B4B1C5 /* Pods_ElixrTalentConnectTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElixrTalentConnectTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BED504A9CFD443A0A85FCC75 /* Pods-ElixrTalentConnect.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnect.debug.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnect/Pods-ElixrTalentConnect.debug.xcconfig"; sourceTree = "<group>"; };
+		F2D133AC8BF649373C38C657 /* Pods_ElixrTalentConnect.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ElixrTalentConnect.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				547412CBFCC37137771FC5AD /* Pods_ElixrTalentConnect.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C84260AEE3A0973DF36BF31B /* Pods_ElixrTalentConnectTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,12 +123,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9F4060DAD2D511E21D7E4B1 /* Pods_ElixrTalentConnect_ElixrTalentConnectUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		134BE48B512F3CDE9231028C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F2D133AC8BF649373C38C657 /* Pods_ElixrTalentConnect.framework */,
+				6C6934C681FA856E5F718912 /* Pods_ElixrTalentConnect_ElixrTalentConnectUITests.framework */,
+				936919F703CE7855E0B4B1C5 /* Pods_ElixrTalentConnectTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5A12A7F82B54EEF800A0BD02 /* SignUP */ = {
 			isa = PBXGroup;
 			children = (
@@ -142,6 +167,8 @@
 				5A9E3E462B4E5F2800E2924A /* ElixrTalentConnectTests */,
 				5A9E3E502B4E5F2800E2924A /* ElixrTalentConnectUITests */,
 				5A9E3E2B2B4E5F2800E2924A /* Products */,
+				E1FF1DBFAE718C194E8A52AB /* Pods */,
+				134BE48B512F3CDE9231028C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -297,6 +324,20 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E1FF1DBFAE718C194E8A52AB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BED504A9CFD443A0A85FCC75 /* Pods-ElixrTalentConnect.debug.xcconfig */,
+				1CE0B1D30FC5050CF44815B0 /* Pods-ElixrTalentConnect.release.xcconfig */,
+				8D931B9392189C57B20A5958 /* Pods-ElixrTalentConnect-ElixrTalentConnectUITests.debug.xcconfig */,
+				1DB07ABD4D543C021EB20E3E /* Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig */,
+				655E51A43BFBECBAA9F4E085 /* Pods-ElixrTalentConnectTests.debug.xcconfig */,
+				7F7EB8631A607B53829B1BE5 /* Pods-ElixrTalentConnectTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -304,9 +345,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A9E3E572B4E5F2800E2924A /* Build configuration list for PBXNativeTarget "ElixrTalentConnect" */;
 			buildPhases = (
+				04410364F5CB6120183BE730 /* [CP] Check Pods Manifest.lock */,
 				5A9E3E262B4E5F2800E2924A /* Sources */,
 				5A9E3E272B4E5F2800E2924A /* Frameworks */,
 				5A9E3E282B4E5F2800E2924A /* Resources */,
+				BDD0E3607FBA969FE2748E9B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -321,6 +364,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A9E3E5A2B4E5F2800E2924A /* Build configuration list for PBXNativeTarget "ElixrTalentConnectTests" */;
 			buildPhases = (
+				5E659896DD5152A0BB7C3530 /* [CP] Check Pods Manifest.lock */,
 				5A9E3E3F2B4E5F2800E2924A /* Sources */,
 				5A9E3E402B4E5F2800E2924A /* Frameworks */,
 				5A9E3E412B4E5F2800E2924A /* Resources */,
@@ -339,9 +383,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5A9E3E5D2B4E5F2800E2924A /* Build configuration list for PBXNativeTarget "ElixrTalentConnectUITests" */;
 			buildPhases = (
+				B6E508223585A94BDA1DA3B6 /* [CP] Check Pods Manifest.lock */,
 				5A9E3E492B4E5F2800E2924A /* Sources */,
 				5A9E3E4A2B4E5F2800E2924A /* Frameworks */,
 				5A9E3E4B2B4E5F2800E2924A /* Resources */,
+				9209316C90E8CF3E51EE7F28 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -423,6 +469,109 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		04410364F5CB6120183BE730 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ElixrTalentConnect-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E659896DD5152A0BB7C3530 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ElixrTalentConnectTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9209316C90E8CF3E51EE7F28 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElixrTalentConnect-ElixrTalentConnectUITests/Pods-ElixrTalentConnect-ElixrTalentConnectUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElixrTalentConnect-ElixrTalentConnectUITests/Pods-ElixrTalentConnect-ElixrTalentConnectUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElixrTalentConnect-ElixrTalentConnectUITests/Pods-ElixrTalentConnect-ElixrTalentConnectUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6E508223585A94BDA1DA3B6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ElixrTalentConnect-ElixrTalentConnectUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BDD0E3607FBA969FE2748E9B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElixrTalentConnect/Pods-ElixrTalentConnect-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ElixrTalentConnect/Pods-ElixrTalentConnect-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ElixrTalentConnect/Pods-ElixrTalentConnect-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		5A9E3E262B4E5F2800E2924A /* Sources */ = {
@@ -614,6 +763,7 @@
 		};
 		5A9E3E582B4E5F2800E2924A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BED504A9CFD443A0A85FCC75 /* Pods-ElixrTalentConnect.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -641,6 +791,7 @@
 		};
 		5A9E3E592B4E5F2800E2924A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CE0B1D30FC5050CF44815B0 /* Pods-ElixrTalentConnect.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -668,6 +819,7 @@
 		};
 		5A9E3E5B2B4E5F2800E2924A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 655E51A43BFBECBAA9F4E085 /* Pods-ElixrTalentConnectTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -687,6 +839,7 @@
 		};
 		5A9E3E5C2B4E5F2800E2924A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F7EB8631A607B53829B1BE5 /* Pods-ElixrTalentConnectTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -706,6 +859,7 @@
 		};
 		5A9E3E5E2B4E5F2800E2924A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8D931B9392189C57B20A5958 /* Pods-ElixrTalentConnect-ElixrTalentConnectUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -723,6 +877,7 @@
 		};
 		5A9E3E5F2B4E5F2800E2924A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DB07ABD4D543C021EB20E3E /* Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
