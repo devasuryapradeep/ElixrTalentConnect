@@ -44,14 +44,5 @@ final class JobViewModel{
         filteredJobs = jobDetails.filter{job in return job.title.lowercased().contains(searchTerm.lowercased()  )
             
         }
-        func formattingFunction(_dateString:String?)->String?{
-            guard let _dateString = _dateString,
-                  let formattedDate = formatHelper(_dateString: _dateString) else {
-                
-            }
-        }
-        private func formatHelper(_dateString:String)->String?{
-            
-        }
     }
 }

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i4b-aB-ygC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aYg-4O-Tqc">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -687,7 +687,7 @@
                                                             </buttonConfiguration>
                                                         </button>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IcL-ME-eMM">
-                                                            <rect key="frame" x="217" y="30.999999999999964" width="132" height="45"/>
+                                                            <rect key="frame" x="221" y="31" width="132" height="45"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Application Deadlne" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zpH-LJ-nVz">
                                                                     <rect key="frame" x="17.666666666666664" y="1" width="96.666666666666686" height="13"/>
@@ -719,7 +719,7 @@
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstItem="VKI-Nr-m7R" firstAttribute="top" secondItem="jIX-sC-QWE" secondAttribute="bottom" constant="10" id="1wD-Ev-QzW"/>
-                                                        <constraint firstAttribute="trailing" secondItem="IcL-ME-eMM" secondAttribute="trailing" constant="4" id="3Ux-zE-pIZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="IcL-ME-eMM" secondAttribute="trailing" id="3Ux-zE-pIZ"/>
                                                         <constraint firstItem="gBS-We-gYB" firstAttribute="top" secondItem="a9J-RR-BaM" secondAttribute="top" constant="10" id="BjX-Sc-pyV"/>
                                                         <constraint firstItem="uZD-3l-Sch" firstAttribute="leading" secondItem="VKI-Nr-m7R" secondAttribute="leading" id="Mu6-yS-uwf"/>
                                                         <constraint firstItem="uZD-3l-Sch" firstAttribute="top" secondItem="VKI-Nr-m7R" secondAttribute="bottom" constant="20.000000000000014" id="U2G-9X-IKl"/>

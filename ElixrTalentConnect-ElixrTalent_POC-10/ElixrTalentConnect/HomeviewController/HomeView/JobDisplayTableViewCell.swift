@@ -1,3 +1,4 @@
+JobDisplayTableViewCell.swift//
 //  JobDisplayTableViewCell.swift
 //  ElixrTalentConnect
 //
@@ -13,9 +14,9 @@ class JobDisplayTableViewCell: UITableViewCell {
     @IBOutlet weak var DisplayView: UIViewSetUp!
     @IBOutlet weak var jobdetails: UILabel!
     @IBOutlet weak var jobLocation: UILabel!
+    @IBOutlet weak var jobStatus: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var jobHeading: UILabel!
-    @IBOutlet weak var deadlineDate: UILabel!
     
     /// Variable Declarattion
     var viewModalData = JobViewModel()
@@ -35,12 +36,8 @@ class JobDisplayTableViewCell: UITableViewCell {
         jobHeading.text = dataItem.title
         jobLocation.text = dataItem.location
         jobdetails.text = dataItem.description
-        guard let formattedDate  = viewModalData.formattingFunction(_dateString: dataItem.deadlineDate) else {
-            return
-        }
-        deadlineDate.text = formattedDate
+        jobStatus.text = dataItem.status
     }
 }
-
 
 
