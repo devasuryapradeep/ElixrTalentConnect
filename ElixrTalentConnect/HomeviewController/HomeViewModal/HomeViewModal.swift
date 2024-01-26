@@ -44,14 +44,40 @@ final class JobViewModel{
         filteredJobs = jobDetails.filter{job in return job.title.lowercased().contains(searchTerm.lowercased()  )
             
         }
-        func formattingFunction(_dateString:String?)->String?{
-            guard let _dateString = _dateString,
-                  let formattedDate = formatHelper(_dateString: _dateString) else {
-                
-            }
+    }
+    func formattingFunction(_dateString:String?)->String?{
+        guard let _dateString = _dateString,
+              let formattedDate = formatHelper(_dateString: _dateString) else {
+            return nil
         }
-        private func formatHelper(_dateString:String)->String?{
-            
+        return formattedDate
+    }
+    private func formatHelper(_dateString:String)->String?{
+        let dateFormatter = DateFormatter()
+        if let date = dateFormatter.date(from: _dateString){
+            let dayFormatter = DateFormatter()
+            dayFormatter.dateFormat = "d"
+            let day = dayFormatter.string(from: date)
+              
+            let  monthFormatter = DateFormatter()
+            dayFormatter.dateFormat = "MMM"
+            let  month = dayFormatter.string(from: date)
+             
+            let yearFormattter  = DateFormatter()
+            dayFormatter.dateFormat = "YYYY"
+            let year  = dayFormatter.string(from: date)
+            return ("(day\(dateSuffix(_day: day))\(month)\(year)")
+        }
+        return String()
+    }
+    private func dateSuffix(_day:String)->String{
+        let dayInt = Int(_day) ?? 0
+        switch dayInt{
+        case 1,21,31:return "st"
+        case 2,22:return "nd"
+        case 3,23:return"rd"
+        default :
+            return "th"
         }
     }
 }
