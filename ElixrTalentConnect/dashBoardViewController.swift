@@ -44,6 +44,7 @@ class dashBoardViewController: UIViewController,UITableViewDelegate,UITableViewD
         cell.dashMenuTitles.backgroundColor = UIColor.white
         cell.titleView.backgroundColor = UIColor(red: 50/255, green: 36/255, blue: 79/255, alpha: 1.0)
         cell.dashMenuTitles.backgroundColor = UIColor(red: 50/255, green: 36/255, blue: 79/255, alpha: 1.0)
+        cell.dashMenuTitles.textColor = UIColor.white
     }
     
     /// View Life Cycle.
