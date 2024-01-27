@@ -62,27 +62,22 @@ final class JobViewModel{
     private func formatHelper(_dateString:String)->String?{
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd"
-        
         if let date = dateFormatter.date(from: _dateString){
-            
             let dayFormatter = DateFormatter()
             dayFormatter.dateFormat = "d"
             let day = dayFormatter.string(from: date)
-            
             let  monthFormatter = DateFormatter()
             monthFormatter.dateFormat = "MMM"
             let  month = monthFormatter.string(from: date)
-            
             let yearFormattter  = DateFormatter()
             yearFormattter.dateFormat = "YYYY"
             let year  = yearFormattter.string(from: date)
-            
             return ("\(day)\(dateSuffix(_day: day))\(month)\(year)")
         }
         return String()
     }
     
-    /// dateSuffix
+    /// dateSuffix().
     /// - Parameter _day: This parameter of value string is passed to the function inorder to add suffix to the day .
     /// - Returns: String type value.
     private func dateSuffix(_day:String)->String{
@@ -95,4 +90,6 @@ final class JobViewModel{
             return "th"
         }
     }
+    
+    
 }

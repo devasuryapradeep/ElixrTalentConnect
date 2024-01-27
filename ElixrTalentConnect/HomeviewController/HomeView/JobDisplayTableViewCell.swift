@@ -20,7 +20,7 @@ class JobDisplayTableViewCell: UITableViewCell {
     /// Variable Declarattion
     var viewModalData = JobViewModel()
     var isOn : Bool = true
-    
+    var  favouriteArray :[Jobs] = []
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -42,14 +42,6 @@ class JobDisplayTableViewCell: UITableViewCell {
             return
         }
         deadlineDate.text = formattedDate
-        for _ in dataItem.id{
-            favoriteButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
-        }
-    }
-   @objc func buttonAction(){
-       favoriteButton.setImage(UIImage(named: "heart.fill 1"), for: .normal)
-       isOn.toggle()
-       
     }
 }
 

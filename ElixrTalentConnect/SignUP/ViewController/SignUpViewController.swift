@@ -76,5 +76,10 @@ class SignUpViewController: UIViewController {
             present(alertOnValidation, animated: true)
         }
 }
-    
+extension SignUpViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
 

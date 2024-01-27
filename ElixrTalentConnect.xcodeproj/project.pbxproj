@@ -13,6 +13,7 @@
 		5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */; };
 		5A3ACBAD2B5A896500B3F9F8 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */; };
 		5A4B7BBD2B56DDB100BF8777 /* SignUpModelstructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */; };
+		5A7D72262B65465D008DCF47 /* UITabBarSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7D72252B65465D008DCF47 /* UITabBarSetup.swift */; };
 		5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A977ECF2B4E88350094286B /* LoginViewController.swift */; };
 		5A977ED22B4E9F300094286B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A977ED12B4E9F300094286B /* Launch Screen.storyboard */; };
 		5A977ED32B4EA6610094286B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E602B4E60DA00E2924A /* Assets.xcassets */; };
@@ -67,6 +68,7 @@
 		5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelstructure.swift; sourceTree = "<group>"; };
+		5A7D72252B65465D008DCF47 /* UITabBarSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITabBarSetup.swift; sourceTree = "<group>"; };
 		5A977ECF2B4E88350094286B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A977ED12B4E9F300094286B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5A9E3E2A2B4E5F2800E2924A /* ElixrTalentConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElixrTalentConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -251,6 +253,7 @@
 		5AA4B1332B53AABB009E469D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5A7D72252B65465D008DCF47 /* UITabBarSetup.swift */,
 				5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */,
 				5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */,
 				5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */,
@@ -589,6 +592,7 @@
 				5A4B7BBD2B56DDB100BF8777 /* SignUpModelstructure.swift in Sources */,
 				5ADBC8002B620C5C00106336 /* JobDisplayTableViewCell.swift in Sources */,
 				5AA0FDB22B5D6D2F008B8D31 /* HomeViewModal.swift in Sources */,
+				5A7D72262B65465D008DCF47 /* UITabBarSetup.swift in Sources */,
 				5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
 				5A2801CD2B56F02B00AD9800 /* UIButtonSetup.swift in Sources */,

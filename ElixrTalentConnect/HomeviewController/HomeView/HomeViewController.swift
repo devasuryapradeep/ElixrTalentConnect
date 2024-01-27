@@ -68,6 +68,7 @@ extension HomeViewController:UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // Hide the keyboard
         performSearch(with: customSearchbar.text)
+        jobDisplayTableView.reloadData()
         return true
     }
     
@@ -82,3 +83,4 @@ extension HomeViewController:UITextFieldDelegate{
         jobDisplayTableView.reloadData()
     }
 }
+
