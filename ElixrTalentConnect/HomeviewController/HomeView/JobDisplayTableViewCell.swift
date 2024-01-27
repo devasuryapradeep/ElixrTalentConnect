@@ -20,6 +20,8 @@ class JobDisplayTableViewCell: UITableViewCell {
     /// Variable Declarattion
     var viewModalData = JobViewModel()
     var isOn : Bool = true
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -35,10 +37,19 @@ class JobDisplayTableViewCell: UITableViewCell {
         jobHeading.text = dataItem.title
         jobLocation.text = dataItem.location
         jobdetails.text = dataItem.description
+        
         guard let formattedDate  = viewModalData.formattingFunction(_dateString: dataItem.deadlineDate) else {
             return
         }
         deadlineDate.text = formattedDate
+        for _ in dataItem.id{
+            favoriteButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        }
+    }
+   @objc func buttonAction(){
+       favoriteButton.setImage(UIImage(named: "heart.fill 1"), for: .normal)
+       isOn.toggle()
+       
     }
 }
 

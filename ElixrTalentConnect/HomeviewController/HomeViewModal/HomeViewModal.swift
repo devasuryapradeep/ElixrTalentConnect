@@ -42,9 +42,12 @@ final class JobViewModel{
             return
         }
         filteredJobs = jobDetails.filter{job in return job.title.lowercased().contains(searchTerm.lowercased()  )
-            
         }
     }
+    
+    /// formattingFunction_ this functtion is to setup the formatHelper() and using that value.
+    /// - Parameter _dateString: A varaible of type string.
+    /// - Returns: String
     func formattingFunction(_dateString:String?)->String?{
         guard let _dateString = _dateString,
               let formattedDate = formatHelper(_dateString: _dateString) else {
@@ -52,24 +55,36 @@ final class JobViewModel{
         }
         return formattedDate
     }
+    
+    /// formatHelper
+    /// - Parameter _dateString: A varaible of type string
+    /// - Returns: String value that sets a specific format for the date.
     private func formatHelper(_dateString:String)->String?{
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
+        
         if let date = dateFormatter.date(from: _dateString){
+            
             let dayFormatter = DateFormatter()
             dayFormatter.dateFormat = "d"
             let day = dayFormatter.string(from: date)
-              
+            
             let  monthFormatter = DateFormatter()
-            dayFormatter.dateFormat = "MMM"
-            let  month = dayFormatter.string(from: date)
-             
+            monthFormatter.dateFormat = "MMM"
+            let  month = monthFormatter.string(from: date)
+            
             let yearFormattter  = DateFormatter()
-            dayFormatter.dateFormat = "YYYY"
-            let year  = dayFormatter.string(from: date)
-            return ("(day\(dateSuffix(_day: day))\(month)\(year)")
+            yearFormattter.dateFormat = "YYYY"
+            let year  = yearFormattter.string(from: date)
+            
+            return ("\(day)\(dateSuffix(_day: day))\(month)\(year)")
         }
         return String()
     }
+    
+    /// dateSuffix
+    /// - Parameter _day: This parameter of value string is passed to the function inorder to add suffix to the day .
+    /// - Returns: String type value.
     private func dateSuffix(_day:String)->String{
         let dayInt = Int(_day) ?? 0
         switch dayInt{
