@@ -21,14 +21,8 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let jobItemCell = jobDisplayTableView.dequeueReusableCell(withIdentifier: "JobDisplayTableViewCell")as? JobDisplayTableViewCell else{
             return UITableViewCell()
         }
-        if customSearchbar.isEditing{
-            let jobsInfo = viewModal.filteredJobs[indexPath.row]
-            jobItemCell.cellData(with: jobsInfo)
-            return jobItemCell
-        }
-        let jobsInfocell = viewModal.jobDetails[indexPath.row]
-        jobItemCell.cellData(with: jobsInfocell)
-        
+        let cellData  =  viewModal.getInfoCell(at: indexPath.row, isSearching: customSearchbar.isEditing)
+        jobItemCell.cellData(with: cellData)
         return jobItemCell
     }
  

@@ -10,16 +10,17 @@ import UIKit
 class JobDisplayTableViewCell: UITableViewCell {
     
     /// Referencing Outlets
-    @IBOutlet weak var DisplayView: UIViewSetUp!
+    @IBOutlet weak var displayView: UIViewSetUp!
     @IBOutlet weak var jobdetails: UILabel!
     @IBOutlet weak var jobLocation: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
     @IBOutlet weak var jobHeading: UILabel!
     @IBOutlet weak var deadlineDate: UILabel!
     
-    /// Variable Declarattion
+    /// Variables  & constants declarattions.
     var viewModalData = JobViewModel()
-    var isOn : Bool = true
+    let darkBlue =  UIColor(red: 50/255, green: 36/255, blue: 79/255, alpha: 1.0)
+    let lightTheme = UIColor(red: 235/255, green: 235/255, blue: 235/255, alpha: 1.0)
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -29,18 +30,42 @@ class JobDisplayTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
+    @IBAction func addToFavouriteAction(_ sender: UIButton) {
+        viewModalData.favouriteButtonAction()
+        UIUpdate()
+        print("tapped")
+    }
+    
     /// cellData- To assign th tablevalues with data from data model.
     /// - Parameter dataItem: dataItem is of type Jobs.
     func cellData(with dataItem:Jobs){
-        jobHeading.text = dataItem.title
-        jobLocation.text = dataItem.location
-        jobdetails.text = dataItem.description
         guard let formattedDate  = viewModalData.formattingFunction(_dateString: dataItem.deadlineDate) else {
             return
         }
         deadlineDate.text = formattedDate
+        jobHeading.text = dataItem.title
+        jobLocation.text = dataItem.location
+        jobdetails.text = dataItem.description
+        viewModalData.idInstance = dataItem.Id
+    }
+
+    func UIUpdate()
+    {
+        guard let uniqueJobId = viewModalData.idInstance else {
+            return
+        }
+        let isFavourite = UserDefaults.standard.bool(forKey: uniqueJobId)
+        if isFavourite{
+            displayView.backgroundColor =  darkBlue
+            jobdetails.textColor = lightTheme
+            jobHeading.textColor = lightTheme
+            jobLocation.textColor  = lightTheme
+            favoriteButton.setImage(UIImage(named: "heart.fill"), for: .normal)
+        }
+        displayView.backgroundColor = lightTheme
+        jobdetails.textColor = darkBlue
+        jobHeading.textColor = darkBlue
+        jobLocation.textColor  = darkBlue
+     favoriteButton.setImage(UIImage(named: "heart"), for: .normal)
     }
 }
-
-
-

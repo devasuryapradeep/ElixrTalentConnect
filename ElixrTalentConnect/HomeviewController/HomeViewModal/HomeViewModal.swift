@@ -9,10 +9,12 @@ import Foundation
 
 /// JobViewModal - Act as a Viewmodel for MVVM unit in the Homepage.
 final class JobViewModel{
+    
+    /// Variable declarations
     var  jobDetails :[Jobs] = []
     var mainDataSource :[Jobs] = []
     var filteredJobs:[Jobs] = []
-    
+    var idInstance : String?
     /// get job list from api
     /// - Parameter completion: completion return true or false
     func getJobsList(completion: @escaping (Bool) -> ()) {
@@ -60,13 +62,13 @@ final class JobViewModel{
             let day = dayFormatter.string(from: date)
               
             let  monthFormatter = DateFormatter()
-            dayFormatter.dateFormat = "MMM"
-            let  month = dayFormatter.string(from: date)
+            monthFormatter.dateFormat = "MMM"
+            let  month = monthFormatter.string(from: date)
              
             let yearFormattter  = DateFormatter()
-            dayFormatter.dateFormat = "YYYY"
-            let year  = dayFormatter.string(from: date)
-            return ("(day\(dateSuffix(_day: day))\(month)\(year)")
+            yearFormattter.dateFormat = "YYYY"
+            let year  = yearFormattter.string(from: date)
+            return ("\(day)\(dateSuffix(_day: day))\(month)\(year)")
         }
         return String()
     }
@@ -78,6 +80,28 @@ final class JobViewModel{
         case 3,23:return"rd"
         default :
             return "th"
+        }
+    }
+    
+    /// <#Description#>
+    func favouriteButtonAction(){
+        guard let uniqueJobId = idInstance else{
+            return
+        }
+        let isFavourite = UserDefaults.standard.bool(forKey: uniqueJobId)
+        UserDefaults.standard.set(!isFavourite, forKey: uniqueJobId)
+    }
+    
+    /// <#Description#>
+    /// - Parameters:
+    ///   - index: <#index description#>
+    ///   - isSearching: <#isSearching description#>
+    /// - Returns: <#description#>
+    func getInfoCell(at index : Int, isSearching :Bool)->Jobs{
+        if isSearching{
+            return filteredJobs [index]
+        } else {
+         return jobDetails [index]
         }
     }
 }

@@ -61,17 +61,8 @@ class HomeViewController: UIViewController {
         alertDisplay.addAction(OkButton)
         present(alertDisplay, animated: true)
     }
-}
-
-// Extension on HomeViewController delgate methods.
-extension HomeViewController:UITextFieldDelegate{
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder() // Hide the keyboard
-        performSearch(with: customSearchbar.text)
-        return true
-    }
     
-    // Replace this method with your actual search logic
+    //  search logic
     func performSearch(with searchTerm: String?) {
         guard let searchTerm = searchTerm ,!searchTerm.isEmpty else {
             viewModal.resetSearch()
@@ -80,5 +71,15 @@ extension HomeViewController:UITextFieldDelegate{
         }
         viewModal.filteredData(with: searchTerm)
         jobDisplayTableView.reloadData()
+    }
+    
+}
+
+// Extension on HomeViewController delgate methods.
+extension HomeViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder() // Hide the keyboard
+        performSearch(with: customSearchbar.text)
+        return true
     }
 }
