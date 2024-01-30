@@ -3,4 +3,230 @@
    uuid = "ABBD133B-E9D1-47AD-B3A4-5B5FF499D7C8"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A199E8B-61C3-4210-BFD9-01074F7A65E2"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ElixrTalentConnect/Helper/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "fetchJobs(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B5086C6-7C8E-4436-A25C-DC13686D1F0A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ElixrTalentConnect/Helper/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "fetchJobs(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5B5086C6-7C8E-4436-A25C-DC13686D1F0A - 3be26d36382b9b36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ElixrTalentConnect.APIManager.fetchJobs(completion: (Swift.Result&lt;Swift.Array&lt;ElixrTalentConnect.Jobs&gt;, ElixrTalentConnect.DataError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ElixrTalentConnect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devasurya/Desktop/elixr%20Final/ElixrTalentConnect/Helper/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "996">
+               </Location>
+               <Location
+                  uuid = "5B5086C6-7C8E-4436-A25C-DC13686D1F0A - 3be26d36382b9b36"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ElixrTalentConnect.APIManager.fetchJobs(completion: (Swift.Result&lt;Swift.Array&lt;ElixrTalentConnect.Jobs&gt;, ElixrTalentConnect.DataError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ElixrTalentConnect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devasurya/Desktop/elixr%20Final/ElixrTalentConnect/Helper/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "1052">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3FE46942-44AE-4B08-A6F5-552FDB381B42"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ElixrTalentConnect/Helper/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "41"
+            endingLineNumber = "41"
+            landmarkName = "fetchJobs(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "3FE46942-44AE-4B08-A6F5-552FDB381B42 - e1ebe77fdc32dc7d"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElixrTalentConnect.APIManager.fetchJobs(completion: (Swift.Result&lt;Swift.Array&lt;ElixrTalentConnect.Jobs&gt;, ElixrTalentConnect.DataError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ElixrTalentConnect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devasurya/Desktop/elixr%20Final/ElixrTalentConnect/Helper/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "652">
+               </Location>
+               <Location
+                  uuid = "3FE46942-44AE-4B08-A6F5-552FDB381B42 - 3be26d36382b9bb2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ElixrTalentConnect.APIManager.fetchJobs(completion: (Swift.Result&lt;Swift.Array&lt;ElixrTalentConnect.Jobs&gt;, ElixrTalentConnect.DataError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ElixrTalentConnect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devasurya/Desktop/elixr%20Final/ElixrTalentConnect/Helper/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "41"
+                  endingLineNumber = "41"
+                  offsetFromSymbolStart = "804">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A06C869E-0B32-4762-A83F-8BFAC75DFF76"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ElixrTalentConnect/Helper/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "fetchJobs(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A06C869E-0B32-4762-A83F-8BFAC75DFF76 - 3be26d36382b85a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ElixrTalentConnect.APIManager.fetchJobs(completion: (Swift.Result&lt;Swift.Array&lt;ElixrTalentConnect.Jobs&gt;, ElixrTalentConnect.DataError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ElixrTalentConnect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devasurya/Desktop/elixr%20Final/ElixrTalentConnect/Helper/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "276">
+               </Location>
+               <Location
+                  uuid = "A06C869E-0B32-4762-A83F-8BFAC75DFF76 - 3be26d36382b85a2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ElixrTalentConnect.APIManager.fetchJobs(completion: (Swift.Result&lt;Swift.Array&lt;ElixrTalentConnect.Jobs&gt;, ElixrTalentConnect.DataError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ElixrTalentConnect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devasurya/Desktop/elixr%20Final/ElixrTalentConnect/Helper/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "25"
+                  endingLineNumber = "25"
+                  offsetFromSymbolStart = "444">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE8771CA-310D-4F75-817C-DD9CC5D0F747"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ElixrTalentConnect/Helper/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "fetchJobs(completion:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "AE8771CA-310D-4F75-817C-DD9CC5D0F747 - e1ebe77fdc32c2a7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ElixrTalentConnect.APIManager.fetchJobs(completion: (Swift.Result&lt;Swift.Array&lt;ElixrTalentConnect.Jobs&gt;, ElixrTalentConnect.DataError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ElixrTalentConnect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devasurya/Desktop/elixr%20Final/ElixrTalentConnect/Helper/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "19"
+                  endingLineNumber = "19"
+                  offsetFromSymbolStart = "332">
+               </Location>
+               <Location
+                  uuid = "AE8771CA-310D-4F75-817C-DD9CC5D0F747 - 3be26d36382b8526"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 @Sendable (Swift.Optional&lt;Foundation.Data&gt;, Swift.Optional&lt;__C.NSURLResponse&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in ElixrTalentConnect.APIManager.fetchJobs(completion: (Swift.Result&lt;Swift.Array&lt;ElixrTalentConnect.Jobs&gt;, ElixrTalentConnect.DataError&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "ElixrTalentConnect"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/devasurya/Desktop/elixr%20Final/ElixrTalentConnect/Helper/APIManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "120">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A16CF56C-DFF9-438D-BC1E-E4AC47673413"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "ElixrTalentConnect/Helper/APIManager.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "fetchJobs(completion:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

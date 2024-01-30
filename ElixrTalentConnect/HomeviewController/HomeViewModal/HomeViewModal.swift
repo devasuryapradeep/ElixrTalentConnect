@@ -12,9 +12,9 @@ final class JobViewModel{
     
     /// Variable declarations
     var  jobDetails :[Jobs] = []
-    var mainDataSource :[Jobs] = []
     var filteredJobs:[Jobs] = []
     var idInstance : String?
+    
     /// get job list from api
     /// - Parameter completion: completion return true or false
     func getJobsList(completion: @escaping (Bool) -> ()) {
@@ -83,7 +83,7 @@ final class JobViewModel{
         }
     }
     
-    /// <#Description#>
+    ///favouriteButtonAction -sets the value in the  userefault  that determines whether the job is selected as favourite or not .
     func favouriteButtonAction(){
         guard let uniqueJobId = idInstance else{
             return
@@ -92,11 +92,11 @@ final class JobViewModel{
         UserDefaults.standard.set(!isFavourite, forKey: uniqueJobId)
     }
     
-    /// <#Description#>
+    /// getInfoCell - This method is responsible for deciding array on the basis of the functionlity.
     /// - Parameters:
-    ///   - index: <#index description#>
-    ///   - isSearching: <#isSearching description#>
-    /// - Returns: <#description#>
+    ///   - index: This indicates the  number of values in the array.
+    ///   - isSearching: isSearching is the argument given for the attribute is
+    /// - Returns: Bool value that determines whether the the display table should be presented from the filtered array or the job details  array.
     func getInfoCell(at index : Int, isSearching :Bool)->Jobs{
         if isSearching{
             return filteredJobs [index]
