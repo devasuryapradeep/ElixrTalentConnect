@@ -72,7 +72,6 @@ class HomeViewController: UIViewController {
         viewModal.filteredData(with: searchTerm)
         jobDisplayTableView.reloadData()
     }
-    
 }
 
 // Extension on HomeViewController delgate methods.

@@ -12,7 +12,7 @@ struct JobsResponse : Codable {
 }
 
 struct Jobs : Codable {
-    let Id : String
+    let id : String
     let title : String
     let department : String
     let postedDate : String

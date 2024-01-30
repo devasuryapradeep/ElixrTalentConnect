@@ -68,6 +68,7 @@ final class JobViewModel{
             let yearFormattter  = DateFormatter()
             yearFormattter.dateFormat = "YYYY"
             let year  = yearFormattter.string(from: date)
+            print("\(day)\(dateSuffix(_day: day))\(month)\(year)")
             return ("\(day)\(dateSuffix(_day: day))\(month)\(year)")
         }
         return String()
