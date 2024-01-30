@@ -79,7 +79,7 @@ final class JobViewModel{
         return nil
     }
     
-    /// dateSuffix- Adds the specific suffix based on the date.
+    /// dateSuffix- Adds the specific suffix based on the date..
     /// - Parameter _day: type Int - irepresenting the number of days in a month.
     /// - Returns: string value that adds the suffix  to the day parameter acoording to the specific date.
     private func dateSuffix(_day:String)->String{
