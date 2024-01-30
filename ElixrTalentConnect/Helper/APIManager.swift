@@ -17,7 +17,7 @@ final class APIManager{
     private init(){}
     
     typealias Handler = (Result<[Jobs],DataError>) -> Void
-    
+// MARK: -API initialization.
     /// fetchJobs -Here the API call is initalilzed .
     /// - Parameter completion: completion handler .
     func fetchJobs (completion:@escaping Handler) {
@@ -48,7 +48,7 @@ final class APIManager{
         print("ended")
     }
 }
-
+// MARK: - ENUM FOR ERROR BLOCK.
 /// This enum created inorder to project a possible error  patterns.
 enum DataError:Error{
     case invalidResponse

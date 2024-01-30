@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="i4b-aB-ygC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uDv-zW-XkE">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -570,12 +570,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yud-om-LSI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6496.9465648854957" y="-309.15492957746483"/>
+            <point key="canvasLocation" x="5498" y="-11"/>
         </scene>
-        <!--View Controller-->
+        <!--Job Detailsview-->
         <scene sceneID="JLi-zw-ekR">
             <objects>
-                <viewController id="uDv-zW-XkE" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="JobDetailsview" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uDv-zW-XkE" customClass="JobDetailsview" customModule="ElixrTalentConnect" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2U5-Of-a4a">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -624,7 +624,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cm-vk-YWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3962.5954198473282" y="795.77464788732402"/>
+            <point key="canvasLocation" x="2355" y="791"/>
         </scene>
         <!--My Jobs-->
         <scene sceneID="Qhb-Cr-AY2">
@@ -660,7 +660,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAN-MG-So6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4849.6183206106871" y="325.35211267605638"/>
+            <point key="canvasLocation" x="4382" y="791"/>
         </scene>
         <!--Home-->
         <scene sceneID="pEe-NI-sYF">
@@ -953,7 +953,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YnT-iC-FaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4400.7633587786258" y="-270.42253521126764"/>
+            <point key="canvasLocation" x="3691" y="-840"/>
         </scene>
         <!--Main Tab Controller-->
         <scene sceneID="LQe-qH-f0F">
@@ -1015,7 +1015,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qw6-GN-TAr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5457" y="-309"/>
+            <point key="canvasLocation" x="4453" y="-11"/>
         </scene>
     </scenes>
     <designables>

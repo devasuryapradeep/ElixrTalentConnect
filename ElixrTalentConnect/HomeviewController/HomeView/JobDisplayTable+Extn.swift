@@ -9,15 +9,19 @@ import Foundation
 import UIKit
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cellTapped  =  UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "JobDetailsview") as? JobDetailsview
+    
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print ("result on filteredArray-->\(viewModal.filteredJobs)")
         return customSearchbar.isEditing ? viewModal.filteredJobs.count:viewModal.jobDetails.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
-    
+   
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let jobItemCell = jobDisplayTableView.dequeueReusableCell(withIdentifier: "JobDisplayTableViewCell")as? JobDisplayTableViewCell else{
             return UITableViewCell()
@@ -26,6 +30,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         jobItemCell.cellData(with: cellData)
         return jobItemCell
     }
+
 }
 
 
