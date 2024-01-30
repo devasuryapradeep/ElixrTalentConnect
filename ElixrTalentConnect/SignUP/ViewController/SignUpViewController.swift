@@ -61,7 +61,6 @@ class SignUpViewController: UIViewController {
             let confirmPassword = confirmPasswordCell?.userInput.text
             if let errorMessage = viewModalInstance.validateCredentials(fullName: fullName, emailAddress: email, password: password, confirmPassword: confirmPassword) {
                 showAlert(message: errorMessage)
-                
             } else {
                 performSegue(withIdentifier: "HomeViewController", sender: UIButton.self)
             }

@@ -43,10 +43,13 @@ final class JobViewModel{
             filteredJobs = jobDetails
             return
         }
-        filteredJobs = jobDetails.filter{job in return job.title.lowercased().contains(searchTerm.lowercased()  )
-            
+        filteredJobs = jobDetails.filter{job in return job.title.lowercased().contains(searchTerm.lowercased())
         }
     }
+    
+    /// formattingFunction - Function is responsible of creating the required format for the date to be displayed , this process is done by referencing  to a function for setiing the custom date Format.
+    /// - Parameter _dateString: datestring- is of type sring
+    /// - Returns: Returns the date String literal created in a specific format.
     func formattingFunction(_dateString:String?)->String?{
         guard let _dateString = _dateString,
               let formattedDate = formatHelper(_dateString: _dateString) else {
@@ -54,25 +57,31 @@ final class JobViewModel{
         }
         return formattedDate
     }
+    
+    /// formatHelper- Function is  re
+    /// - Parameter _dateString: is of type sring.
+    /// - Returns: function for setiing the custom date Format.
     private func formatHelper(_dateString:String)->String?{
         let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy-MM-dd"
         if let date = dateFormatter.date(from: _dateString){
             let dayFormatter = DateFormatter()
             dayFormatter.dateFormat = "d"
             let day = dayFormatter.string(from: date)
-              
             let  monthFormatter = DateFormatter()
             monthFormatter.dateFormat = "MMM"
             let  month = monthFormatter.string(from: date)
-             
             let yearFormattter  = DateFormatter()
-            yearFormattter.dateFormat = "YYYY"
+            yearFormattter.dateFormat = "yyyy"
             let year  = yearFormattter.string(from: date)
-            print("\(day)\(dateSuffix(_day: day))\(month)\(year)")
             return ("\(day)\(dateSuffix(_day: day))\(month)\(year)")
         }
-        return String()
+        return nil
     }
+    
+    /// dateSuffix- Adds the specific suffix based on the date.
+    /// - Parameter _day: type Int - irepresenting the number of days in a month.
+    /// - Returns: string value that adds the suffix  to the day parameter acoording to the specific date.
     private func dateSuffix(_day:String)->String{
         let dayInt = Int(_day) ?? 0
         switch dayInt{
@@ -94,7 +103,7 @@ final class JobViewModel{
     }
     
     /// getInfoCell - This method is responsible for deciding array on the basis of the functionlity.
-    /// - Parameters:
+    /// - Parameters:a
     ///   - index: This indicates the  number of values in the array.
     ///   - isSearching: isSearching is the argument given for the attribute is
     /// - Returns: Bool value that determines whether the the display table should be presented from the filtered array or the job details  array.

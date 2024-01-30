@@ -13,6 +13,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         print ("result on filteredArray-->\(viewModal.filteredJobs)")
         return customSearchbar.isEditing ? viewModal.filteredJobs.count:viewModal.jobDetails.count
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
@@ -25,7 +26,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         jobItemCell.cellData(with: cellData)
         return jobItemCell
     }
- 
 }
 
 

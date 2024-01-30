@@ -577,15 +577,16 @@
             <objects>
                 <viewController id="uDv-zW-XkE" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="2U5-Of-a4a">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="1100"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="i6K-pa-TMb"/>
                         <color key="backgroundColor" red="0.92156863209999995" green="0.92156863209999995" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </view>
+                    <size key="freeformSize" width="393" height="1100"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q8D-g2-fpa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7636" y="-309"/>
+            <point key="canvasLocation" x="7635.8778625954192" y="-309.15492957746483"/>
         </scene>
         <!--Profile-->
         <scene sceneID="1YL-gB-ORq">
