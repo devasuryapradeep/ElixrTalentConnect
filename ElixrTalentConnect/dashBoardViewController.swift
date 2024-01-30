@@ -25,7 +25,6 @@ class dashBoardViewController: UIViewController,UITableViewDelegate,UITableViewD
         menuItems.dashMenuTitles.text = titleHeadings[indexPath.row]
         return menuItems
     }
-    
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath) as! DashBoardCell
@@ -34,7 +33,7 @@ class dashBoardViewController: UIViewController,UITableViewDelegate,UITableViewD
         cell.dashMenuTitles.backgroundColor = UIColor(red: 50/255, green: 36/255, blue: 79/255, alpha: 1.0)
         cell.dashMenuTitles.textColor = UIColor.white
     }
-    
+
     /// View Life Cycle.
     override func viewDidLoad() {
         super.viewDidLoad()

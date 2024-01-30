@@ -32,8 +32,3 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
 }
-
-
-
-
-
