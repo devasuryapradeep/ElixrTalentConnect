@@ -21,10 +21,10 @@ class HomeViewController: UIViewController {
     
     /// View llife cycle
     override func viewDidLoad() {
-        customSearchbar.delegate = self
         super.viewDidLoad()
+        customSearchbar.delegate = self
         getJobs()
-        self.navigationItem.setHidesBackButton(true, animated: true)
+        self.navigationItem.setHidesBackButton(true, animated: true)        
     }
     
     /// searchFunctionality- this is to asign search functionality to the textfield called  custom textfield.

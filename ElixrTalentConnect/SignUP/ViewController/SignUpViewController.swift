@@ -76,4 +76,10 @@ class SignUpViewController: UIViewController {
         }
 }
     
-
+extension SignUpViewController :UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+resignFirstResponder()
+         textField.resignFirstResponder()
+return  true
+    }
+}

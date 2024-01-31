@@ -8,7 +8,7 @@
 import UIKit
 
 /// Represents tjhe cell in the tableview.
-class DashBoardCell: UITableViewCell {
+class HamburgerCell: UITableViewCell {
     
     /// Referencing Outlets.
     @IBOutlet weak var dashMenuTitles: UILabel!
