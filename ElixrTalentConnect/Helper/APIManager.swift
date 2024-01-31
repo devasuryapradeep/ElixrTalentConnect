@@ -48,7 +48,7 @@ final class APIManager{
         print("ended")
     }
 }
-// MARK: - ENUM FOR ERROR BLOCK.
+// MARK: -  ERROR BLOCK.
 /// This enum created inorder to project a possible error  patterns.
 enum DataError:Error{
     case invalidResponse

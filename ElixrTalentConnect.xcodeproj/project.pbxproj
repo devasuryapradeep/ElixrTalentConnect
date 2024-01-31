@@ -19,6 +19,7 @@
 		5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A977ECF2B4E88350094286B /* LoginViewController.swift */; };
 		5A977ED22B4E9F300094286B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A977ED12B4E9F300094286B /* Launch Screen.storyboard */; };
 		5A977ED32B4EA6610094286B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E602B4E60DA00E2924A /* Assets.xcassets */; };
+		5A9CF87B2B6A0853003939E7 /* ShowJobDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9CF87A2B6A0853003939E7 /* ShowJobDetailsViewController.swift */; };
 		5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */; };
 		5A9E3E352B4E5F2800E2924A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E332B4E5F2800E2924A /* Main.storyboard */; };
 		5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5A9E3E362B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld */; };
@@ -75,6 +76,7 @@
 		5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelstructure.swift; sourceTree = "<group>"; };
 		5A977ECF2B4E88350094286B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A977ED12B4E9F300094286B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		5A9CF87A2B6A0853003939E7 /* ShowJobDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowJobDetailsViewController.swift; sourceTree = "<group>"; };
 		5A9E3E2A2B4E5F2800E2924A /* ElixrTalentConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElixrTalentConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A9E3E342B4E5F2800E2924A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				5A977ECE2B4E88350094286B /* Login */,
 				5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */,
 				5A9E3E332B4E5F2800E2924A /* Main.storyboard */,
+				5A9CF87A2B6A0853003939E7 /* ShowJobDetailsViewController.swift */,
 				5A06F2D92B68FD46009F1553 /* JobDetailsview.swift */,
 				5ABCCDA22B62E39400133F2F /* DashBoardCell.swift */,
 				5ABCCDA02B62E30700133F2F /* dashBoardViewController.swift */,
@@ -606,6 +609,7 @@
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,
 				5A4B7BBD2B56DDB100BF8777 /* SignUpModelstructure.swift in Sources */,
 				5A06F2DA2B68FD46009F1553 /* JobDetailsview.swift in Sources */,
+				5A9CF87B2B6A0853003939E7 /* ShowJobDetailsViewController.swift in Sources */,
 				5A06F2D42B68D19E009F1553 /* JobDisplayTableViewCell.swift in Sources */,
 				5AA0FDB22B5D6D2F008B8D31 /* HomeViewModal.swift in Sources */,
 				5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */,

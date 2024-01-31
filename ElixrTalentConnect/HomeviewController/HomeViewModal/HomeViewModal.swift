@@ -15,10 +15,13 @@ final class JobViewModel{
     var filteredJobs:[Jobs] = []
     var idInstance : String?
     
-    /// get job list from api
+    /// get job list from API.
     /// - Parameter completion: completion return true or false
     func getJobsList(completion: @escaping (Bool) -> ()) {
-        APIManager.shared.fetchJobs { [self] response in
+        APIManager.shared.fetchJobs { [weak self] response in
+            guard let self = self else {
+                return
+            }
             switch response {
             case .success(let tableData):
                 print(tableData)
