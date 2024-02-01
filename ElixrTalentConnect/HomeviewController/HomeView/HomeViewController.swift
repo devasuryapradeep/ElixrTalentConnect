@@ -12,7 +12,6 @@ class HomeViewController: UIViewController {
     
     /// Variable and constant Declarations.
     var viewModal = JobViewModel()
-    var isFavourite:Bool = false
     
     /// Referencing Outlets.
     @IBOutlet weak var customSearchbar: UITextField!

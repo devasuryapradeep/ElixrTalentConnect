@@ -10,7 +10,7 @@ import UIKit
 class DescriptionCell: UITableViewCell {
     
     /// Varaible declarations
-    var  jodetailInstance =  JobDetailsView()
+    var  jodetailInstance =  JobDetailsViewController()
     
     /// Referencing Outlets.
     @IBOutlet weak var jobTitle: UILabel!
@@ -24,5 +24,7 @@ class DescriptionCell: UITableViewCell {
     }
     /// Function  to assign data to the table view Fields.
     /// - Parameter dataItem: The expected parameter is of type Jobs (DataModel).
-   
+    func configueDetails (dataItem :Jobs){
+        jobTitle.text = dataItem.title
+    }
 }

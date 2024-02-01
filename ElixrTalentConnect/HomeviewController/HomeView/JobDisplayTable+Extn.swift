@@ -30,7 +30,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         detailsViewNavigation(for: selectedCell)
     }
     func detailsViewNavigation (for jobDescription :Jobs){
-        guard let detailsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "JobDetailsview")as?JobDetailsView else {
+        guard let detailsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "JobDisplayViewController")as?DetailsViewController else {
             return
         }
         navigationController?.pushViewController(detailsView, animated: true)
