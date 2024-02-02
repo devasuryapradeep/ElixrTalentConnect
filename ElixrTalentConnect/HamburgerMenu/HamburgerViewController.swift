@@ -8,7 +8,7 @@
 import UIKit
 
 /// dashBoardViewController - To present dashboard(Sidemenu)
-class HambugerMenu: UIViewController,UITableViewDelegate,UITableViewDataSource {
+class HamburgerViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
     /// Variable Declarations.
     var titleHeadings = ["About Us","Contact Us","Change Password","Privacy Policy","Terms & Conditions"]
@@ -19,7 +19,7 @@ class HambugerMenu: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let menuItems = tableView.dequeueReusableCell(withIdentifier: "DashBoardCell")as? HamburgerCell else {
+        guard let menuItems = tableView.dequeueReusableCell(withIdentifier: "DashBoardCell")as? HamBurgerCell else {
             return UITableViewCell()
         }
         menuItems.dashMenuTitles.text = titleHeadings[indexPath.row]
@@ -27,7 +27,7 @@ class HambugerMenu: UIViewController,UITableViewDelegate,UITableViewDataSource {
     }
    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! HamburgerCell
+        let cell = tableView.cellForRow(at: indexPath) as! HamBurgerCell
         cell.dashMenuTitles.backgroundColor = UIColor.white
         cell.titleView.backgroundColor = UIColor(red: 50/255, green: 36/255, blue: 79/255, alpha: 1.0)
         cell.dashMenuTitles.backgroundColor = UIColor(red: 50/255, green: 36/255, blue: 79/255, alpha: 1.0)

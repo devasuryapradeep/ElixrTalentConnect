@@ -16,6 +16,7 @@ class ProfileDisplayCell: UITableViewCell {
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var userInput: UITextField!
     @IBOutlet weak var userText: UILabel!
+    
     /// View life cycle.
     override func awakeFromNib() {
         super.awakeFromNib()

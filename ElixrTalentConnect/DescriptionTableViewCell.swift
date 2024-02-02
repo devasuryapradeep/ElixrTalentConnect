@@ -1,5 +1,5 @@
 //
-//  UserInteractionCell.swift
+//  DescriptionTableViewCell.swift
 //  ElixrTalentConnect
 //
 //  Created by Devasurya on 01/02/24.
@@ -7,8 +7,13 @@
 
 import UIKit
 
-class UserInteractionCell: UITableViewCell {
-
+class DescriptionTableViewCell: UITableViewCell {
+    
+    /// Referencing Outlets.
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var titleDescription: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -1,5 +1,5 @@
 //
-//  ProfileTableViewCell.swift
+//  UserProfileTableViewCell.swift
 //  ElixrTalentConnect
 //
 //  Created by Devasurya on 01/02/24.
@@ -7,8 +7,15 @@
 
 import UIKit
 
-class ProfileTableViewCell: UITableViewCell {
+class UserProfileTableViewCell: UITableViewCell {
 
+    
+    @IBOutlet weak var jobTitle: UILabel!
+    @IBOutlet weak var LevelOfJob: UILabel!
+    @IBOutlet weak var locationDetails: UILabel!
+    @IBOutlet weak var jobType: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

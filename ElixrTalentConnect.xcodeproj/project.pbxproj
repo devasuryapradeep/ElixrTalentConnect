@@ -8,14 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		547412CBFCC37137771FC5AD /* Pods_ElixrTalentConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D133AC8BF649373C38C657 /* Pods_ElixrTalentConnect.framework */; };
-		5A06F2D42B68D19E009F1553 /* JobDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06F2D32B68D19E009F1553 /* JobDisplayTableViewCell.swift */; };
 		5A06F2D62B68D1A3009F1553 /* JobDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06F2D52B68D1A3009F1553 /* JobDisplayTableViewCell.swift */; };
+		5A06F2DA2B68FD46009F1553 /* JobDetailsview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06F2D92B68FD46009F1553 /* JobDetailsview.swift */; };
 		5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */; };
 		5A2801CD2B56F02B00AD9800 /* UIButtonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */; };
 		5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */; };
 		5A3ACBAD2B5A896500B3F9F8 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */; };
 		5A4B7BBD2B56DDB100BF8777 /* SignUpModelstructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */; };
-		5A83A7C22B6B9DCA00DC67E9 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A83A7C12B6B9DCA00DC67E9 /* DetailsViewController.swift */; };
 		5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A977ECF2B4E88350094286B /* LoginViewController.swift */; };
 		5A977ED22B4E9F300094286B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A977ED12B4E9F300094286B /* Launch Screen.storyboard */; };
 		5A977ED32B4EA6610094286B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E602B4E60DA00E2924A /* Assets.xcassets */; };
@@ -34,8 +33,8 @@
 		5AA4B1412B54555A009E469D /* ProfileDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */; };
 		5AB565422B55787E00B97941 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565412B55787E00B97941 /* LoginModel.swift */; };
 		5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565442B562E9A00B97941 /* LoginViewModel.swift */; };
-		5ABCCDA12B62E30700133F2F /* HambugerMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCCDA02B62E30700133F2F /* HambugerMenu.swift */; };
-		5ABCCDA32B62E39400133F2F /* HamburgerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCCDA22B62E39400133F2F /* HamburgerCell.swift */; };
+		5ABCCDA12B62E30700133F2F /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCCDA02B62E30700133F2F /* HamburgerViewController.swift */; };
+		5ABCCDA32B62E39400133F2F /* HamBurgerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCCDA22B62E39400133F2F /* HamBurgerCell.swift */; };
 		5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */; };
 		5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */; };
 		5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */; };
@@ -64,14 +63,13 @@
 /* Begin PBXFileReference section */
 		1CE0B1D30FC5050CF44815B0 /* Pods-ElixrTalentConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnect.release.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnect/Pods-ElixrTalentConnect.release.xcconfig"; sourceTree = "<group>"; };
 		1DB07ABD4D543C021EB20E3E /* Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnect-ElixrTalentConnectUITests/Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5A06F2D32B68D19E009F1553 /* JobDisplayTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = JobDisplayTableViewCell.swift; path = "../../../../../Elixr final/ElixrTalentConnect/HomeviewController/HomeView/JobDisplayTableViewCell.swift"; sourceTree = "<group>"; };
 		5A06F2D52B68D1A3009F1553 /* JobDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobDisplayTableViewCell.swift; path = "../../../../../Elixr final/ElixrTalentConnect/HomeviewController/HomeView/JobDisplayTableViewCell.swift"; sourceTree = "<group>"; };
+		5A06F2D92B68FD46009F1553 /* JobDetailsview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsview.swift; sourceTree = "<group>"; };
 		5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewcontroller+Extn.swift"; sourceTree = "<group>"; };
 		5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButtonSetup.swift; path = ElixrTalentConnect/SignUP/UIButtonSetup.swift; sourceTree = SOURCE_ROOT; };
 		5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelstructure.swift; sourceTree = "<group>"; };
-		5A83A7C12B6B9DCA00DC67E9 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		5A977ECF2B4E88350094286B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5A977ED12B4E9F300094286B /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		5A9E3E2A2B4E5F2800E2924A /* ElixrTalentConnect.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ElixrTalentConnect.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +91,8 @@
 		5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplayCell.swift; sourceTree = "<group>"; };
 		5AB565412B55787E00B97941 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		5AB565442B562E9A00B97941 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
-		5ABCCDA02B62E30700133F2F /* HambugerMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HambugerMenu.swift; sourceTree = "<group>"; };
-		5ABCCDA22B62E39400133F2F /* HamburgerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerCell.swift; sourceTree = "<group>"; };
+		5ABCCDA02B62E30700133F2F /* HamburgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
+		5ABCCDA22B62E39400133F2F /* HamBurgerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamBurgerCell.swift; sourceTree = "<group>"; };
 		5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
 		5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDisplayTable+Extn.swift"; sourceTree = "<group>"; };
 		5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModal.swift; sourceTree = "<group>"; };
@@ -156,14 +154,6 @@
 			path = SignUP;
 			sourceTree = "<group>";
 		};
-		5A83A7C02B6B9D8500DC67E9 /* JobDisplay */ = {
-			isa = PBXGroup;
-			children = (
-				5A83A7C12B6B9DCA00DC67E9 /* DetailsViewController.swift */,
-			);
-			path = JobDisplay;
-			sourceTree = "<group>";
-		};
 		5A977ECE2B4E88350094286B /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -202,12 +192,12 @@
 				5AA0FDB32B5D70CD008B8D31 /* Helper */,
 				5AB565432B562E7100B97941 /* HomeviewController */,
 				5A12A7F82B54EEF800A0BD02 /* SignUP */,
-				5ACAE9C42B690A4A00A02965 /* HamburgerView */,
+				5ACAE9C42B690A4A00A02965 /* MyJobs */,
 				5AA4B1332B53AABB009E469D /* Extensions */,
-				5A83A7C02B6B9D8500DC67E9 /* JobDisplay */,
 				5A977ECE2B4E88350094286B /* Login */,
 				5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */,
 				5A9E3E332B4E5F2800E2924A /* Main.storyboard */,
+				5AC6E5A42B6BB17300B13FF6 /* HamburgerMenu */,
 				5A977ED12B4E9F300094286B /* Launch Screen.storyboard */,
 				5A9E3E602B4E60DA00E2924A /* Assets.xcassets */,
 				5A9E3E3E2B4E5F2800E2924A /* Info.plist */,
@@ -281,19 +271,26 @@
 			path = HomeviewController;
 			sourceTree = "<group>";
 		};
-		5ACAE9C42B690A4A00A02965 /* HamburgerView */ = {
+		5AC6E5A42B6BB17300B13FF6 /* HamburgerMenu */ = {
 			isa = PBXGroup;
 			children = (
-				5ABCCDA02B62E30700133F2F /* HambugerMenu.swift */,
-				5ABCCDA22B62E39400133F2F /* HamburgerCell.swift */,
+				5ABCCDA22B62E39400133F2F /* HamBurgerCell.swift */,
+				5ABCCDA02B62E30700133F2F /* HamburgerViewController.swift */,
 			);
-			path = HamburgerView;
+			path = HamburgerMenu;
+			sourceTree = "<group>";
+		};
+		5ACAE9C42B690A4A00A02965 /* MyJobs */ = {
+			isa = PBXGroup;
+			children = (
+				5A06F2D92B68FD46009F1553 /* JobDetailsview.swift */,
+			);
+			path = MyJobs;
 			sourceTree = "<group>";
 		};
 		5AF49FC32B5D0CAF00893719 /* Modal */ = {
 			isa = PBXGroup;
 			children = (
-				5A06F2D32B68D19E009F1553 /* JobDisplayTableViewCell.swift */,
 				5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */,
 			);
 			path = Modal;
@@ -608,9 +605,8 @@
 				5AB565422B55787E00B97941 /* LoginModel.swift in Sources */,
 				5A3ACBAD2B5A896500B3F9F8 /* SignupViewModel.swift in Sources */,
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,
-				5A83A7C22B6B9DCA00DC67E9 /* DetailsViewController.swift in Sources */,
 				5A4B7BBD2B56DDB100BF8777 /* SignUpModelstructure.swift in Sources */,
-				5A06F2D42B68D19E009F1553 /* JobDisplayTableViewCell.swift in Sources */,
+				5A06F2DA2B68FD46009F1553 /* JobDetailsview.swift in Sources */,
 				5AA0FDB22B5D6D2F008B8D31 /* HomeViewModal.swift in Sources */,
 				5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
@@ -624,9 +620,9 @@
 				5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */,
 				5AA4B1412B54555A009E469D /* ProfileDisplayCell.swift in Sources */,
 				5AA4B1352B53AAEB009E469D /* TapGestureSetUp.swift in Sources */,
-				5ABCCDA32B62E39400133F2F /* HamburgerCell.swift in Sources */,
+				5ABCCDA32B62E39400133F2F /* HamBurgerCell.swift in Sources */,
 				5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */,
-				5ABCCDA12B62E30700133F2F /* HambugerMenu.swift in Sources */,
+				5ABCCDA12B62E30700133F2F /* HamburgerViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

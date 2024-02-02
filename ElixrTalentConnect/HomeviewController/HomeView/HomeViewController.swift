@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
     
     /// Variable and constant Declarations.
     var viewModal = JobViewModel()
+    var isFavourite:Bool = false
     
     /// Referencing Outlets.
     @IBOutlet weak var customSearchbar: UITextField!
@@ -23,9 +24,12 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         customSearchbar.delegate = self
         getJobs()
-        self.navigationItem.setHidesBackButton(true, animated: true)        
+        self.navigationItem.setHidesBackButton(true, animated: true)
+
     }
-    
+    override func viewWillAppear(_ animated: Bool) {
+        jobDisplayTableView.reloadData()
+    }
     /// searchFunctionality- this is to asign search functionality to the textfield called  custom textfield.
     /// - Parameter sender: UITextField
     @IBAction func searchFunctionality(_ sender: UITextField) {

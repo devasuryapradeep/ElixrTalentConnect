@@ -38,7 +38,7 @@ final class JobViewModel{
     func resetSearch(){
         filteredJobs = jobDetails
     }
-    
+
     /// filtereData- Main Filter Logic based on job Title.
     /// - Parameter searchTerm: searchTerm: type- String which represents the user input.
     func filteredData(with searchTerm :String?){
