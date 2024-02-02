@@ -983,7 +983,7 @@
                                 </constraints>
                                 <color key="separatorColor" red="0.92156863209999995" green="0.92156863209999995" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="JobDisplayTableViewCell" rowHeight="147" id="Xmw-Sj-U51" customClass="JobDisplayTableViewCell" customModule="ElixrTalentConnect" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeInfoCell" rowHeight="147" id="Xmw-Sj-U51" customClass="HomeInfoCell" customModule="ElixrTalentConnect" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="361" height="147"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Xmw-Sj-U51" id="Ugc-Fi-niK">

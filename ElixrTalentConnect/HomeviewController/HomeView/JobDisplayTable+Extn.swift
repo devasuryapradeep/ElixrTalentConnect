@@ -18,7 +18,7 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let jobItemCell = jobDisplayTableView.dequeueReusableCell(withIdentifier: "JobDisplayTableViewCell")as? JobDisplayTableViewCell else{
+        guard let jobItemCell = jobDisplayTableView.dequeueReusableCell(withIdentifier: "HomeInfoCell")as? HomeInfoCell else{
             return UITableViewCell()
         }
         let cellData  =  viewModal.getInfoCell(at: indexPath.row, isSearching: customSearchbar.isEditing)

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		547412CBFCC37137771FC5AD /* Pods_ElixrTalentConnect.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F2D133AC8BF649373C38C657 /* Pods_ElixrTalentConnect.framework */; };
-		5A06F2D62B68D1A3009F1553 /* JobDisplayTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06F2D52B68D1A3009F1553 /* JobDisplayTableViewCell.swift */; };
+		5A06F2D62B68D1A3009F1553 /* HomeInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06F2D52B68D1A3009F1553 /* HomeInfoCell.swift */; };
 		5A06F2DA2B68FD46009F1553 /* JobDetailsview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A06F2D92B68FD46009F1553 /* JobDetailsview.swift */; };
 		5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */; };
 		5A2801CD2B56F02B00AD9800 /* UIButtonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */; };
@@ -63,7 +63,7 @@
 /* Begin PBXFileReference section */
 		1CE0B1D30FC5050CF44815B0 /* Pods-ElixrTalentConnect.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnect.release.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnect/Pods-ElixrTalentConnect.release.xcconfig"; sourceTree = "<group>"; };
 		1DB07ABD4D543C021EB20E3E /* Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig"; path = "Target Support Files/Pods-ElixrTalentConnect-ElixrTalentConnectUITests/Pods-ElixrTalentConnect-ElixrTalentConnectUITests.release.xcconfig"; sourceTree = "<group>"; };
-		5A06F2D52B68D1A3009F1553 /* JobDisplayTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = JobDisplayTableViewCell.swift; path = "../../../../../Elixr final/ElixrTalentConnect/HomeviewController/HomeView/JobDisplayTableViewCell.swift"; sourceTree = "<group>"; };
+		5A06F2D52B68D1A3009F1553 /* HomeInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HomeInfoCell.swift; path = "../../../../../Elixr final/ElixrTalentConnect/HomeviewController/HomeView/HomeInfoCell.swift"; sourceTree = "<group>"; };
 		5A06F2D92B68FD46009F1553 /* JobDetailsview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsview.swift; sourceTree = "<group>"; };
 		5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewcontroller+Extn.swift"; sourceTree = "<group>"; };
 		5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButtonSetup.swift; path = ElixrTalentConnect/SignUP/UIButtonSetup.swift; sourceTree = SOURCE_ROOT; };
@@ -228,7 +228,7 @@
 			children = (
 				5AA4B1362B53BB4C009E469D /* HomeViewController.swift */,
 				5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */,
-				5A06F2D52B68D1A3009F1553 /* JobDisplayTableViewCell.swift */,
+				5A06F2D52B68D1A3009F1553 /* HomeInfoCell.swift */,
 			);
 			path = HomeView;
 			sourceTree = "<group>";
@@ -611,7 +611,7 @@
 				5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */,
 				5A9E3E2E2B4E5F2800E2924A /* AppDelegate.swift in Sources */,
 				5A2801CD2B56F02B00AD9800 /* UIButtonSetup.swift in Sources */,
-				5A06F2D62B68D1A3009F1553 /* JobDisplayTableViewCell.swift in Sources */,
+				5A06F2D62B68D1A3009F1553 /* HomeInfoCell.swift in Sources */,
 				5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */,
 				5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */,
 				5AA0FDB52B5D70F7008B8D31 /* APIManager.swift in Sources */,
