@@ -18,6 +18,7 @@ class JobDetailsview: UIViewController {
     @IBOutlet weak var jobTitle: UILabel!
     @IBOutlet weak var typeOfJob: UILabel!
     @IBOutlet weak var location: UILabel!
+    @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var jobLevel: UILabel!
     @IBOutlet weak var jobDescription: UILabel!
     @IBOutlet weak var responsibilitiesDescription: UILabel!
@@ -30,6 +31,8 @@ class JobDetailsview: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         dataConfigure()
+        userImage.layer.cornerRadius = userImage.frame.width / 2
+
     }
     
     /// Function that renders data and presents data to the UI.
@@ -56,7 +59,7 @@ class JobDetailsview: UIViewController {
             guard let jobInfoDescription = jobInfoDescription else {
                 return
             }
-            JobManager.shared.arrayOfJobs.append(jobInfoDescription)
+            JobManager.shared.addjobs(_jobItem: jobInfoDescription)
         }
         let conformationAlert = UIAlertController(title: "Job request Successful.", message: "Your job request has been sent.", preferredStyle: .alert)
         conformationAlert.addAction(messageIndicatior)

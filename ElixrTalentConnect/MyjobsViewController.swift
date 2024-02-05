@@ -15,7 +15,7 @@ class MyjobsViewController: UIViewController {
     
     //MARK: - Variable Declarations.
      var arrayOfAppliedJobs : [Jobs] {
-       
+        
          return JobManager.shared.arrayOfJobs
          
      }
@@ -23,6 +23,15 @@ class MyjobsViewController: UIViewController {
     //MARK: - View life Cycle.
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        JobManager.shared.jobAddedCallBack = { [weak self] in
+            guard let self = self else {
+                return
+            }
+            self.appliedJobCell.reloadData()
+        }
     }
 
 }
