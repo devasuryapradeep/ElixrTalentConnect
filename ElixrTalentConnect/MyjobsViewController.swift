@@ -14,39 +14,28 @@ class MyjobsViewController: UIViewController {
     @IBOutlet weak var CustomSearchBar: UITextField!
     
     //MARK: - Variable Declarations.
-     var arrayOfAppliedJobs : [Jobs] {
-        
-         return JobManager.shared.arrayOfJobs
-         
-     }
+     var arrayOfAppliedJobs : [Jobs]?
     
     //MARK: - View life Cycle.
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
-    override func viewWillAppear(_ animated: Bool) {
-        JobManager.shared.jobAddedCallBack = { [weak self] in
-            guard let self = self else {
-                return
-            }
-            self.appliedJobCell.reloadData()
-        }
-    }
+  
 
 }
 
 //MARK: - TableView  Methods.
 extension MyjobsViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return arrayOfAppliedJobs.count
+        return arrayOfAppliedJobs!.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard   let displayCell  = tableView.dequeueReusableCell(withIdentifier: "AppliedJobCell")as? AppliedJobCell else {
             return UITableViewCell()
         }
-        displayCell.configureData(dataitem: arrayOfAppliedJobs[indexPath.row])
+        displayCell.configureData(dataitem: arrayOfAppliedJobs![indexPath.row])
         return displayCell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

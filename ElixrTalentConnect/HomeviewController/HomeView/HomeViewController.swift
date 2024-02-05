@@ -25,7 +25,13 @@ class HomeViewController: UIViewController {
         customSearchbar.delegate = self
         getJobs()
         self.navigationItem.setHidesBackButton(true, animated: true)
-
+        guard let imageTitle = UIImage(named: "Logo") else {
+            return
+        }
+        let titleImage = UIImageView(image: imageTitle)
+        titleImage.contentMode = .scaleAspectFit
+        navigationItem.titleView = titleImage
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         jobDisplayTableView.reloadData()

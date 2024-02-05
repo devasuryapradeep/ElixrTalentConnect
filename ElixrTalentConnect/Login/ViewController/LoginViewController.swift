@@ -33,6 +33,7 @@ class LoginViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
+        //navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
     /// SignIntapped is the IBaction of the button "signInButton", which trigers alert actions,validation

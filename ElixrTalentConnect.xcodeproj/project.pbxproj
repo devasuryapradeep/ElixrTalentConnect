@@ -12,6 +12,8 @@
 		5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */; };
 		5A2801CD2B56F02B00AD9800 /* UIButtonSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */; };
 		5A36485D2B51B5CA009228F4 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */; };
+		5A3692752B70BF7300624D5D /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3692742B70BF7300624D5D /* MyProfileViewController.swift */; };
+		5A3692772B70E0DB00624D5D /* StringExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3692762B70E0DB00624D5D /* StringExtension.swift */; };
 		5A3ACBAD2B5A896500B3F9F8 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */; };
 		5A41658F2B6FEB2900980BCF /* AppliedJobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41658E2B6FEB2900980BCF /* AppliedJobCell.swift */; };
 		5A4165932B6FEC5800980BCF /* MyjobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4165922B6FEC5800980BCF /* MyjobsViewController.swift */; };
@@ -39,6 +41,7 @@
 		5ABCCDA12B62E30700133F2F /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCCDA02B62E30700133F2F /* HamburgerViewController.swift */; };
 		5ABCCDA32B62E39400133F2F /* HamBurgerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCCDA22B62E39400133F2F /* HamBurgerCell.swift */; };
 		5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */; };
+		5AF193F02B710D0400157A8D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193EF2B710D0400157A8D /* ProfileViewController.swift */; };
 		5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */; };
 		5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */; };
 		5AF9C89F2B5F7A1E007A0D54 /* MainTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */; };
@@ -70,6 +73,8 @@
 		5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignupViewcontroller+Extn.swift"; sourceTree = "<group>"; };
 		5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = UIButtonSetup.swift; path = ElixrTalentConnect/SignUP/UIButtonSetup.swift; sourceTree = SOURCE_ROOT; };
 		5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		5A3692742B70BF7300624D5D /* MyProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		5A3692762B70E0DB00624D5D /* StringExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtension.swift; sourceTree = "<group>"; };
 		5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		5A41658E2B6FEB2900980BCF /* AppliedJobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedJobCell.swift; sourceTree = "<group>"; };
 		5A4165922B6FEC5800980BCF /* MyjobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyjobsViewController.swift; path = ../MyjobsViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +105,7 @@
 		5ABCCDA02B62E30700133F2F /* HamburgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
 		5ABCCDA22B62E39400133F2F /* HamBurgerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamBurgerCell.swift; sourceTree = "<group>"; };
 		5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
+		5AF193EF2B710D0400157A8D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDisplayTable+Extn.swift"; sourceTree = "<group>"; };
 		5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModal.swift; sourceTree = "<group>"; };
 		5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MainTabController.swift; path = ElixrTalentConnect/Helper/MainTabController.swift; sourceTree = SOURCE_ROOT; };
@@ -164,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				5A06F2D92B68FD46009F1553 /* JobDetailsview.swift */,
+				5A3692762B70E0DB00624D5D /* StringExtension.swift */,
 			);
 			path = JobDetails;
 			sourceTree = "<group>";
@@ -181,6 +188,7 @@
 		5A9E3E212B4E5F2800E2924A = {
 			isa = PBXGroup;
 			children = (
+				5AF193EF2B710D0400157A8D /* ProfileViewController.swift */,
 				5A9E3E2C2B4E5F2800E2924A /* ElixrTalentConnect */,
 				5A9E3E462B4E5F2800E2924A /* ElixrTalentConnectTests */,
 				5A9E3E502B4E5F2800E2924A /* ElixrTalentConnectUITests */,
@@ -212,6 +220,7 @@
 				5A977ECE2B4E88350094286B /* Login */,
 				5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */,
 				5A9E3E332B4E5F2800E2924A /* Main.storyboard */,
+				5A3692742B70BF7300624D5D /* MyProfileViewController.swift */,
 				5AC6E5A42B6BB17300B13FF6 /* HamburgerMenu */,
 				5A977ED12B4E9F300094286B /* Launch Screen.storyboard */,
 				5A9E3E602B4E60DA00E2924A /* Assets.xcassets */,
@@ -618,14 +627,17 @@
 			files = (
 				5A4165932B6FEC5800980BCF /* MyjobsViewController.swift in Sources */,
 				5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */,
+				5A3692752B70BF7300624D5D /* MyProfileViewController.swift in Sources */,
 				5A4165962B709E0B00980BCF /* JobsDisplayManager.swift in Sources */,
 				5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */,
+				5A3692772B70E0DB00624D5D /* StringExtension.swift in Sources */,
 				5AF9C89F2B5F7A1E007A0D54 /* MainTabController.swift in Sources */,
 				5AB565422B55787E00B97941 /* LoginModel.swift in Sources */,
 				5A3ACBAD2B5A896500B3F9F8 /* SignupViewModel.swift in Sources */,
 				5A41658F2B6FEB2900980BCF /* AppliedJobCell.swift in Sources */,
 				5A9E3E382B4E5F2800E2924A /* ElixrTalentConnect.xcdatamodeld in Sources */,
 				5A4B7BBD2B56DDB100BF8777 /* SignUpModelstructure.swift in Sources */,
+				5AF193F02B710D0400157A8D /* ProfileViewController.swift in Sources */,
 				5A06F2DA2B68FD46009F1553 /* JobDetailsview.swift in Sources */,
 				5AA0FDB22B5D6D2F008B8D31 /* HomeViewModal.swift in Sources */,
 				5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */,

@@ -32,7 +32,7 @@ class JobDetailsview: UIViewController {
         super.viewDidLoad()
         dataConfigure()
         userImage.layer.cornerRadius = userImage.frame.width / 2
-
+        
     }
     
     /// Function that renders data and presents data to the UI.
@@ -51,20 +51,54 @@ class JobDetailsview: UIViewController {
     }
     
     @IBAction func ApplyForJob(_ sender: UIButton) {
-        conformationPrompt()
+        applyJob()
     }
-    func conformationPrompt(){
-        let messageIndicatior = UIAlertAction(title: "OK", style: .default) { [self]
-            UIAlertAction in
-            guard let jobInfoDescription = jobInfoDescription else {
-                return
-            }
-            JobManager.shared.addjobs(_jobItem: jobInfoDescription)
+    func applyJob1() {
+        guard let jobInfoDescription = jobInfoDescription else { return }
+        var savedJobs = UserDefaults.standard.array(forKey: .userKey) as? [[String: Any]] ?? []
+        savedJobs.append(["id": jobInfoDescription.id ?? " ", "title": jobInfoDescription.title, "description": jobInfoDescription.description, "location": jobInfoDescription.location]) //
+    }
+
+    func applyJob() {
+        var savedJobs = getSavedJobs()
+        guard let jobInfoDescription = jobInfoDescription, !isJobAlreadyApplied(savedJobs, job: jobInfoDescription) else {
+            print("Job has already been applied for.")
+            showAlert(message: "Job already applied")
+            return
         }
-        let conformationAlert = UIAlertController(title: "Job request Successful.", message: "Your job request has been sent.", preferredStyle: .alert)
-        conformationAlert.addAction(messageIndicatior)
-        present(conformationAlert, animated: true)
+        savedJobs.append(jobInfoDescription)
+        do {
+            let appliedJobsData = try JSONEncoder().encode(savedJobs)
+            UserDefaults.standard.set(appliedJobsData, forKey: .userKey)
+        } catch {
+            showAlert(message: "Job Applied")
+        }
     }
+    
+    func getSavedJobs() -> [Jobs] {
+        guard let savedJobData = UserDefaults.standard.data(forKey: .userKey),
+              let savedJobs = try? JSONDecoder().decode([Jobs].self, from: savedJobData) else {
+            return []
+        }
+        
+        return savedJobs
+    }
+    
+    func isJobAlreadyApplied(_ savedJobs: [Jobs], job: Jobs) -> Bool {
+        guard !savedJobs.isEmpty else {
+            return false
+        }
+        let isApplied = savedJobs.contains(where: { $0.id == job.id })
+        return isApplied
+    }
+    
+    func showAlert(message: String) {
+        let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+        alertController.addAction(okAction)
+        present(alertController, animated: true, completion: nil)
+    }
+    
     
     //MARK: - @IBAction For Favourite button action.
     @IBAction func FavoriteButtonAction(_ sender: UIButton) {
@@ -92,4 +126,6 @@ class JobDetailsview: UIViewController {
             favouriteButton.setImage(UIImage(named: "heart"), for: .normal)
         }
     }
+    
 }
+
