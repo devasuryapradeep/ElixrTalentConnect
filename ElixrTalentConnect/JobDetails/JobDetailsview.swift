@@ -12,6 +12,8 @@ class JobDetailsview: UIViewController {
     /// Variable decalarations.
     var  jobInfoDescription :Jobs?
     var wishListVariable :String?
+    var appliedJobInstance = MyjobsViewController()
+    var delegateForSavingJob:saveJobOnapply?
     
     /// Referencing Outlets.
     @IBOutlet weak var jobTitle: UILabel!
@@ -49,19 +51,27 @@ class JobDetailsview: UIViewController {
     @IBAction func ApplyForJob(_ sender: UIButton) {
         conformationPrompt()
     }
-    
     func conformationPrompt(){
-        let messageIndicatior = UIAlertAction(title: "OK", style: .default)
+        let messageIndicatior = UIAlertAction(title: "OK", style: .default) { [self]
+            UIAlertAction in
+            guard let jobInfoDescription = jobInfoDescription else {
+                return
+            }
+            
+            delegateForSavingJob?.addJobs(result: jobInfoDescription)
+        }
         let conformationAlert = UIAlertController(title: "Job request Successful.", message: "Your job request has been sent.", preferredStyle: .alert)
         conformationAlert.addAction(messageIndicatior)
         present(conformationAlert, animated: true)
     }
     
+    //MARK: - @IBAction For Favourite button action.
     @IBAction func FavoriteButtonAction(_ sender: UIButton) {
         checkifValuePresent()
         actionOnCheck()
     }
     
+    // MARK: - Functions to  perform Favourite Button action.
     func checkifValuePresent(){
         guard let uniqueJobId = wishListVariable else {
             return
@@ -81,4 +91,7 @@ class JobDetailsview: UIViewController {
             favouriteButton.setImage(UIImage(named: "heart"), for: .normal)
         }
     }
+}
+protocol saveJobOnapply{
+    func addJobs(result:Jobs)
 }
