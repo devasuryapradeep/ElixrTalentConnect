@@ -7,33 +7,29 @@
 
 import UIKit
 
-class MyjobsViewController: UIViewController , saveJobOnapply{
+class MyjobsViewController: UIViewController {
     
    //MARK: - IBOutlets.
     @IBOutlet weak var appliedJobCell: UITableView!
     @IBOutlet weak var CustomSearchBar: UITextField!
     
     //MARK: - Variable Declarations.
-    var arrayOfAppliedJobs : [Jobs] = []
+     var arrayOfAppliedJobs : [Jobs] {
+       
+         return JobManager.shared.arrayOfJobs
+         
+     }
     
     //MARK: - View life Cycle.
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
-    func addJobs(result: Jobs) {
-        arrayOfAppliedJobs.append(result)
-        appliedJobCell.reloadData()
-        let jobDetailsViewController = JobDetailsview()
-        jobDetailsViewController.delegateForSavingJob = self
-        print("-->\(arrayOfAppliedJobs)")
-    }
+
 }
 
 //MARK: - TableView  Methods.
 extension MyjobsViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print("-->\(arrayOfAppliedJobs.count)")
         return arrayOfAppliedJobs.count
     }
     

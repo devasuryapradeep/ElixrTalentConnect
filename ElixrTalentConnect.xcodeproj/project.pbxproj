@@ -15,6 +15,7 @@
 		5A3ACBAD2B5A896500B3F9F8 /* SignupViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */; };
 		5A41658F2B6FEB2900980BCF /* AppliedJobCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A41658E2B6FEB2900980BCF /* AppliedJobCell.swift */; };
 		5A4165932B6FEC5800980BCF /* MyjobsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4165922B6FEC5800980BCF /* MyjobsViewController.swift */; };
+		5A4165962B709E0B00980BCF /* JobsDisplayManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4165952B709E0B00980BCF /* JobsDisplayManager.swift */; };
 		5A4936432B6CE9A700E26F98 /* HomeInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4936422B6CE9A700E26F98 /* HomeInfoCell.swift */; };
 		5A4B7BBD2B56DDB100BF8777 /* SignUpModelstructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */; };
 		5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A977ECF2B4E88350094286B /* LoginViewController.swift */; };
@@ -72,6 +73,7 @@
 		5A3ACBAC2B5A896500B3F9F8 /* SignupViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModel.swift; sourceTree = "<group>"; };
 		5A41658E2B6FEB2900980BCF /* AppliedJobCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppliedJobCell.swift; sourceTree = "<group>"; };
 		5A4165922B6FEC5800980BCF /* MyjobsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MyjobsViewController.swift; path = ../MyjobsViewController.swift; sourceTree = "<group>"; };
+		5A4165952B709E0B00980BCF /* JobsDisplayManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsDisplayManager.swift; sourceTree = "<group>"; };
 		5A4936422B6CE9A700E26F98 /* HomeInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoCell.swift; sourceTree = "<group>"; };
 		5A4B7BBC2B56DDB100BF8777 /* SignUpModelstructure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpModelstructure.swift; sourceTree = "<group>"; };
 		5A977ECF2B4E88350094286B /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -201,12 +203,12 @@
 		5A9E3E2C2B4E5F2800E2924A /* ElixrTalentConnect */ = {
 			isa = PBXGroup;
 			children = (
-				5A4165942B6FED1E00980BCF /* JobDetails */,
 				5AA0FDB32B5D70CD008B8D31 /* Helper */,
+				5AA4B1332B53AABB009E469D /* Extensions */,
 				5AB565432B562E7100B97941 /* HomeviewController */,
 				5A12A7F82B54EEF800A0BD02 /* SignUP */,
 				5ACAE9C42B690A4A00A02965 /* MyJobs */,
-				5AA4B1332B53AABB009E469D /* Extensions */,
+				5A4165942B6FED1E00980BCF /* JobDetails */,
 				5A977ECE2B4E88350094286B /* Login */,
 				5A9E3E2D2B4E5F2800E2924A /* AppDelegate.swift */,
 				5A9E3E332B4E5F2800E2924A /* Main.storyboard */,
@@ -258,6 +260,7 @@
 			isa = PBXGroup;
 			children = (
 				5AF9C89E2B5F7A1E007A0D54 /* MainTabController.swift */,
+				5A4165952B709E0B00980BCF /* JobsDisplayManager.swift */,
 				5AA0FDB42B5D70F7008B8D31 /* APIManager.swift */,
 			);
 			path = Helper;
@@ -615,6 +618,7 @@
 			files = (
 				5A4165932B6FEC5800980BCF /* MyjobsViewController.swift in Sources */,
 				5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */,
+				5A4165962B709E0B00980BCF /* JobsDisplayManager.swift in Sources */,
 				5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */,
 				5AF9C89F2B5F7A1E007A0D54 /* MainTabController.swift in Sources */,
 				5AB565422B55787E00B97941 /* LoginModel.swift in Sources */,

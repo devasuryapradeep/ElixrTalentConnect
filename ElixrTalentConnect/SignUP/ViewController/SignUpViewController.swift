@@ -75,5 +75,11 @@ class SignUpViewController: UIViewController {
             present(alertOnValidation, animated: true)
         }
 }
-    
+
+//MARK: - UITextfieldDelegate method to respond user interaction while 
+extension SignUpViewController:UITextFieldDelegate{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+}
 

@@ -13,7 +13,6 @@ class JobDetailsview: UIViewController {
     var  jobInfoDescription :Jobs?
     var wishListVariable :String?
     var appliedJobInstance = MyjobsViewController()
-    var delegateForSavingJob:saveJobOnapply?
     
     /// Referencing Outlets.
     @IBOutlet weak var jobTitle: UILabel!
@@ -57,8 +56,7 @@ class JobDetailsview: UIViewController {
             guard let jobInfoDescription = jobInfoDescription else {
                 return
             }
-            
-            delegateForSavingJob?.addJobs(result: jobInfoDescription)
+            JobManager.shared.arrayOfJobs.append(jobInfoDescription)
         }
         let conformationAlert = UIAlertController(title: "Job request Successful.", message: "Your job request has been sent.", preferredStyle: .alert)
         conformationAlert.addAction(messageIndicatior)
@@ -91,7 +89,4 @@ class JobDetailsview: UIViewController {
             favouriteButton.setImage(UIImage(named: "heart"), for: .normal)
         }
     }
-}
-protocol saveJobOnapply{
-    func addJobs(result:Jobs)
 }

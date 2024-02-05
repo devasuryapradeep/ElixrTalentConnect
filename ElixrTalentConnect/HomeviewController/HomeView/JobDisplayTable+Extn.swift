@@ -37,5 +37,6 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         navigationController?.pushViewController(detailsView, animated: true)
     }
 }
+ 
 
 
