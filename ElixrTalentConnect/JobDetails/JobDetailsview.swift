@@ -32,7 +32,6 @@ class JobDetailsview: UIViewController {
         super.viewDidLoad()
         dataConfigure()
         userImage.layer.cornerRadius = userImage.frame.width / 2
-        
     }
     
     /// Function that renders data and presents data to the UI.

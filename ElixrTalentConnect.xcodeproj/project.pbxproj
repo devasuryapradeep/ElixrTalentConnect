@@ -170,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				5A06F2D92B68FD46009F1553 /* JobDetailsview.swift */,
-				5A3692762B70E0DB00624D5D /* StringExtension.swift */,
 			);
 			path = JobDetails;
 			sourceTree = "<group>";
@@ -278,6 +277,7 @@
 		5AA4B1332B53AABB009E469D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				5A3692762B70E0DB00624D5D /* StringExtension.swift */,
 				5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */,
 				5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */,
 				5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */,

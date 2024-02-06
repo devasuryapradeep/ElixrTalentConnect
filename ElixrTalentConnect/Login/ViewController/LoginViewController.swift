@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     
     /// Variables and constants  declaration
     private var viewModel : LoginViewModel!
-    
+    //MARK: - Referencing Outlets.
     /// Referencing  Outlets.
     @IBOutlet weak var outerView: UIView!
     @IBOutlet weak var signInButton: UIButton!
@@ -30,6 +30,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         viewModel = LoginViewModel()
+        self.navigationController?.navigationBar.backgroundColor = UIColor.blue
         self.navigationItem.setHidesBackButton(true, animated: true)
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
@@ -132,6 +133,12 @@ class LoginViewController: UIViewController {
         present(alertMessage, animated: true)
         
     }
+   
+    deinit {
+          // Unregister from keyboard notifications
+          NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+          NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+      }
     
     /// Function to navigate to the Signupviewcontroller.
     func navigateToSignup(){
