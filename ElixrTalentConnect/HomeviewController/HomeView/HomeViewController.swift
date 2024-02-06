@@ -15,6 +15,7 @@ class HomeViewController: UIViewController {
     var isFavourite:Bool = false
     
     /// Referencing Outlets.
+    @IBOutlet weak var hamBurgerButton: UIButton!
     @IBOutlet weak var customSearchbar: UITextField!
     @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
     @IBOutlet weak var jobDisplayTableView: UITableView!
@@ -22,10 +23,13 @@ class HomeViewController: UIViewController {
     /// View llife cycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         customSearchbar.delegate = self
         getJobs()
+        self.navigationController?.navigationBar.isHidden = true
         self.navigationItem.setHidesBackButton(true, animated: true)
-      setUpNavigationItem()
+        self.view.bringSubviewToFront(hamBurgerButton)
+     // setUpNavigationItem()
     }
     override func viewWillAppear(_ animated: Bool) {
         jobDisplayTableView.reloadData()
@@ -66,16 +70,6 @@ class HomeViewController: UIViewController {
         present(alertDisplay, animated: true)
     }
    
-    func setUpNavigationItem() {
-        guard let imageTitle = UIImage(named: "Logo") else {
-            return
-        }
-        let titleImage = UIImageView(image: imageTitle)
-        titleImage.contentMode = .scaleAspectFit
-        navigationItem.titleView = titleImage
-        
-    }
-    
     //  search logic
     func performSearch(with searchTerm: String?) {
         guard let searchTerm = searchTerm ,!searchTerm.isEmpty else {
@@ -93,14 +87,6 @@ class HomeViewController: UIViewController {
 extension HomeViewController:UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // Hide the keyboard
-        performSearch(with: customSearchbar.text)
-        return true
-    }
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let currentText = textField.text ?? " "
-        let updatedText =  (currentText as NSString).replacingCharacters(in: range, with: string)
-        viewModal.filteredData(with: updatedText)
-        jobDisplayTableView.reloadData()
         return true
     }
 }
