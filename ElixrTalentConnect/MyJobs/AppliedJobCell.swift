@@ -16,6 +16,7 @@ class AppliedJobCell: UITableViewCell {
     @IBOutlet weak var jobDescription: UILabel!
     @IBOutlet weak var jobLocation: UILabel!
     @IBOutlet weak var jobTitle: UILabel!
+    @IBOutlet weak var jobStatus: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,5 +30,17 @@ class AppliedJobCell: UITableViewCell {
         jobTitle.text = dataitem.title
         jobDescription.text = dataitem.description
         jobLocation.text = dataitem.location
+        jobStatus.text  = dataitem.status
+        jobStatus.layer.cornerRadius = 5
+        jobStatus.clipsToBounds = true
+        if jobStatus.text  == "Scheduled" {
+            jobStatus.backgroundColor = UIColor.green
+        }
+        else if jobStatus.text == "Rejected" {
+            jobStatus.backgroundColor = UIColor.red
+        }
+        else if  jobStatus.text == "In Progress" {
+            jobStatus.backgroundColor = UIColor.blue
+        }
     }
 }
