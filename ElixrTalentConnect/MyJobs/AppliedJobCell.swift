@@ -26,6 +26,8 @@ class AppliedJobCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    /// configureData - this  Function is called in the cell for rowat function to render data  from data soucrce.
+    /// - Parameter dataitem: type: jobs.
     func configureData(dataitem : Jobs){
         jobTitle.text = dataitem.title
         jobDescription.text = dataitem.description

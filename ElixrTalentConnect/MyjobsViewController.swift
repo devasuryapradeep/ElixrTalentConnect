@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+// MyjobsViewController - Displays all applied jobs  in a tableview.
 class MyjobsViewController: UIViewController {
     
    //MARK: - IBOutlets.
@@ -22,18 +22,14 @@ class MyjobsViewController: UIViewController {
         super.viewDidLoad()
         savedJobs = getSavedJobs()
         appliedJobCell.reloadData()
-        guard let imageTitle = UIImage(named: "Logo") else {
-            print("-->boyhtinf")
-                   return
-               }
-               let titleImage = UIImageView(image: imageTitle)
-               titleImage.contentMode = .scaleAspectFit
-               navigationItem.titleView = titleImage
     }
     override func viewWillAppear(_ animated: Bool) {
         savedJobs = getSavedJobs()
              appliedJobCell.reloadData()
     }
+    //MARK: - Applied jobs are acessed using userdefault method
+    /// getSavedJobs - The data stored in userdefault is decoded and  assigned to a array of type Jobs.
+    /// - Returns: An array of jobs.
     func getSavedJobs() -> [Jobs] {
               guard let savedJobData = UserDefaults.standard.data(forKey: .userKey),
                     let savedJobs = try? JSONDecoder().decode([Jobs].self, from: savedJobData) else {
@@ -61,5 +57,4 @@ extension MyjobsViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return  UITableView.automaticDimension
     }
-    
 }
