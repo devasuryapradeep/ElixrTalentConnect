@@ -25,6 +25,7 @@ final class JobViewModel{
             switch response {
             case .success(let tableData):
                 print(tableData)
+                self.filteredJobs = tableData
                 self.jobDetails = tableData
                 completion(true)
             case .failure(let error):

@@ -22,7 +22,13 @@ class MyjobsViewController: UIViewController {
         super.viewDidLoad()
         savedJobs = getSavedJobs()
         appliedJobCell.reloadData()
-        
+        guard let imageTitle = UIImage(named: "Logo") else {
+                   return
+               }
+               let titleImage = UIImageView(image: imageTitle)
+               titleImage.contentMode = .scaleAspectFit
+               navigationItem.titleView = titleImage
+        self.navigationItem.setHidesBackButton(true, animated: true)
     }
     override func viewWillAppear(_ animated: Bool) {
         savedJobs = getSavedJobs()

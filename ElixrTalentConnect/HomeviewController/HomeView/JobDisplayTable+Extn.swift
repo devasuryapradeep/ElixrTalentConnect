@@ -10,7 +10,10 @@ import UIKit
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return customSearchbar.isEditing ? viewModal.filteredJobs.count:viewModal.jobDetails.count
+        print(customSearchbar.isEditing)
+        print("-->\(customSearchbar.isEditing ? viewModal.filteredJobs.count:viewModal.jobDetails.count)")
+        //return customSearchbar.isEditing ? viewModal.filteredJobs.count:viewModal.jobDetails.count
+        return viewModal.filteredJobs.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -21,9 +24,12 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let jobItemCell = jobDisplayTableView.dequeueReusableCell(withIdentifier: "HomeInfoCell")as? HomeInfoCell else{
             return UITableViewCell()
         }
-        let cellData  =  viewModal.getInfoCell(at: indexPath.row, isSearching: customSearchbar.isEditing)
-        jobItemCell.cellData(with: cellData)
-        return jobItemCell
+        let cellData  =  viewModal.filteredJobs[indexPath.row]
+         // let cellData  =  viewModal.getInfoCell(at: indexPath.row, isSearching: customSearchbar.isEditing)
+            jobItemCell.cellData(with: cellData)
+        
+            return jobItemCell
+        
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let selectedCell = viewModal.getInfoCell(at: indexPath.row, isSearching: customSearchbar.isEditing)
@@ -33,6 +39,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         guard let detailsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "JobDetailsview")as?JobDetailsview else {
             return
         }
+    performSearch(with:  nil )
+        customSearchbar.resignFirstResponder()
+// Hide the keyboard
         detailsView.jobInfoDescription =  jobDescription
         navigationController?.pushViewController(detailsView, animated: true)
     }

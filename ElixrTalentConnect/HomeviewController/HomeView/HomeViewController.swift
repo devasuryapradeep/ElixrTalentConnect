@@ -25,12 +25,12 @@ class HomeViewController: UIViewController {
         customSearchbar.delegate = self
         getJobs()
         self.navigationItem.setHidesBackButton(true, animated: true)
-        guard let imageTitle = UIImage(named: "Logo") else {
-            return
-        }
-        let titleImage = UIImageView(image: imageTitle)
-        titleImage.contentMode = .scaleAspectFit
-        navigationItem.titleView = titleImage
+//        guard let imageTitle = UIImage(named: "Logo") else {
+//            return
+//        }
+//        let titleImage = UIImageView(image: imageTitle)
+//        titleImage.contentMode = .scaleAspectFit
+//        navigationItem.titleView = titleImage
         
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +42,7 @@ class HomeViewController: UIViewController {
         if let searchText = sender.text{
             viewModal.filteredData(with: searchText)
             jobDisplayTableView.reloadData()
+            
         }
     }
     
@@ -76,6 +77,7 @@ class HomeViewController: UIViewController {
         guard let searchTerm = searchTerm ,!searchTerm.isEmpty else {
             viewModal.resetSearch()
             jobDisplayTableView.reloadData()
+            customSearchbar.text = nil
             return
         }
         viewModal.filteredData(with: searchTerm)
@@ -88,6 +90,13 @@ extension HomeViewController:UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder() // Hide the keyboard
         performSearch(with: customSearchbar.text)
+        return true
+    }
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let currentText = textField.text ?? " "
+        let updatedText =  (currentText as NSString).replacingCharacters(in: range, with: string)
+        viewModal.filteredData(with: updatedText)
+        jobDisplayTableView.reloadData()
         return true
     }
 }
