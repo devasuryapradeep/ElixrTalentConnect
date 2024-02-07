@@ -9,7 +9,7 @@ import Foundation
 
 /// Model of the Login Page.
 struct UserModel {
-    var userName:String?
-    var passwordValue:String?
+    let userName:String
+    let passwordValue:String
 }
 

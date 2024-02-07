@@ -15,10 +15,10 @@ import LocalAuthentication
         /// - Parameter model: Is of type UserModal.   ( modal for MVVM structure)
         /// - Returns: returns a closure containing  a boolean value and  message related to that basic array.
         func validateCredentials(model: UserModel) -> (isValid: Bool, message: String?) {
-            guard !model.userName!.isEmpty, model.userName!.contains("@"), model.userName!.contains(".") else {
+            guard !model.userName.isEmpty, model.userName.contains("@"), model.userName.contains(".") else {
                 return (false, "Please enter a valid email.")
             }
-            guard !model.passwordValue!.isEmpty, isAlphanumeric(model.passwordValue!), model.passwordValue!.count >= 8 else {
+            guard !model.passwordValue.isEmpty, isAlphanumeric(model.passwordValue), model.passwordValue.count >= 8 else {
                 return (false, "Please enter a valid alphanumeric password.")
             }
             return (true, nil)
