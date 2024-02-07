@@ -30,7 +30,6 @@
 		5A9E3E612B4E60DA00E2924A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A9E3E602B4E60DA00E2924A /* Assets.xcassets */; };
 		5AA0FDB22B5D6D2F008B8D31 /* HomeViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA0FDB12B5D6D2F008B8D31 /* HomeViewModal.swift */; };
 		5AA0FDB52B5D70F7008B8D31 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA0FDB42B5D70F7008B8D31 /* APIManager.swift */; };
-		5AA4B1352B53AAEB009E469D /* TapGestureSetUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */; };
 		5AA4B1372B53BB4C009E469D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1362B53BB4C009E469D /* HomeViewController.swift */; };
 		5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */; };
 		5AA4B1412B54555A009E469D /* ProfileDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */; };
@@ -92,7 +91,6 @@
 		5A9E3E602B4E60DA00E2924A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ElixrTalentConnect/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		5AA0FDB12B5D6D2F008B8D31 /* HomeViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModal.swift; sourceTree = "<group>"; };
 		5AA0FDB42B5D70F7008B8D31 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
-		5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapGestureSetUp.swift; sourceTree = "<group>"; };
 		5AA4B1362B53BB4C009E469D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSetup.swift; sourceTree = "<group>"; };
 		5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplayCell.swift; sourceTree = "<group>"; };
@@ -275,7 +273,6 @@
 				5A2801CC2B56F02B00AD9800 /* UIButtonSetup.swift */,
 				5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */,
 				5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */,
-				5AA4B1342B53AAEB009E469D /* TapGestureSetUp.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -651,7 +648,6 @@
 				5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */,
 				5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */,
 				5AA4B1412B54555A009E469D /* ProfileDisplayCell.swift in Sources */,
-				5AA4B1352B53AAEB009E469D /* TapGestureSetUp.swift in Sources */,
 				5ABCCDA32B62E39400133F2F /* HamBurgerCell.swift in Sources */,
 				5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */,
 				5ABCCDA12B62E30700133F2F /* HamburgerViewController.swift in Sources */,
