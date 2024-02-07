@@ -37,14 +37,7 @@ class SignUpViewController: UIViewController {
         signUpButton.layer.cornerRadius = 5
         signUpButton.clipsToBounds = true
     }
-    
-    //MARK: - @IBAction for SignIn .
-    /// SignIn action
-    /// - Parameter sender: UIButton
-    @IBAction func SignUpTapped(_ sender: UIButton) {
-        authenticationOnSignup()
-    }
-    
+        
     //MARK: - @IBAction for return back to the LoginScreen .
     ///@IBAction to set up return button to the rootview controller.
     /// - Parameter sender: UIButton

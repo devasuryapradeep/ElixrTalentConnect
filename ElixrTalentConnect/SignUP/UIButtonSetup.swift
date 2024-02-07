@@ -2,8 +2,8 @@ import UIKit
 import Foundation
 @IBDesignable
 
+/// IBDesignable  to UIButton  that will add features to the  attribute inspector of the UIbutton.
 class UIButtonSetup:UIButton {
-     
         @IBInspectable var borderColor: UIColor? {
             set {
                 guard let uiColor = newValue else { return }
@@ -26,13 +26,10 @@ class UIButtonSetup:UIButton {
             get { layer.borderWidth }
             set { layer.borderWidth = newValue }
         }
-        
         override init(frame: CGRect) {
             super.init(frame: frame)
         }
-        
         required init?(coder aDecoder: NSCoder) {
             super.init(coder: aDecoder)
         }
-    
 }

@@ -8,6 +8,8 @@
 import Foundation
 import UIKit
 @IBDesignable
+/// /// IBDesignable  to UIView  that will add features to the  attribute inspector of the UIview.
+
 class UIViewSetUp: UIView {
     
     @IBInspectable
