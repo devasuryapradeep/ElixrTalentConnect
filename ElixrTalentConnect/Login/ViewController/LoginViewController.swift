@@ -47,22 +47,23 @@ class LoginViewController: UIViewController {
     /// SignIntapped is the IBaction of the button "signInButton", which trigers alert actions,validation
     /// - Parameter sender: UIbutton named "signInButton".
     @IBAction func signInTapped(_ sender: UIButton){
-        let loginModel = UserModel(userName: emailField.text , passwordValue:passwordField.text)
-        let validationResult = viewModel.validateCredentials(model: loginModel)
-        if validationResult.isValid {
-            viewModel.authenticateWithBiometrics { [weak self] (success, error) in
-                if success {
-                    self!.navigateToHome()
-                } else {
-                    if let error = error {
-                        self!.alertOnEmptyFields(message: "Biometric authentication failed: \(error.localizedDescription)")
+          let loginModel = UserModel(userName: emailField.text ?? "" , passwordValue:passwordField.text ?? "")
+            let validationResult = viewModel.validateCredentials(model: loginModel)
+            if validationResult.isValid {
+                viewModel.authenticateWithBiometrics { [weak self] (success, error) in
+                    if success {
+                        self!.navigateToHome()
+                    } else {
+                        if let error = error {
+                            self!.alertOnEmptyFields(message: "Biometric authentication failed: \(error.localizedDescription)")
+                        }
                     }
                 }
+            } else {
+                alertOnEmptyFields(message: validationResult.message ?? "Invalid credentials.")
             }
-        } else {
-            alertOnEmptyFields(message: validationResult.message ?? "Invalid credentials.")
         }
-    }
+    
     
     /// Function to  perform navigaion to HomeviewController.
     func navigateToHome() {
