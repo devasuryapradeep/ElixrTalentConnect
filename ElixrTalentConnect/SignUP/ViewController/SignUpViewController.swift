@@ -12,6 +12,7 @@ class SignUpViewController: UIViewController {
     //MARK: - Referencing Outlets
     /// Referencing Outlets.
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButtonSetup!
     @IBOutlet weak var SignUpTableview: UITableView!
     @IBOutlet weak var promptSignup: UILabel!
     
@@ -21,19 +22,25 @@ class SignUpViewController: UIViewController {
     var firstCellPlaceholder:String?
     let cellTypes: [SignupDataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
     let viewModalInstance = SignUpViewModel()
-    var isOn : Bool = true
     
     //MARK: - View life Cycle.
     
     /// View life Cycle.
     override func viewDidLoad() {
         super.viewDidLoad()
+        UISetup()
         backButton.setImage(UIImage(systemName: "arrow.backward"), for: .highlighted)
         backButton.tintColor = UIColor.gray
         self.view.endEditing(true)
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
+    
+    // MARK: -  Sign-in button setup.
+    func UISetup (){
+        signUpButton.layer.cornerRadius = 5
+        signUpButton.clipsToBounds = true
+    }
     //MARK: - @IBAction for SignIn .
     /// SignIn action
     /// - Parameter sender: UIButton

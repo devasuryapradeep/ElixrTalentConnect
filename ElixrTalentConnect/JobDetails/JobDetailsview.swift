@@ -6,34 +6,62 @@
 //
 
 import UIKit
-
+// JobDetailsview will show the
 class JobDetailsview: UIViewController {
+    
+    //MARK: - Variable & Constants decalarations.
     
     /// Variable decalarations.
     var  jobInfoDescription :Jobs?
     var wishListVariable :String?
     var appliedJobInstance = MyjobsViewController()
+    let heartImage = UIImage(named: "heart")
+    let heartFillImage = UIImage(named: "heart.fill")
     
+    //MARK: - Referencing Outlets.
     /// Referencing Outlets.
     @IBOutlet weak var jobTitle: UILabel!
     @IBOutlet weak var typeOfJob: UILabel!
     @IBOutlet weak var location: UILabel!
     @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var applyButton: UIScrollView!
     @IBOutlet weak var jobLevel: UILabel!
     @IBOutlet weak var jobDescription: UILabel!
     @IBOutlet weak var responsibilitiesDescription: UILabel!
     @IBOutlet weak var qualificationDescription: UILabel!
     @IBOutlet weak var favouriteButton: UIButton!
     
+    //MARK: -IBAction for ApplyForJob button.
+    /// ApplyForJob - @IBAction for "apply for job" button  that appen job to the myjob view .
+    /// - Parameter sender: UIbutton
+    @IBAction func ApplyForJob(_ sender: UIButton) {
+        applyJob()
+    }
+    
+    //MARK: - @IBAction For Favourite button action.
+    @IBAction func FavoriteButtonAction(_ sender: UIButton) {
+        checkifValuePresent()
+        actionOnCheck()
+    }
+    //MARK: - View Life Cycle.
+    
     override func viewWillAppear(_ animated: Bool) {
         actionOnCheck()
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         dataConfigure()
-        userImage.layer.cornerRadius = userImage.frame.width / 2
-        
+        UISetup()
     }
+    
+    /// UISetup - is the function to setup the UI.
+    func UISetup(){
+        userImage.layer.cornerRadius = userImage.frame.width / 2
+        applyButton.layer.cornerRadius = 5
+        applyButton.clipsToBounds = true
+    }
+    
     
     /// Function that renders data and presents data to the UI.
     func dataConfigure(){
@@ -50,15 +78,13 @@ class JobDetailsview: UIViewController {
         wishListVariable = jobInfoDescription.id
     }
     
-    @IBAction func ApplyForJob(_ sender: UIButton) {
-        applyJob()
-    }
+ 
     func applyJob1() {
         guard let jobInfoDescription = jobInfoDescription else { return }
         var savedJobs = UserDefaults.standard.array(forKey: .userKey) as? [[String: Any]] ?? []
         savedJobs.append(["id": jobInfoDescription.id ?? " ", "title": jobInfoDescription.title, "description": jobInfoDescription.description, "location": jobInfoDescription.location]) //
     }
-
+    
     func applyJob() {
         var savedJobs = getSavedJobs()
         guard let jobInfoDescription = jobInfoDescription, !isJobAlreadyApplied(savedJobs, job: jobInfoDescription) else {
@@ -70,8 +96,10 @@ class JobDetailsview: UIViewController {
         do {
             let appliedJobsData = try JSONEncoder().encode(savedJobs)
             UserDefaults.standard.set(appliedJobsData, forKey: .userKey)
-        } catch {
             showAlert(message: "Job Applied")
+            
+        } catch {
+            showAlert(message: "ERROR")
         }
     }
     
@@ -92,6 +120,8 @@ class JobDetailsview: UIViewController {
         return isApplied
     }
     
+    /// showAlert -  this function is called when job is applied for the first time and also preseted when the same job is applied twice.
+    /// - Parameter message: is a string variable that changes its value based on the activation of  applyforJob() and applyforJob1().
     func showAlert(message: String) {
         let alertController = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
@@ -99,12 +129,7 @@ class JobDetailsview: UIViewController {
         present(alertController, animated: true, completion: nil)
     }
     
-    
-    //MARK: - @IBAction For Favourite button action.
-    @IBAction func FavoriteButtonAction(_ sender: UIButton) {
-        checkifValuePresent()
-        actionOnCheck()
-    }
+  
     
     // MARK: - Functions to  perform Favourite Button action.
     func checkifValuePresent(){
@@ -114,18 +139,13 @@ class JobDetailsview: UIViewController {
         let isWishList = UserDefaults.standard.bool(forKey: uniqueJobId)
         UserDefaults.standard.set(!isWishList, forKey: uniqueJobId)
     }
+    /// actionOnCheck- thid function dete
     func actionOnCheck (){
         guard let uniqueJobId =  wishListVariable else{
             return
         }
         let isWishList = UserDefaults.standard.bool(forKey: uniqueJobId)
-        if isWishList{
-            favouriteButton.setImage(UIImage(named: "heart.fill"), for: .normal)
-        }
-        else{
-            favouriteButton.setImage(UIImage(named: "heart"), for: .normal)
-        }
+        favouriteButton.setImage(isWishList ? heartFillImage : heartImage, for: .normal)
     }
-    
 }
 

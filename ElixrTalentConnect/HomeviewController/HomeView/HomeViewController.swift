@@ -48,7 +48,7 @@ class HomeViewController: UIViewController {
             jobDisplayTableView.reloadData()
         }
     }
-    //MARK: - The API initialized in the viewController.
+    //MARK: - The API is initialized in the viewController.
     /// get Jobs- This is to make  make View Controller connect with view Model and also responsible for updating the UI of the screen.
     func getJobs() {
         activityIndicator.startAnimating()

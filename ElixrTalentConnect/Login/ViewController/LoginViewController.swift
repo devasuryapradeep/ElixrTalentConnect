@@ -41,6 +41,8 @@ class LoginViewController: UIViewController {
     func UISetup() {
         backGroundImage.layer.cornerRadius = 20
         backGroundImage.clipsToBounds = true
+        signInButton.layer.cornerRadius = 5
+        signInButton.clipsToBounds = true
     }
     
     //MARK: - @IBAction for sign-in button.
