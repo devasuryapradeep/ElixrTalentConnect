@@ -7,12 +7,10 @@
 
 import Foundation
 import UIKit
+//MARK: - Table view methods .
 extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(customSearchbar.isEditing)
-        print("-->\(customSearchbar.isEditing ? viewModal.filteredJobs.count:viewModal.jobDetails.count)")
-        //return customSearchbar.isEditing ? viewModal.filteredJobs.count:viewModal.jobDetails.count
         return viewModal.filteredJobs.count
     }
     
@@ -25,27 +23,25 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         let cellData  =  viewModal.filteredJobs[indexPath.row]
-         // let cellData  =  viewModal.getInfoCell(at: indexPath.row, isSearching: customSearchbar.isEditing)
-            jobItemCell.cellData(with: cellData)
-        
-            return jobItemCell
-        
+        jobItemCell.cellData(with: cellData)
+        return jobItemCell
     }
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let selectedCell = viewModal.getInfoCell(at: indexPath.row, isSearching: customSearchbar.isEditing)
+        let selectedCell = viewModal.getInfoCell(at: indexPath.row)
         detailsViewNavigation(for: selectedCell)
     }
+    
+    /// Function to anvigate on clicking the cell.
+    /// - Parameter jobDescription: is of type jobs
     func detailsViewNavigation (for jobDescription :Jobs){
         guard let detailsView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "JobDetailsview")as?JobDetailsview else {
             return
         }
-    performSearch(with:  nil )
-        customSearchbar.resignFirstResponder()
-// Hide the keyboard
         detailsView.jobInfoDescription =  jobDescription
         navigationController?.pushViewController(detailsView, animated: true)
     }
 }
- 
+
 
 

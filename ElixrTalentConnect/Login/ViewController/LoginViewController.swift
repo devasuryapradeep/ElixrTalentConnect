@@ -10,9 +10,10 @@ import LocalAuthentication
 /// LoginViewcontroller contains  user authentication,sign-in ,sign-up.
 /// View in MVVM.
 class LoginViewController: UIViewController {
-    
+    //MARK: - Variables & constants  declaration
     /// Variables and constants  declaration
     private var viewModel : LoginViewModel!
+    
     //MARK: - Referencing Outlets.
     /// Referencing  Outlets.
     @IBOutlet weak var outerView: UIView!
@@ -22,6 +23,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var backGroundImage: UIImageView!
     
+    //MARK: - View Life cycle.
     /// View Life cycle.- Contain method calls to setup basic UI.
     /// Setupcode to perform same action as that of IQkeyboard manager.
     override func viewDidLoad() {
@@ -30,13 +32,18 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
         viewModel = LoginViewModel()
-       
         self.navigationItem.setHidesBackButton(true, animated: true)
         emailField.resignFirstResponder()
         passwordField.resignFirstResponder()
-        //navigationController?.setNavigationBarHidden(true, animated: false)
     }
     
+    /// Function to get the basic UI layout.
+    func UISetup() {
+        backGroundImage.layer.cornerRadius = 20
+        backGroundImage.clipsToBounds = true
+    }
+    
+    //MARK: - @IBAction for sign-in button.
     /// SignIntapped is the IBaction of the button "signInButton", which trigers alert actions,validation
     /// - Parameter sender: UIbutton named "signInButton".
     @IBAction func signInTapped(_ sender: UIButton){
@@ -57,12 +64,15 @@ class LoginViewController: UIViewController {
         }
     }
     
-    /// Function to get the basic UI layout.
-    func UISetup() {
-        backGroundImage.layer.cornerRadius = 20
-        backGroundImage.clipsToBounds = true
+    /// Function to  perform navigaion to HomeviewController.
+    func navigateToHome() {
+        guard   let HomeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? UITabBarController else {
+            return
+        }
+        self.navigationController?.pushViewController(HomeView, animated: true)
     }
     
+    // MARK: -  Keyboard configurations while displaying.
     /// This function is called when the keyboard is about to be displayed.
     ///It checks the size of the keyboard using information from the notification.
     /// - Parameter notification: notification on clicking the textfields.
@@ -82,19 +92,13 @@ class LoginViewController: UIViewController {
         }
     }
     
-    /// Function  to perform  navigation to Signup viewcontroller.
-    func tapSignup() {
-        performSegue(withIdentifier: "Signupviewcontroller", sender: UIButton.self)
+    // Unregister from keyboard notifications
+    deinit {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    /// Function to  perform navigaion to HomeviewController.
-    func navigateToHome() {
-        guard   let HomeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? UITabBarController else {
-            return
-        }
-        self.navigationController?.pushViewController(HomeView, animated: true)
-    }
-    
+    //MARK: -  Alerts while incorect enrollment of user credentails.
     /// Functions to display alert on empty fields.
     /// - Parameter message: Message based on the vacancy of the specfic  fields.
     func alertOnEmptyFields(message:String){
@@ -131,26 +135,12 @@ class LoginViewController: UIViewController {
         let okButton = UIAlertAction(title: "OK", style: .default)
         alertMessage.addAction(okButton)
         present(alertMessage, animated: true)
-        
-    }
-   
-    deinit {
-          // Unregister from keyboard notifications
-          NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-          NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
-      }
-    
-    /// Function to navigate to the Signupviewcontroller.
-    func navigateToSignup(){
-        guard let rootView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpViewController") as? SignUpViewController
-        else {
-            return
-        }
-        navigationController?.pushViewController(rootView, animated: true)
     }
 }
 
+//MARK: -UITextFieldDelegate method to set up keyborad response.
 extension LoginViewController: UITextFieldDelegate{
+    
     /// UItextfield  delegate method .
     /// - Parameter textField:UITextField
     /// - Returns: Bool

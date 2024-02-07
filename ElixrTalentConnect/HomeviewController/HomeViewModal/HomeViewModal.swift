@@ -9,12 +9,12 @@ import Foundation
 
 /// JobViewModal - Act as a Viewmodel for MVVM unit in the Homepage.
 final class JobViewModel{
-    
+//MARK: - Variable declarations
     /// Variable declarations
     var  jobDetails :[Jobs] = []
     var filteredJobs:[Jobs] = []
     var idInstance : String?
-    
+    //MARK: - get job details from API
     /// get job list from API.
     /// - Parameter completion: completion return true or false
     func getJobsList(completion: @escaping (Bool) -> ()) {
@@ -35,12 +35,8 @@ final class JobViewModel{
         }
     }
     
-    /// Funtion to reset the filteredJobs when there is no search criteria applied.
-    func resetSearch(){
-        filteredJobs = jobDetails
-    }
-
-    /// filtereData- Main Filter Logic based on job Title.
+// MARK: - Function used in the view to perform filter operations.
+    /// filtereData- Main Filter Logic based on job Title. This is done by changing the elements inside filtered jobs on applyinfg the filter.
     /// - Parameter searchTerm: searchTerm: type- String which represents the user input.
     func filteredData(with searchTerm :String?){
         guard let searchTerm = searchTerm,!searchTerm.isEmpty else {
@@ -51,6 +47,7 @@ final class JobViewModel{
         }
     }
     
+    //MARK: - Functions to implement a specifc date Format.
     /// formattingFunction - Function is responsible of creating the required format for the date to be displayed , this process is done by referencing  to a function for setiing the custom date Format.
     /// - Parameter _dateString: datestring- is of type sring
     /// - Returns: Returns the date String literal created in a specific format.
@@ -97,6 +94,7 @@ final class JobViewModel{
         }
     }
     
+    //MARK: - Funtion to perform favourite button action.
     ///favouriteButtonAction -sets the value in the  userefault  that determines whether the job is selected as favourite or not .
     func favouriteButtonAction(){
         guard let uniqueJobId = idInstance else{
@@ -106,16 +104,10 @@ final class JobViewModel{
         UserDefaults.standard.set(!isFavourite, forKey: uniqueJobId)
     }
     
-    /// getInfoCell - This method is responsible for deciding array on the basis of the functionlity.
-    /// - Parameters:a
-    ///   - index: This indicates the  number of values in the array.
-    ///   - isSearching: isSearching is the argument given for the attribute is
-    /// - Returns: Bool value that determines whether the the display table should be presented from the filtered array or the job details  array.
-    func getInfoCell(at index : Int, isSearching :Bool)->Jobs{
-        if isSearching{
+    /// getInfoCell -  Function provide the filtered jobs array wirh index to perform search operations.
+    /// - Parameter index: type int
+    /// - Returns: returns a specific index  in filtered jobs  which is of type Jobs.
+    func getInfoCell(at index : Int)->Jobs{
             return filteredJobs [index]
-        } else {
-         return jobDetails [index]
-        }
     }
 }
