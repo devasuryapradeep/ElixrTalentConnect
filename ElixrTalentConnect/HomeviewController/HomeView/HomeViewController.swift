@@ -48,6 +48,7 @@ class HomeViewController: UIViewController {
             jobDisplayTableView.reloadData()
         }
     }
+    
     //MARK: - The API is initialized in the viewController.
     /// get Jobs- This is to make  make View Controller connect with view Model and also responsible for updating the UI of the screen.
     func getJobs() {
@@ -67,6 +68,7 @@ class HomeViewController: UIViewController {
         }
     }
     
+    //MARK: -  Alert .
     /// ShowAlert - Display the alert on failure while calling API.
     func showAlert(){
         let OkButton = UIAlertAction(title: "OK", style: .default)
@@ -75,6 +77,7 @@ class HomeViewController: UIViewController {
         present(alertDisplay, animated: true)
     }
 }
+
 //MARK: - UITextFieldDelegate Methods to set the  the keyboard Functionalities.
 // Extension on HomeViewController delgate methods.
 extension HomeViewController:UITextFieldDelegate{

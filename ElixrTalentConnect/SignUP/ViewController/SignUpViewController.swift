@@ -18,13 +18,10 @@ class SignUpViewController: UIViewController {
     
     //MARK: - Variable  & Constants Declaration.
     /// Variable Declaration.
-    var dataheading :[String]?
-    var firstCellPlaceholder:String?
     let cellTypes: [SignupDataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
     let viewModalInstance = SignUpViewModel()
     
     //MARK: - View life Cycle.
-    
     /// View life Cycle.
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +32,12 @@ class SignUpViewController: UIViewController {
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
-    
     // MARK: -  Sign-in button setup.
     func UISetup (){
         signUpButton.layer.cornerRadius = 5
         signUpButton.clipsToBounds = true
     }
+    
     //MARK: - @IBAction for SignIn .
     /// SignIn action
     /// - Parameter sender: UIButton
@@ -83,6 +80,7 @@ class SignUpViewController: UIViewController {
             performSegue(withIdentifier: "HomeViewController", sender: UIButton.self)
         }
     }
+    
     //MARK: - ALert on Authentications
     /// showAlert
     /// - Parameter message: This is the fuction responsible to the alert on validating the criterias.
@@ -98,6 +96,7 @@ class SignUpViewController: UIViewController {
 extension SignUpViewController:UITextFieldDelegate{
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
+        return true
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+// Stores a the key for the userDefaults in a string variable.
 extension String{
     static var userKey = "savedJob"
 }

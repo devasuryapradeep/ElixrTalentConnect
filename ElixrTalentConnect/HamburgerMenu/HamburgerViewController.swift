@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+//MARK: -  Tableview methods.
 /// dashBoardViewController - To present dashboard(Sidemenu)
 class HamburgerViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
     
@@ -24,14 +24,6 @@ class HamburgerViewController: UIViewController,UITableViewDelegate,UITableViewD
         }
         menuItems.dashMenuTitles.text = titleHeadings[indexPath.row]
         return menuItems
-    }
-   
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath) as! HamBurgerCell
-        cell.dashMenuTitles.backgroundColor = UIColor.white
-        cell.titleView.backgroundColor = UIColor(red: 50/255, green: 36/255, blue: 79/255, alpha: 1.0)
-        cell.dashMenuTitles.backgroundColor = UIColor(red: 50/255, green: 36/255, blue: 79/255, alpha: 1.0)
-        cell.dashMenuTitles.textColor = UIColor.white
     }
 
     /// View Life Cycle.

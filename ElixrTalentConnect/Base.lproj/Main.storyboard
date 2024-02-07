@@ -55,7 +55,7 @@
                                                     <segue destination="1cL-Jb-Nzf" kind="show" identifier="SignUpViewController" id="0FL-TU-9am"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDX-hD-jxW">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VDX-hD-jxW" customClass="UIButtonSetup" customModule="ElixrTalentConnect" customModuleProvider="target">
                                                 <rect key="frame" x="45.666666666666657" y="368" width="302" height="38"/>
                                                 <color key="backgroundColor" red="0.89411764709999997" green="0.46274509800000002" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -73,6 +73,11 @@
                                                     </attributedString>
                                                     <color key="baseForegroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </buttonConfiguration>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="5"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                                 <connections>
                                                     <action selector="signInTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="PQ0-mK-55F"/>
                                                 </connections>
@@ -827,7 +832,7 @@
                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mCl-8h-nXg">
                                                                 <rect key="frame" x="0.0" y="0.0" width="393" height="120"/>
                                                                 <subviews>
-                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AS-oA-odH">
+                                                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1AS-oA-odH" customClass="UIButtonSetup" customModule="ElixrTalentConnect" customModuleProvider="target">
                                                                         <rect key="frame" x="165" y="20" width="103" height="30"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                         <color key="backgroundColor" red="0.89411764709999997" green="0.46274509800000002" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -836,6 +841,11 @@
                                                                             <fontDescription key="titleFontDescription" type="system" weight="semibold" pointSize="0.0"/>
                                                                             <color key="baseForegroundColor" red="0.92156863209999995" green="0.92156863209999995" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                         </buttonConfiguration>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                         <connections>
                                                                             <action selector="ApplyForJob:" destination="uDv-zW-XkE" eventType="touchUpInside" id="UES-l5-BUX"/>
                                                                         </connections>
@@ -1015,13 +1025,18 @@
                                                                         <nil key="textColor"/>
                                                                         <nil key="highlightedColor"/>
                                                                     </label>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc2-qa-kvo">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vc2-qa-kvo" customClass="UIButtonSetup" customModule="ElixrTalentConnect" customModuleProvider="target">
                                                                         <rect key="frame" x="0.0" y="221.66666666666666" width="153" height="34.333333333333343"/>
                                                                         <color key="backgroundColor" red="0.89411764709999997" green="0.46274509800000002" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" title="Edit Profile">
                                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </buttonConfiguration>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                 </subviews>
                                                             </stackView>
@@ -1071,13 +1086,18 @@
                                                                             </label>
                                                                         </subviews>
                                                                     </stackView>
-                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mt-QK-Vj4">
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Mt-QK-Vj4" customClass="UIButtonSetup" customModule="ElixrTalentConnect" customModuleProvider="target">
                                                                         <rect key="frame" x="222" y="29.666666666666686" width="123" height="35"/>
                                                                         <color key="backgroundColor" red="0.89411764709999997" green="0.46274509800000002" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                         <state key="normal" title="Button"/>
                                                                         <buttonConfiguration key="configuration" style="plain" image="pencil" catalog="system" title="Update">
                                                                             <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                         </buttonConfiguration>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="5"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
                                                                     </button>
                                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LaG-n7-lyA">
                                                                         <rect key="frame" x="10" y="17" width="60" height="60"/>
@@ -1447,7 +1467,7 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-H7-G3f">
-                                <rect key="frame" x="-3" y="59" width="396" height="44"/>
+                                <rect key="frame" x="-5" y="59" width="397" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="MyJobs" id="xL9-sg-VXZ">
@@ -1875,16 +1895,16 @@
     </scenes>
     <designables>
         <designable name="5ax-v5-Tn9">
-            <size key="intrinsicContentSize" width="148" height="34"/>
+            <size key="intrinsicContentSize" width="130" height="34"/>
         </designable>
         <designable name="BA1-Xi-dOB">
-            <size key="intrinsicContentSize" width="104.33333333333333" height="34"/>
+            <size key="intrinsicContentSize" width="82.666666666666671" height="34"/>
         </designable>
         <designable name="FW3-Ah-Psb">
-            <size key="intrinsicContentSize" width="154" height="34"/>
+            <size key="intrinsicContentSize" width="130" height="34"/>
         </designable>
         <designable name="d9C-AZ-W1F">
-            <size key="intrinsicContentSize" width="84.333333333333329" height="34"/>
+            <size key="intrinsicContentSize" width="58.333333333333336" height="34"/>
         </designable>
         <designable name="eLz-f0-yuW">
             <size key="intrinsicContentSize" width="88.666666666666671" height="34"/>

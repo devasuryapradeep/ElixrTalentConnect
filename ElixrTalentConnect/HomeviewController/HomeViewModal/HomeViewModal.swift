@@ -9,11 +9,13 @@ import Foundation
 
 /// JobViewModal - Act as a Viewmodel for MVVM unit in the Homepage.
 final class JobViewModel{
-//MARK: - Variable declarations
+    
+    //MARK: - Variable declarations
     /// Variable declarations
     var  jobDetails :[Jobs] = []
     var filteredJobs:[Jobs] = []
     var idInstance : String?
+    
     //MARK: - get job details from API
     /// get job list from API.
     /// - Parameter completion: completion return true or false
@@ -35,7 +37,7 @@ final class JobViewModel{
         }
     }
     
-// MARK: - Function used in the view to perform filter operations.
+    // MARK: - Function used in the view to perform filter operations.
     /// filtereData- Main Filter Logic based on job Title. This is done by changing the elements inside filtered jobs on applyinfg the filter.
     /// - Parameter searchTerm: searchTerm: type- String which represents the user input.
     func filteredData(with searchTerm :String?){
@@ -108,6 +110,6 @@ final class JobViewModel{
     /// - Parameter index: type int
     /// - Returns: returns a specific index  in filtered jobs  which is of type Jobs.
     func getInfoCell(at index : Int)->Jobs{
-            return filteredJobs [index]
+        return filteredJobs [index]
     }
 }

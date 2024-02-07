@@ -13,11 +13,9 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModal.filteredJobs.count
     }
-    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let jobItemCell = jobDisplayTableView.dequeueReusableCell(withIdentifier: "HomeInfoCell")as? HomeInfoCell else{
             return UITableViewCell()

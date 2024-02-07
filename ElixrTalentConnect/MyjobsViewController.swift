@@ -14,7 +14,6 @@ class MyjobsViewController: UIViewController {
     @IBOutlet weak var CustomSearchBar: UITextField!
     
     //MARK: - Variable Declarations.
-    var arrayOfAppliedJobs : [Jobs]?
     var savedJobs: [Jobs] = []
     
     //MARK: - View life Cycle.
@@ -23,10 +22,12 @@ class MyjobsViewController: UIViewController {
         savedJobs = getSavedJobs()
         appliedJobCell.reloadData()
     }
+    
     override func viewWillAppear(_ animated: Bool) {
         savedJobs = getSavedJobs()
         appliedJobCell.reloadData()
     }
+    
     //MARK: - Applied jobs are acessed using userdefault method
     /// getSavedJobs - The data stored in userdefault is decoded and  assigned to a array of type Jobs.
     /// - Returns: An array of jobs.
@@ -37,7 +38,6 @@ class MyjobsViewController: UIViewController {
         }
         return savedJobs
     }
-    
 }
 
 //MARK: - TableView  Methods.

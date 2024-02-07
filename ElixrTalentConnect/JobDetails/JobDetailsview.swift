@@ -78,7 +78,7 @@ class JobDetailsview: UIViewController {
         wishListVariable = jobInfoDescription.id
     }
     
- 
+    
     func applyJob1() {
         guard let jobInfoDescription = jobInfoDescription else { return }
         var savedJobs = UserDefaults.standard.array(forKey: .userKey) as? [[String: Any]] ?? []
@@ -103,15 +103,21 @@ class JobDetailsview: UIViewController {
         }
     }
     
+    /// getSavedJobs -This is function responsible of casting to the value of savedJobs
+    /// - Returns: An array of type jobs.
     func getSavedJobs() -> [Jobs] {
         guard let savedJobData = UserDefaults.standard.data(forKey: .userKey),
               let savedJobs = try? JSONDecoder().decode([Jobs].self, from: savedJobData) else {
             return []
         }
-        
         return savedJobs
     }
     
+    /// isJobAlreadyApplied -This function is used to check whether the same job is saved again using job ID.
+    /// - Parameters:
+    ///   - savedJobs: Array of applied jobs.
+    ///   - job: is of type of the data Model.
+    /// - Returns: Returns  a boolean value  , based on this alert is message is altered.
     func isJobAlreadyApplied(_ savedJobs: [Jobs], job: Jobs) -> Bool {
         guard !savedJobs.isEmpty else {
             return false
@@ -119,7 +125,7 @@ class JobDetailsview: UIViewController {
         let isApplied = savedJobs.contains(where: { $0.id == job.id })
         return isApplied
     }
-    
+    //MARK: - Alert on Job apply and Duplicate job request
     /// showAlert -  this function is called when job is applied for the first time and also preseted when the same job is applied twice.
     /// - Parameter message: is a string variable that changes its value based on the activation of  applyforJob() and applyforJob1().
     func showAlert(message: String) {
@@ -128,7 +134,7 @@ class JobDetailsview: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-
+    
     // MARK: - Functions to  perform Favourite Button action.
     func checkifValuePresent(){
         guard let uniqueJobId = wishListVariable else {
@@ -137,7 +143,8 @@ class JobDetailsview: UIViewController {
         let isWishList = UserDefaults.standard.bool(forKey: uniqueJobId)
         UserDefaults.standard.set(!isWishList, forKey: uniqueJobId)
     }
-    /// actionOnCheck- thid function dete
+    
+    /// actionOnCheck - Function to set the value in the isWishList variable. Based on  the value of this variable isFavourite button is functioning.
     func actionOnCheck (){
         guard let uniqueJobId =  wishListVariable else{
             return

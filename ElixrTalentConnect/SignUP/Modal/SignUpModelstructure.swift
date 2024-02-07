@@ -15,7 +15,10 @@ enum SignupDataModel {
     case confirmPassword
 }
 
+//MARK: - Extension to the SignupDataModel
 extension SignupDataModel {
+    
+    /// title is of type String and is the extended property of the enum SignupDataModel
     var title: String {
         switch self {
         case .fullName:
@@ -28,6 +31,8 @@ extension SignupDataModel {
             return "CONFIRM PASSWORD"
         }
     }
+    
+    /// placeHolder is of type String and is the extended property of the enum SignupDataModel
     var placeHolder : String{
         switch self {
         case .fullName:
@@ -41,6 +46,7 @@ extension SignupDataModel {
         }
     }
     
+    /// Icon is of type UIimage and is the extended property of the enum SignupDataModel.
     var icon : String {
         switch self{
         case .fullName:
@@ -54,6 +60,7 @@ extension SignupDataModel {
         }
     }
     
+    /// isVisible is of type UIimage and is the extended property of the enum SignupDataModel.
     var isVisible:Bool {
         switch self {
         case .fullName:
@@ -64,8 +71,6 @@ extension SignupDataModel {
             return true
         case .confirmPassword:
             return  true
-            
         }
     }
-    
 }

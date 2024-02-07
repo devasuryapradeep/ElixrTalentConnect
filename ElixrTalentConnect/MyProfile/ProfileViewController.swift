@@ -7,7 +7,10 @@
 
 import UIKit
 
+/// ProfileViewController - Displays the profile.
 class ProfileViewController: UIViewController {
+    
+    /// @IBOutlet
     @IBOutlet weak var imageEditButton: UIButton!
     
     @IBOutlet weak var userImage: UIImageView!
@@ -16,6 +19,7 @@ class ProfileViewController: UIViewController {
        UISetup()
     }
     
+    /// UISetup in the Profile view.
     func  UISetup(){
         userImage.layer.borderWidth = 1
           userImage.layer.masksToBounds = false

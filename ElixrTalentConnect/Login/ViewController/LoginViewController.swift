@@ -41,8 +41,6 @@ class LoginViewController: UIViewController {
     func UISetup() {
         backGroundImage.layer.cornerRadius = 20
         backGroundImage.clipsToBounds = true
-        signInButton.layer.cornerRadius = 5
-        signInButton.clipsToBounds = true
     }
     
     //MARK: - @IBAction for sign-in button.
@@ -53,11 +51,14 @@ class LoginViewController: UIViewController {
             let validationResult = viewModel.validateCredentials(model: loginModel)
             if validationResult.isValid {
                 viewModel.authenticateWithBiometrics { [weak self] (success, error) in
+                    guard let self = self else {
+                        return
+                    }
                     if success {
-                        self!.navigateToHome()
+                        self.navigateToHome()
                     } else {
                         if let error = error {
-                            self!.alertOnEmptyFields(message: "Biometric authentication failed: \(error.localizedDescription)")
+                            self.alertOnEmptyFields(message: "Biometric authentication failed: \(error.localizedDescription)")
                         }
                     }
                 }
@@ -65,8 +66,7 @@ class LoginViewController: UIViewController {
                 alertOnEmptyFields(message: validationResult.message ?? "Invalid credentials.")
             }
         }
-    
-    
+
     /// Function to  perform navigaion to HomeviewController.
     func navigateToHome() {
         guard   let HomeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? UITabBarController else {
@@ -101,7 +101,7 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    //MARK: -  Alerts while incorect enrollment of user credentails.
+    //MARK: -  Alerts while incorect enrollment of user credentails & Biometric Authentications.
     /// Functions to display alert on empty fields.
     /// - Parameter message: Message based on the vacancy of the specfic  fields.
     func alertOnEmptyFields(message:String){
@@ -109,15 +109,6 @@ class LoginViewController: UIViewController {
         let emptyFields = UIAlertController(title: "Empty Fields", message:message , preferredStyle: .alert)
         emptyFields.addAction(okButton)
         present(emptyFields, animated: true)
-    }
-    
-    /// Alert on Biometric Authentication.
-    /// - Parameter message: Based on the authentication related message is prompted to the user.
-    private func alertOnBiometric(with message: String){
-        let alertMessage = UIAlertController(title: "Alert", message: message, preferredStyle: .alert)
-        let okButton = UIAlertAction(title: "OK", style: .default)
-        alertMessage.addAction(okButton)
-        present(alertMessage, animated: true)
     }
 }
 

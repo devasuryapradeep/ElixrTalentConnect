@@ -19,7 +19,6 @@ class ProfileDisplayCell: UITableViewCell {
     @IBOutlet weak var userText: UILabel!
     
     //MARK: - View life cycle.
-    
     /// View life cycle.
     override func awakeFromNib() {
         super.awakeFromNib()
