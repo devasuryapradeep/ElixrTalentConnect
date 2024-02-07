@@ -10,12 +10,15 @@ import UIKit
 /// Cell file created to contain all cell related data of the SignupTableview.
 class ProfileDisplayCell: UITableViewCell {
     
+    //MARK: -Referencing Outlets
     /// Referencing Outlets.
     @IBOutlet weak var privacyButton: UIButton!
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var profileView: UIView!
     @IBOutlet weak var userInput: UITextField!
     @IBOutlet weak var userText: UILabel!
+    
+    //MARK: - View life cycle.
     
     /// View life cycle.
     override func awakeFromNib() {
@@ -25,6 +28,7 @@ class ProfileDisplayCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
+    //MARK: - Configure Data  & privacyButton action.
     
     /// Configure- is the function that will fe
     func configure(with dataItem :SignupDataModel){

@@ -7,7 +7,7 @@
 
 import Foundation
 import UIKit
-
+//MARK: - Tableview  Methods.
 extension SignUpViewController:UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return cellTypes.count

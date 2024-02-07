@@ -9,12 +9,12 @@ import UIKit
 // MyjobsViewController - Displays all applied jobs  in a tableview.
 class MyjobsViewController: UIViewController {
     
-   //MARK: - IBOutlets.
+    //MARK: - IBOutlets.
     @IBOutlet weak var appliedJobCell: UITableView!
     @IBOutlet weak var CustomSearchBar: UITextField!
     
     //MARK: - Variable Declarations.
-     var arrayOfAppliedJobs : [Jobs]?
+    var arrayOfAppliedJobs : [Jobs]?
     var savedJobs: [Jobs] = []
     
     //MARK: - View life Cycle.
@@ -25,19 +25,19 @@ class MyjobsViewController: UIViewController {
     }
     override func viewWillAppear(_ animated: Bool) {
         savedJobs = getSavedJobs()
-             appliedJobCell.reloadData()
+        appliedJobCell.reloadData()
     }
     //MARK: - Applied jobs are acessed using userdefault method
     /// getSavedJobs - The data stored in userdefault is decoded and  assigned to a array of type Jobs.
     /// - Returns: An array of jobs.
     func getSavedJobs() -> [Jobs] {
-              guard let savedJobData = UserDefaults.standard.data(forKey: .userKey),
-                    let savedJobs = try? JSONDecoder().decode([Jobs].self, from: savedJobData) else {
-                  return []
-              }
-              return savedJobs
-          }
-
+        guard let savedJobData = UserDefaults.standard.data(forKey: .userKey),
+              let savedJobs = try? JSONDecoder().decode([Jobs].self, from: savedJobData) else {
+            return []
+        }
+        return savedJobs
+    }
+    
 }
 
 //MARK: - TableView  Methods.
