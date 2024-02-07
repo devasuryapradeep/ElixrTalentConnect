@@ -70,7 +70,7 @@ class JobDetailsview: UIViewController {
         }
         jobTitle.text = jobInfoDescription.title
         location.text = jobInfoDescription.location
-        jobLevel.text = "-"
+        jobLevel.text = "Intermediate"
         jobDescription .text = jobInfoDescription.description
         responsibilitiesDescription.text = jobInfoDescription.responsibilities
         qualificationDescription.text =
@@ -128,9 +128,7 @@ class JobDetailsview: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true, completion: nil)
     }
-    
-  
-    
+
     // MARK: - Functions to  perform Favourite Button action.
     func checkifValuePresent(){
         guard let uniqueJobId = wishListVariable else {

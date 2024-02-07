@@ -111,26 +111,6 @@ class LoginViewController: UIViewController {
         present(emptyFields, animated: true)
     }
     
-    /// Function to check userAuthentication via face ID.
-    func authenticationOnBiometrics(){
-        let context = LAContext()
-        var error:NSError? = nil
-        if context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
-        {
-            let reason = "explaination of Authentication"
-            context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason){ [self] success , authenticationError in
-                if  success{
-                    self.alertOnBiometric(with: "Authentication Successfull.")
-                } else {
-                }
-                print("Authentication failed.")
-            }
-        }
-        else {
-            self.alertOnBiometric(with: "Authentication not available")
-        }
-    }
-    
     /// Alert on Biometric Authentication.
     /// - Parameter message: Based on the authentication related message is prompted to the user.
     private func alertOnBiometric(with message: String){

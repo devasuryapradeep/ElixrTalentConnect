@@ -10,28 +10,32 @@ import XCTest
 
 final class ElixrTalentConnectTests: XCTestCase {
     
+    /// Variable of type loginViewModel
     var loginViewModel :LoginViewModel?
-    override func setUpWithError() throws {
-        var  loginViewmodel :  LoginViewModel?
-    }
-
+    
+    /// setUp()  method is called in every Test Cases
+        override func setUp() {
+                loginViewModel = LoginViewModel()
+        }
+    /// Provides an opportunity to perform cleanup and to throw errors after each test method in a test case ends.
     override func tearDownWithError() throws {
         loginViewModel = nil
     }
-
-//    func testUserValidationOnTrue() throws {
-//          let userModelInstance = UserModel(userName: "valid@gmail.com", passwordValue: "123qweasd")
-//            let result = loginViewModel?.validateCredentials(model: userModelInstance)
-//        XCTAssertTrue(result?.isValid,"Validation should pass for  valid credentials")
-//        XCTAssertNil(result?.message,"Message should be nil for valid credentials")
-//
-//    }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    /// Test case  validations.
+    func testValidateCredentials() throws {
+            //Invalid email
+        var testModel = UserModel(userName: "invalid", passwordValue: "validPassword")
+            let viewModel = try XCTUnwrap(loginViewModel)
+            var validationResult = viewModel.validateCredentials(model: testModel)
+            XCTAssertFalse(validationResult.isValid, "validation result should not be false")
+            //Invalid passwoord
+        testModel = UserModel(userName: "validEmail@example.com", passwordValue: "short")
+            validationResult = viewModel.validateCredentials(model: testModel)
+            XCTAssertFalse(validationResult.isValid)
+            //Valid details
+        testModel = UserModel(userName: "validEmail@example.com", passwordValue: "passsword1234")
+            validationResult = viewModel.validateCredentials(model: testModel)
+            XCTAssertTrue(validationResult.isValid)
         }
-    }
-
 }

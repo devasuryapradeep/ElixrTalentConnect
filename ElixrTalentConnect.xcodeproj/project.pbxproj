@@ -38,7 +38,6 @@
 		5ABCCDA12B62E30700133F2F /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCCDA02B62E30700133F2F /* HamburgerViewController.swift */; };
 		5ABCCDA32B62E39400133F2F /* HamBurgerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCCDA22B62E39400133F2F /* HamBurgerCell.swift */; };
 		5AC636992B51013C00EA45E0 /* DesignableUITextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */; };
-		5AE3A3402B73949700256118 /* JobDetailsViewModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AE3A33F2B73949700256118 /* JobDetailsViewModal.swift */; };
 		5AF193F02B710D0400157A8D /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF193EF2B710D0400157A8D /* ProfileViewController.swift */; };
 		5AF49FC02B5D038E00893719 /* JobDisplayTable+Extn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */; };
 		5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */; };
@@ -100,7 +99,6 @@
 		5ABCCDA02B62E30700133F2F /* HamburgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
 		5ABCCDA22B62E39400133F2F /* HamBurgerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamBurgerCell.swift; sourceTree = "<group>"; };
 		5AC636982B50FA7E00EA45E0 /* DesignableUITextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignableUITextField.swift; sourceTree = "<group>"; };
-		5AE3A33F2B73949700256118 /* JobDetailsViewModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobDetailsViewModal.swift; sourceTree = "<group>"; };
 		5AF193EF2B710D0400157A8D /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		5AF49FBF2B5D038E00893719 /* JobDisplayTable+Extn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "JobDisplayTable+Extn.swift"; sourceTree = "<group>"; };
 		5AF49FCA2B5D180C00893719 /* HomeDataModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDataModal.swift; sourceTree = "<group>"; };
@@ -183,7 +181,6 @@
 		5A9E3E212B4E5F2800E2924A = {
 			isa = PBXGroup;
 			children = (
-				5AE3A33F2B73949700256118 /* JobDetailsViewModal.swift */,
 				5A9E3E2C2B4E5F2800E2924A /* ElixrTalentConnect */,
 				5A9E3E462B4E5F2800E2924A /* ElixrTalentConnectTests */,
 				5A9E3E502B4E5F2800E2924A /* ElixrTalentConnectUITests */,
@@ -208,12 +205,12 @@
 			children = (
 				5AA0FDB32B5D70CD008B8D31 /* Helper */,
 				5AA4B1332B53AABB009E469D /* Extensions */,
-				5AC6E5A42B6BB17300B13FF6 /* HamburgerMenu */,
 				5AE53AED2B72AFF3006A4031 /* MyProfile */,
+				5AC6E5A42B6BB17300B13FF6 /* HamburgerMenu */,
+				5A4165942B6FED1E00980BCF /* JobDetails */,
+				5ACAE9C42B690A4A00A02965 /* MyJobs */,
 				5AB565432B562E7100B97941 /* HomeviewController */,
 				5A12A7F82B54EEF800A0BD02 /* SignUP */,
-				5ACAE9C42B690A4A00A02965 /* MyJobs */,
-				5A4165942B6FED1E00980BCF /* JobDetails */,
 				5A977ECE2B4E88350094286B /* Login */,
 				5AE3A33E2B738C5C00256118 /* Launch Screen */,
 				5A9E3E332B4E5F2800E2924A /* Main.storyboard */,
@@ -640,7 +637,6 @@
 				5A977ED02B4E88350094286B /* LoginViewController.swift in Sources */,
 				5A3692772B70E0DB00624D5D /* StringExtension.swift in Sources */,
 				5AF9C89F2B5F7A1E007A0D54 /* MainTabController.swift in Sources */,
-				5AE3A3402B73949700256118 /* JobDetailsViewModal.swift in Sources */,
 				5AB565422B55787E00B97941 /* LoginModel.swift in Sources */,
 				5A3ACBAD2B5A896500B3F9F8 /* SignupViewModel.swift in Sources */,
 				5A41658F2B6FEB2900980BCF /* AppliedJobCell.swift in Sources */,
