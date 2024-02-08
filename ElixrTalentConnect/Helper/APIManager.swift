@@ -46,7 +46,7 @@ final class APIManager{
             }
         }.resume()
         print("ended")
-    }
+    }   
 }
 // MARK: -  ERROR BLOCK.
 /// This enum created inorder to project a possible error  patterns.

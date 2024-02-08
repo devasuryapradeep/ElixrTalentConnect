@@ -29,7 +29,7 @@ final class ElixrTalentConnectTests: XCTestCase {
             let viewModel = try XCTUnwrap(loginViewModel)
             var validationResult = viewModel.validateCredentials(model: testModel)
             XCTAssertFalse(validationResult.isValid, "validation result should not be false")
-            //Invalid passwoord
+            //Invalid password
         testModel = UserModel(userName: "validEmail@example.com", passwordValue: "short")
             validationResult = viewModel.validateCredentials(model: testModel)
             XCTAssertFalse(validationResult.isValid)

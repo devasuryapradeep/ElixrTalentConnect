@@ -105,7 +105,7 @@ class LoginViewController: UIViewController {
         }
     }
     
-    // Unregister from keyboard notifications
+   /// The deinit method removes the view controller from observing keyboard notifications to prevent memory leaks.
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)

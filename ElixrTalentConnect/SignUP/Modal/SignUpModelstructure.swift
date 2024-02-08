@@ -54,19 +54,5 @@ extension SignupDataModel {
         case .password: return UIImage(systemName: "lock")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
         case .confirmPassword: return UIImage(systemName: "lock")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
         }
-        
-        /// isVisible is of type UIimage and is the extended property of the enum SignupDataModel.
-        var isVisible:Bool {
-            switch self {
-            case .fullName:
-                return false
-            case .emailAddress:
-                return false
-            case .password:
-                return true
-            case .confirmPassword:
-                return  true
-            }
-        }
     }
 }
