@@ -11,7 +11,7 @@ import Foundation
 class SignUpViewModel {
     
     //MARK: - Variable Declarations.
-    var cellTypes: [SignupDataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
+    var cellTypes: [SignupDataModel] = [.fullName, .emailAddress, .password, .confirmPassword]
     
     //MARK: - validate Credentials
     

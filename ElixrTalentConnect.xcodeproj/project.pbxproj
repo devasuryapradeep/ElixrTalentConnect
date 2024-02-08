@@ -32,7 +32,7 @@
 		5AA0FDB52B5D70F7008B8D31 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA0FDB42B5D70F7008B8D31 /* APIManager.swift */; };
 		5AA4B1372B53BB4C009E469D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1362B53BB4C009E469D /* HomeViewController.swift */; };
 		5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */; };
-		5AA4B1412B54555A009E469D /* ProfileDisplayCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */; };
+		5AA4B1412B54555A009E469D /* ProfileDisplayCells.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA4B1402B54555A009E469D /* ProfileDisplayCells.swift */; };
 		5AB565422B55787E00B97941 /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565412B55787E00B97941 /* LoginModel.swift */; };
 		5AB565452B562E9A00B97941 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AB565442B562E9A00B97941 /* LoginViewModel.swift */; };
 		5ABCCDA12B62E30700133F2F /* HamburgerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABCCDA02B62E30700133F2F /* HamburgerViewController.swift */; };
@@ -93,7 +93,7 @@
 		5AA0FDB42B5D70F7008B8D31 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		5AA4B1362B53BB4C009E469D /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		5AA4B13E2B544AE4009E469D /* UIViewSetup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewSetup.swift; sourceTree = "<group>"; };
-		5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplayCell.swift; sourceTree = "<group>"; };
+		5AA4B1402B54555A009E469D /* ProfileDisplayCells.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileDisplayCells.swift; sourceTree = "<group>"; };
 		5AB565412B55787E00B97941 /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		5AB565442B562E9A00B97941 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		5ABCCDA02B62E30700133F2F /* HamburgerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HamburgerViewController.swift; sourceTree = "<group>"; };
@@ -342,7 +342,7 @@
 			children = (
 				5A36485C2B51B5CA009228F4 /* SignUpViewController.swift */,
 				5A12A7F22B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift */,
-				5AA4B1402B54555A009E469D /* ProfileDisplayCell.swift */,
+				5AA4B1402B54555A009E469D /* ProfileDisplayCells.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -655,7 +655,7 @@
 				5AA4B1372B53BB4C009E469D /* HomeViewController.swift in Sources */,
 				5AF49FCB2B5D180C00893719 /* HomeDataModal.swift in Sources */,
 				5AA4B13F2B544AE4009E469D /* UIViewSetup.swift in Sources */,
-				5AA4B1412B54555A009E469D /* ProfileDisplayCell.swift in Sources */,
+				5AA4B1412B54555A009E469D /* ProfileDisplayCells.swift in Sources */,
 				5ABCCDA32B62E39400133F2F /* HamBurgerCell.swift in Sources */,
 				5A12A7F32B54DD1E00A0BD02 /* SignupViewcontroller+Extn.swift in Sources */,
 				5ABCCDA12B62E30700133F2F /* HamburgerViewController.swift in Sources */,

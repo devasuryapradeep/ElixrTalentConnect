@@ -18,6 +18,8 @@ class ProfileDisplayCell: UITableViewCell {
     @IBOutlet weak var userInput: UITextField!
     @IBOutlet weak var userText: UILabel!
     
+    var eyeButtonClosure: (() -> Void)?
+    
     //MARK: - View life cycle.
     /// View life cycle.
     override func awakeFromNib() {
@@ -27,23 +29,7 @@ class ProfileDisplayCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
-    //MARK: - Configure Data  & privacyButton action.
-    
-    /// Configure- is the function that will fe
-    func configure(with dataItem :SignupDataModel){
-        userText.text = dataItem.title
-        userInput.placeholder = dataItem.placeHolder
-        profileImage.image = UIImage(systemName: dataItem.icon)
-        profileImage.tintColor = UIColor(red: 228/255, green: 118/255, blue: 75/255, alpha: 1.0)
-        if dataItem.isVisible{
-            profileImage.image = UIImage(systemName: dataItem.icon)
-            userInput.isSecureTextEntry = true
-            privacyButton.tintColor = UIColor.gray
-            privacyButton.setImage(UIImage(systemName: "eye"), for: .normal)
-            privacyButton.addTarget(self, action: #selector(privacyButtonTapped), for: .touchUpInside)
-            privacyButton.isHidden = false
-        }
-    }
+ 
     
     /// privacyButtonTapped -Fuction used to trigger the functionality of showing  and hiding the password.
     @objc func privacyButtonTapped () {
@@ -53,6 +39,9 @@ class ProfileDisplayCell: UITableViewCell {
             privacyButton.tintColor = UIColor.gray
             privacyButton.isHidden = false
         }
+    }
+    @objc  func eyeButtonTapped(_sender : UIButton){
+        eyeButtonClosure?()
     }
 }
 

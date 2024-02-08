@@ -414,7 +414,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
-                                            <segue destination="Qeq-hP-DGF" kind="show" id="3UC-vN-XaQ"/>
+                                            <action selector="SignUpTapped:" destination="1cL-Jb-Nzf" eventType="touchUpInside" id="7a8-UE-HER"/>
+                                            <segue destination="Qeq-hP-DGF" kind="show" identifier="HomeViewController" id="3UC-vN-XaQ"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      Already have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-4j-G7N">
@@ -1466,7 +1467,7 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-H7-G3f">
-                                <rect key="frame" x="-5" y="59" width="396" height="44"/>
+                                <rect key="frame" x="-8" y="59" width="396" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="MyJobs" id="xL9-sg-VXZ">

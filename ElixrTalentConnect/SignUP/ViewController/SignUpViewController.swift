@@ -18,7 +18,7 @@ class SignUpViewController: UIViewController {
     
     //MARK: - Variable  & Constants Declaration.
     /// Variable Declaration.
-    let cellTypes: [SignupDataModel] = [.fullName, .emailAdress, .password, .confirmPassword]
+    let cellTypes: [SignupDataModel] = [.fullName, .emailAddress, .password, .confirmPassword]
     let viewModalInstance = SignUpViewModel()
     
     //MARK: - View life Cycle.
@@ -58,9 +58,11 @@ class SignUpViewController: UIViewController {
     
     //MARK: - Authentication on signUp.
     /// Function to navigate on validating some crirteria on the text fields.
+    //MARK: - Authentication on signUp.
+    /// Function to navigate on validating some crirteria on the text fields.
     func authenticationOnSignup(){
         let fullNameCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .fullName) ?? 0, section: 0)) as? ProfileDisplayCell
-        let emailCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .emailAdress) ?? 0, section: 0)) as? ProfileDisplayCell
+        let emailCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .emailAddress) ?? 0, section: 0)) as? ProfileDisplayCell
         let passwordCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .password) ?? 0, section: 0)) as? ProfileDisplayCell
         let confirmPasswordCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of:.confirmPassword) ?? 0, section: 0)) as? ProfileDisplayCell
         let fullName = fullNameCell?.userInput.text
@@ -73,8 +75,12 @@ class SignUpViewController: UIViewController {
             performSegue(withIdentifier: "HomeViewController", sender: UIButton.self)
         }
     }
-    
-    //MARK: - ALert on Authentications
+    //MARK: - @IBAction for Signup .
+    /// SignIn action
+    /// - Parameter sender: UIButton
+    @IBAction func SignUpTapped(_ sender: UIButton) {
+        authenticationOnSignup()
+    }    //MARK: - ALert on Authentications
     /// showAlert
     /// - Parameter message: This is the fuction responsible to the alert on validating the criterias.
     func showAlert(message:String){

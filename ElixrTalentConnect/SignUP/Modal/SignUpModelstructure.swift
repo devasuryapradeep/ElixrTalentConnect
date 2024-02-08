@@ -10,7 +10,7 @@ import Foundation
 /// Data model for Signup view controller.
 enum SignupDataModel {
     case fullName
-    case emailAdress
+    case emailAddress
     case password
     case confirmPassword
 }
@@ -23,7 +23,7 @@ extension SignupDataModel {
         switch self {
         case .fullName:
             return "FULL NAME"
-        case .emailAdress:
+        case .emailAddress:
             return "EMAIL ADDRESS"
         case .password:
             return "PASSWORD"
@@ -37,7 +37,7 @@ extension SignupDataModel {
         switch self {
         case .fullName:
             return "Enter your user name."
-        case .emailAdress:
+        case .emailAddress:
             return "Enter your Email ID."
         case .password:
             return "Enter your password."
@@ -47,30 +47,26 @@ extension SignupDataModel {
     }
     
     /// Icon is of type UIimage and is the extended property of the enum SignupDataModel.
-    var icon : String {
+    var icon : UIImage? {
         switch self{
-        case .fullName:
-            return "person"
-        case .emailAdress:
-            return "envelope"
-        case .password:
-            return "lock"
-        case .confirmPassword:
-            return "lock"
+        case .fullName: return UIImage(systemName: "person")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        case .emailAddress: return UIImage(systemName: "envelope")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        case .password: return UIImage(systemName: "lock")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        case .confirmPassword: return UIImage(systemName: "lock")?.withTintColor(.orange, renderingMode: .alwaysOriginal)
         }
-    }
-    
-    /// isVisible is of type UIimage and is the extended property of the enum SignupDataModel.
-    var isVisible:Bool {
-        switch self {
-        case .fullName:
-            return false
-        case .emailAdress:
-            return false
-        case .password:
-            return true
-        case .confirmPassword:
-            return  true
+        
+        /// isVisible is of type UIimage and is the extended property of the enum SignupDataModel.
+        var isVisible:Bool {
+            switch self {
+            case .fullName:
+                return false
+            case .emailAddress:
+                return false
+            case .password:
+                return true
+            case .confirmPassword:
+                return  true
+            }
         }
     }
 }

@@ -43,30 +43,6 @@ class LoginViewController: UIViewController {
         backGroundImage.clipsToBounds = true
     }
     
-    //MARK: - @IBAction for sign-in button.
-    /// SignIntapped is the IBaction of the button "signInButton", which trigers alert actions,validation
-    /// - Parameter sender: UIbutton named "signInButton".
-    @IBAction func signInTapped(_ sender: UIButton){
-          let loginModel = UserModel(userName: emailField.text ?? "" , passwordValue:passwordField.text ?? "")
-            let validationResult = viewModel.validateCredentials(model: loginModel)
-            if validationResult.isValid {
-                viewModel.authenticateWithBiometrics { [weak self] (success, error) in
-                    guard let self = self else {
-                        return
-                    }
-                    if success {
-                        self.navigateToHome()
-                    } else {
-                        if let error = error {
-                            self.alertOnEmptyFields(message: "Biometric authentication failed: \(error.localizedDescription)")
-                        }
-                    }
-                }
-            } else {
-                alertOnEmptyFields(message: validationResult.message ?? "Invalid credentials.")
-            }
-        }
-
     /// Function to  perform navigaion to HomeviewController.
     func navigateToHome() {
         guard   let HomeView = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "TabBarViewController") as? UITabBarController else {
@@ -74,6 +50,40 @@ class LoginViewController: UIViewController {
         }
         self.navigationController?.pushViewController(HomeView, animated: true)
     }
+    //MARK: - @IBAction for sign-in button.
+    /// SignIntapped is the IBaction of the button "signInButton", which trigers alert actions,validation
+    /// - Parameter sender: UIbutton named "signInButton".
+    @IBAction func signInTapped(_ sender: UIButton){
+        toAuthenticate()
+    }
+    
+    //Authentication  for signin
+    func toAuthenticate() {
+        let loginModel = UserModel(userName: emailField.text ?? "" , passwordValue:passwordField.text ?? "")
+        let validationResult = viewModel.validateCredentials(model: loginModel)
+        if validationResult.isValid {
+            viewModel.authenticateWithBiometrics { [weak self] (success, error) in
+                
+                if success {
+                    self?.navigateToHome()
+                } else {
+                    if let error = error {
+                        self?.showErrorAlert(message: "Biometric authentication failed: \(error.localizedDescription)")
+                    }
+                }
+            }
+        } else {
+            self.showErrorAlert(message: validationResult.message ?? "Invalid credentials.")
+        }
+    }
+    
+    //MARK: - alert
+    
+    func showErrorAlert(message: String) {
+          let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+          alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+          present(alert, animated: true, completion: nil)
+      }
     
     // MARK: -  Keyboard configurations while displaying.
     /// This function is called when the keyboard is about to be displayed.
@@ -101,25 +111,16 @@ class LoginViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    //MARK: -  Alerts while incorect enrollment of user credentails & Biometric Authentications.
-    /// Functions to display alert on empty fields.
-    /// - Parameter message: Message based on the vacancy of the specfic  fields.
-    func alertOnEmptyFields(message:String){
-        let okButton = UIAlertAction(title: "OK", style: .default)
-        let emptyFields = UIAlertController(title: "Empty Fields", message:message , preferredStyle: .alert)
-        emptyFields.addAction(okButton)
-        present(emptyFields, animated: true)
-    }
 }
+    //MARK: -UITextFieldDelegate method to set up keyborad response.
+    extension LoginViewController: UITextFieldDelegate{
+        
+        /// UItextfield  delegate method .
+        /// - Parameter textField:UITextField
+        /// - Returns: Bool
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            textField.resignFirstResponder()
+            return true
+        }
+    }
 
-//MARK: -UITextFieldDelegate method to set up keyborad response.
-extension LoginViewController: UITextFieldDelegate{
-    
-    /// UItextfield  delegate method .
-    /// - Parameter textField:UITextField
-    /// - Returns: Bool
-    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-}
