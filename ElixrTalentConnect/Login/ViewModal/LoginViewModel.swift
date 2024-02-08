@@ -8,6 +8,7 @@
 import Foundation
 import UIKit
 import LocalAuthentication
+
 /// LoginViewModel is considered as the Viewmodel which connects and updates both model and view.
 class LoginViewModel {
     

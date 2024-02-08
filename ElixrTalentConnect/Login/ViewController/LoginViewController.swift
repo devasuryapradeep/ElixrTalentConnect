@@ -50,6 +50,7 @@ class LoginViewController: UIViewController {
         }
         self.navigationController?.pushViewController(HomeView, animated: true)
     }
+    
     //MARK: - @IBAction for sign-in button.
     /// SignIntapped is the IBaction of the button "signInButton", which trigers alert actions,validation
     /// - Parameter sender: UIbutton named "signInButton".
@@ -63,12 +64,14 @@ class LoginViewController: UIViewController {
         let validationResult = viewModel.validateCredentials(model: loginModel)
         if validationResult.isValid {
             viewModel.authenticateWithBiometrics { [weak self] (success, error) in
-                
+                guard let self =  self else{
+                    return
+                }
                 if success {
-                    self?.navigateToHome()
+                    self.navigateToHome()
                 } else {
                     if let error = error {
-                        self?.showErrorAlert(message: "Biometric authentication failed: \(error.localizedDescription)")
+                        self.showErrorAlert(message: "Biometric authentication failed: \(error.localizedDescription)")
                     }
                 }
             }
@@ -80,10 +83,10 @@ class LoginViewController: UIViewController {
     //MARK: - alert
     
     func showErrorAlert(message: String) {
-          let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
-          alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-          present(alert, animated: true, completion: nil)
-      }
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alert, animated: true, completion: nil)
+    }
     
     // MARK: -  Keyboard configurations while displaying.
     /// This function is called when the keyboard is about to be displayed.
@@ -105,22 +108,21 @@ class LoginViewController: UIViewController {
         }
     }
     
-   /// The deinit method removes the view controller from observing keyboard notifications to prevent memory leaks.
+    /// The deinit method removes the view controller from observing keyboard notifications to prevent memory leaks.
     deinit {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
 }
-    //MARK: -UITextFieldDelegate method to set up keyborad response.
-    extension LoginViewController: UITextFieldDelegate{
-        
-        /// UItextfield  delegate method .
-        /// - Parameter textField:UITextField
-        /// - Returns: Bool
-        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-            textField.resignFirstResponder()
-            return true
-        }
+//MARK: -UITextFieldDelegate method to set up keyborad response.
+extension LoginViewController: UITextFieldDelegate{
+    
+    /// UItextfield  delegate method .
+    /// - Parameter textField:UITextField
+    /// - Returns: Bool
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
+}
 

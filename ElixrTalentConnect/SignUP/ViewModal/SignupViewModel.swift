@@ -14,8 +14,7 @@ class SignUpViewModel {
     var cellTypes: [SignupDataModel] = [.fullName, .emailAddress, .password, .confirmPassword]
     
     //MARK: - validate Credentials
-    
-    /// validateCredentials
+        /// validateCredentials
     /// - Parameters:
     ///   - fullName: String value corresponds to the value expected in the usernameTextfield.
     ///   - emailAddress: String value corresponds to the value expected in the emailTextfield.
