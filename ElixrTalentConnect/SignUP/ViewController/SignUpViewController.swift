@@ -9,6 +9,7 @@ import UIKit
 
 /// SignUpViewController - is the view through which user can add their user Credentials.
 class SignUpViewController: UIViewController {
+    
     //MARK: - Referencing Outlets
     /// Referencing Outlets.
     @IBOutlet weak var backButton: UIButton!
@@ -26,18 +27,18 @@ class SignUpViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         UISetup()
-        backButton.setImage(UIImage(systemName: "arrow.backward"), for: .highlighted)
-        backButton.tintColor = UIColor.gray
         self.view.endEditing(true)
         self.navigationItem.setHidesBackButton(true, animated: true)
     }
     
     // MARK: -  Sign-in button setup.
     func UISetup (){
+        backButton.setImage(UIImage(systemName: "arrow.backward"), for: .highlighted)
+        backButton.tintColor = UIColor.gray
         signUpButton.layer.cornerRadius = 5
         signUpButton.clipsToBounds = true
     }
-        
+    
     //MARK: - @IBAction for return back to the LoginScreen .
     ///@IBAction to set up return button to the rootview controller.
     /// - Parameter sender: UIButton
@@ -57,9 +58,7 @@ class SignUpViewController: UIViewController {
     }
     
     //MARK: - Authentication on signUp.
-    /// Function to navigate on validating some crirteria on the text fields.
-    //MARK: - Authentication on signUp.
-    /// Function to navigate on validating some crirteria on the text fields.
+    /// Function to navigate to each cell type based on cell type, and
     func authenticationOnSignup(){
         let fullNameCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .fullName) ?? 0, section: 0)) as? ProfileDisplayCell
         let emailCell = SignUpTableview.cellForRow(at: IndexPath(row: viewModalInstance.cellTypes.firstIndex(of: .emailAddress) ?? 0, section: 0)) as? ProfileDisplayCell
@@ -73,6 +72,7 @@ class SignUpViewController: UIViewController {
             showAlert(message: errorMessage)
         }
     }
+    
     //MARK: - @IBAction for Signup .
     /// SignIn action
     /// - Parameter sender: UIButton

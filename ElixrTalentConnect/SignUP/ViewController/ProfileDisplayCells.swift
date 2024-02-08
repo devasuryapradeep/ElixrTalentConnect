@@ -18,6 +18,7 @@ class ProfileDisplayCell: UITableViewCell {
     @IBOutlet weak var userInput: UITextField!
     @IBOutlet weak var userText: UILabel!
     
+    /// Variable Declarations.
     var eyeButtonClosure: (() -> Void)?
     
     //MARK: - View life cycle.
@@ -29,8 +30,7 @@ class ProfileDisplayCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
     }
- 
-    
+     
     /// privacyButtonTapped -Fuction used to trigger the functionality of showing  and hiding the password.
     @objc func privacyButtonTapped () {
         userInput.isSecureTextEntry.toggle()
