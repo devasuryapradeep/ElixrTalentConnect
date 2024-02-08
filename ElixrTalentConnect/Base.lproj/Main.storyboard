@@ -415,7 +415,7 @@
                                         </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="SignUpTapped:" destination="1cL-Jb-Nzf" eventType="touchUpInside" id="7a8-UE-HER"/>
-                                            <segue destination="Qeq-hP-DGF" kind="show" identifier="HomeViewController" id="3UC-vN-XaQ"/>
+                                            <segue destination="Qeq-hP-DGF" kind="show" identifier="HomeViewController" id="yYn-7b-6ft"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="      Already have an account?" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Acb-4j-G7N">
@@ -1299,7 +1299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3Cm-vk-YWp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2354.9618320610684" y="790.84507042253529"/>
+            <point key="canvasLocation" x="1747" y="1089"/>
         </scene>
         <!--My Jobs-->
         <scene sceneID="Qhb-Cr-AY2">
@@ -1422,7 +1422,7 @@
                                                             </constraints>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                                    <real key="value" value="1"/>
+                                                                    <real key="value" value="0.0"/>
                                                                 </userDefinedRuntimeAttribute>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="5"/>
@@ -1467,7 +1467,7 @@
                                 </constraints>
                             </view>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9zM-H7-G3f">
-                                <rect key="frame" x="-8" y="59" width="396" height="44"/>
+                                <rect key="frame" x="-12" y="59" width="396" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="MyJobs" id="xL9-sg-VXZ">
@@ -1508,7 +1508,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WAN-MG-So6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3408" y="791"/>
+            <point key="canvasLocation" x="3789" y="1089"/>
         </scene>
         <!--Home View Controller-->
         <scene sceneID="pEe-NI-sYF">
@@ -1519,11 +1519,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-aW-HW7">
-                                <rect key="frame" x="16" y="288" width="361" height="389"/>
+                                <rect key="frame" x="16" y="288" width="361" height="481"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="389" id="roi-IW-vmi"/>
-                                </constraints>
                                 <color key="separatorColor" red="0.92156863209999995" green="0.92156863209999995" blue="0.92156863209999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="HomeInfoCell" rowHeight="147" id="Xmw-Sj-U51" customClass="HomeInfoCell" customModule="ElixrTalentConnect" customModuleProvider="target">
@@ -1656,7 +1653,7 @@
                                 </connections>
                             </tableView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="qOt-bX-2XK">
-                                <rect key="frame" x="178" y="480" width="37" height="37"/>
+                                <rect key="frame" x="178" y="526" width="37" height="37"/>
                                 <color key="color" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </activityIndicatorView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NoD-of-BZu">
@@ -1707,7 +1704,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8Y-vQ-dpI">
                                 <rect key="frame" x="0.0" y="144" width="393" height="68"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQd-zp-cWz">
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IQd-zp-cWz">
                                         <rect key="frame" x="320" y="14" width="64" height="40"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Filter">
@@ -1784,6 +1781,7 @@
                             <constraint firstItem="cvd-fa-Wf5" firstAttribute="leading" secondItem="JBz-nF-kj8" secondAttribute="leading" id="iGp-P1-Thd"/>
                             <constraint firstItem="cvd-fa-Wf5" firstAttribute="leading" secondItem="JBz-nF-kj8" secondAttribute="leading" id="itr-1f-0JO"/>
                             <constraint firstAttribute="trailing" secondItem="NoD-of-BZu" secondAttribute="trailing" id="phg-8Q-Xwn"/>
+                            <constraint firstItem="JBz-nF-kj8" firstAttribute="bottom" secondItem="3pO-aW-HW7" secondAttribute="bottom" id="scp-xT-mBp"/>
                             <constraint firstItem="cvd-fa-Wf5" firstAttribute="trailing" secondItem="JBz-nF-kj8" secondAttribute="trailing" id="spB-4x-api"/>
                             <constraint firstItem="qOt-bX-2XK" firstAttribute="centerX" secondItem="3pO-aW-HW7" secondAttribute="centerX" id="yzw-n3-c0k"/>
                         </constraints>
@@ -1819,7 +1817,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xuq-JM-0M8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2860" y="0.0"/>
+            <point key="canvasLocation" x="2767" y="77"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5yr-cp-Chc">
@@ -1880,6 +1878,7 @@
                         </imageReference>
                     </tabBarItem>
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="qBv-uD-iTj"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="8VN-An-b3f">
                         <rect key="frame" x="0.0" y="59" width="393" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -1924,7 +1923,7 @@
         </designable>
     </designables>
     <inferredMetricsTieBreakers>
-        <segue reference="eqc-xm-XTH"/>
+        <segue reference="W5B-9d-FuA"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="Filter" width="40" height="40"/>

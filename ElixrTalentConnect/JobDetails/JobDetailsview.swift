@@ -62,7 +62,7 @@ class JobDetailsview: UIViewController {
         applyButton.clipsToBounds = true
     }
     
-    
+    //MARK: - Data Configure.
     /// Function that renders data and presents data to the UI.
     func dataConfigure(){
         guard let jobInfoDescription = jobInfoDescription else {
@@ -78,17 +78,11 @@ class JobDetailsview: UIViewController {
         wishListVariable = jobInfoDescription.id
     }
     
-    
-    func applyJob1() {
-        guard let jobInfoDescription = jobInfoDescription else { return }
-        var savedJobs = UserDefaults.standard.array(forKey: .userKey) as? [[String: Any]] ?? []
-        savedJobs.append(["id": jobInfoDescription.id ?? " ", "title": jobInfoDescription.title, "description": jobInfoDescription.description, "location": jobInfoDescription.location]) //
-    }
-    
+    //MARK: - Function to perform applyForJOb.
+    /// applyjob functionality firs
     func applyJob() {
         var savedJobs = getSavedJobs()
         guard let jobInfoDescription = jobInfoDescription, !isJobAlreadyApplied(savedJobs, job: jobInfoDescription) else {
-            print("Job has already been applied for.")
             showAlert(message: "Job already applied")
             return
         }
@@ -96,7 +90,7 @@ class JobDetailsview: UIViewController {
         do {
             let appliedJobsData = try JSONEncoder().encode(savedJobs)
             UserDefaults.standard.set(appliedJobsData, forKey: .userKey)
-            showAlert(message: "Job Applied")
+            showAlert(message: "Job application successful.")
             
         } catch {
             showAlert(message: "ERROR")
